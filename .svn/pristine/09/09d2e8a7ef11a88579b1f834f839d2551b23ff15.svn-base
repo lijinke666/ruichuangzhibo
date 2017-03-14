@@ -1,0 +1,832 @@
+@charset "utf-8";
+/* Scss Document */
+
+// 引入compass的库 
+@import "compass/css3";
+@import "blueprint/colors";
+@import "compass/support";
+@import "compass/css3/box";
+
+//引入基础样式
+
+@import "include/config.scss";
+@import "include/base.scss";
+
+.wrapper{ background-color:#fff; width: $wrap_width; margin: 30px auto; border:1px solid $border_color; position:relative;}
+.user-sidebar{width: 230px; min-height: 100%; background-color: #FAFAFA; color: #9196a4; position:absolute; top:0; left:0; bottom:0; border-right:1px solid #eee;
+    .usermenu{
+        display: none;
+        font-size: 13px;
+        a{ border-left:7px solid #FAFAFA; padding-right: 7px ;display: block; height: 45px;  line-height: 45px; @include a-color(#666,#666,$main_color,#bdc3d0);
+            &.active,&:hover{ background-color: #FFF; color: $main_color; border-left:7px solid $main_color;}
+        }
+    }
+    h5{
+        cursor: pointer ;
+       padding: 20px; font-size: 15px; color:#222; border-bottom:1px solid $border_color;
+        span{width: 20px; color:#7E7E7E; font-size: 20px; margin-right: 20px; vertical-align: baseline; }
+        i{ color:#595959; margin-top: 4px; font-size: 12px; @extend %transition-05;}
+        .rotate{
+            @include transform(rotate(90deg));
+        }
+    }
+}
+.user-wrap{ min-height: 100%; margin-left:255px; background-color:#fff;}
+.user-header{ height: 68px; margin-bottom: 20px; background-color: #FFF; border-bottom: 1px solid $border_color;
+}
+.user-content{
+    padding: 20px 20px 20px 0;
+    min-height: 755px;
+    overflow: hidden;
+    .content{
+        @include box-sizing(border-box);
+        background-color: $usercenter_bg_color;
+        padding: 20px 50px 50px 50px;
+    }
+}
+.user-title{
+    padding: 25px 0 15px 0;
+    font-size: 16px;
+    border-bottom: 1px solid $border_color;
+    h3{
+        color:#555;
+        font-size: 16px;
+        i{
+            margin-right: 15px;
+            color:#7B7B7B;
+            font-size: 24px;
+        }
+        .search{
+            margin-right: 15px;
+            margin-top: -10px;
+            position: relative;
+        }
+        input{
+            width: 230px;
+            background-color: $usercenter_grey;
+        }
+        .icon-search{
+            position: absolute;
+            right:0;
+            top:9px;
+            color:#9C9C9C;
+            cursor: pointer;
+        }
+    }
+    .icon{
+        color: #666;
+        font-size: 18px;
+        vertical-align: text-bottom;
+    }
+}
+.row{ margin-bottom: 16px; @include clearfix; position: relative;
+    &>.row{ margin-bottom: 0;}
+}
+
+//个人中心广告图
+.usercenter-banner{
+    img{
+        width: 100%;
+    }
+}
+.userInfo{
+    >a{
+        @include a-color(#FF9900,#FF9900,#FF9900,#FF9900);
+    }
+    table.usercenter-table,
+    table.userInfo-table,
+    table.safeCenter-table{
+        border:0;
+        thead{
+            td{
+                vertical-align: top;
+            }
+        }
+        .v-error input{
+           &:focus{
+               @include box-shadow(0 0 1px 1px $danger_color);
+           }
+        }
+         em.v-error{
+            font-style: normal;
+            color:$danger_color;
+        }
+        td{
+            font-size: 16px;
+            color:#606060;
+            border:0;
+            padding: 10px 25px;
+        }
+        .header-image{
+            width: 100px;
+            height: 100px;
+            overflow: hidden;
+            position: relative;
+            display: inline-block;
+            margin-right: 10px;
+            cursor: pointer;
+            img{
+                width: 100%;
+            }
+            div{
+                width: 100%;
+                height: 20px;
+                line-height: 20px;
+                position: absolute;
+                left:0;
+                bottom:0;
+                background-color: rgba(0,0,0,.5);
+                filter: progid:DXImageTransform.Microsoft.gradient(startcolorstr=#99000000,endcolorstr=#99000000);
+            }
+        }
+    }
+    table.userInfo-table{
+        td{
+            font-size: 16px;
+            color:#606060;
+            border:0;
+            padding: 10px 8px;
+        }
+        input,select{
+            padding: 11px 18px;
+            margin-right: 12px;
+            font-family: "Microsoft YaHei";
+        }
+        .select-sex{
+            label{
+                height: 25px;
+                line-height: 25px;
+                padding: 0 20px;
+                font-size: 14px;
+                display: inline-block;
+                border:1px solid $main_color;
+                @extend %transition-03;
+                color:$main_color;
+            }
+            label.boy{
+                @include border-radius(10px 0 0 10px);
+            }
+            label.girl{
+                @include border-radius(0 10px 10px 0);
+            }
+        }
+        input:checked +label{
+            background-color: $main_color;
+            color:#FFF;
+            @include text-shadow(1px 1px 2px rgba(0,0,0,.2));
+        }
+        input.address{
+            width: 400px;
+        }
+        input{
+            @extend %radius-5px;
+        }
+        button,a{
+            @extend %radius-2px;
+            padding: 13px 43px;
+        }
+        button.margin-right{
+            margin-right: 10px;
+        }
+    }
+    table.safeCenter-table{
+        margin-top: 30px;
+        color:#696969;
+        td{
+            position: relative;
+        }
+        em.v-error{
+            position: absolute;
+            right:47px ;
+            top:22px;
+        }
+        input{
+            width: 320px;
+            padding: 10px 28px;
+            @extend %radius-5px;
+        }
+        button{
+            padding: 10px 30px;
+            @extend %radius-3px;
+            margin-top: 20px;
+        }
+        button.margin-right{
+            padding: 10px 53px;
+        }
+        button.reset{
+            background: none;
+            &:hover{
+                background:#FFF;
+            }
+        }
+    }
+}
+
+//头像上传
+.upload-img{
+    aside{
+        button{
+            width: 48%;
+            height: 60px;
+            @extend %radius-2px;
+        }
+    }
+
+    button.upload-select-btn{
+        margin-right: 3%;
+    }
+    #range{
+        width: 82%;
+    }
+    .range-title{
+        i{
+            margin-right: .5rem;
+        }
+    }
+    .down,.up{
+        width: 40px;
+        height: 40px;
+        @extend %radius-100p;
+        text-align: center;
+        line-height: 40px;
+        background-color: $grey_color;
+        color:#FFF;
+        @include inlineblock();
+        cursor: pointer;
+        font-size: 22px;
+        vertical-align: middle;
+        @extend %transition-03;
+        &:hover{
+            background-color: $main_color;
+        }
+    }
+    .down{
+        margin-right: 12px;
+    }
+    .up{
+        margin-left: 12px;
+    }
+    .upload-image-box{
+        height: 280px;
+        border: 1px solid #eee;
+        background-color: #f3f3f3;
+        overflow: hidden;
+        position: relative;
+        img{
+            @include user-select(none);
+        }
+        .move-image{
+            height: 280px;
+            cursor: move;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        .clip-image{
+            width: 180px;
+            height: 180px;
+            border: 2px solid #eaeaea;
+            position: absolute;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+            pointer-events: none;
+            @include box-shadow(0 0 2px #eee)
+        }
+    }
+    #range{
+        background-color: #F3F4F6;
+        border-color: #F3F4F6;
+    }
+    #range::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        cursor: move;
+        width: 40px;
+        height: 40px;
+        padding: 0 !important;
+        background-color: $main_color;
+        @extend %radius-100p;
+        @include box-shadow( 0 0 1px rgba(255, 255, 255, .5));
+    }
+}
+
+//视屏管理
+.teacher-videos{
+    table{
+        border:0;
+        width: 100%;
+        td{
+            padding: 10px;
+            border:0;
+            .btn{
+                font-size: 12px;
+            }
+        }
+        thead{
+            line-height: 40px;
+            height: 40px;
+            background-color: #FcFcFc;
+            i{
+                font-size: 14px;
+                vertical-align: initial;
+                margin-right: 5px;
+            }
+            td{
+                font-size: 14px;
+            }
+        }
+        tbody{
+            tr{
+                .teacher-videos-img{
+                    width: 130px;
+                    height: 68px;
+                    overflow: hidden;
+                    >img{
+                        width: 100%;
+                    }
+                }
+                td{
+                    span{
+                        i{
+                            margin-right: 4px;
+                            font-size: 12px;
+                        }
+                    }
+                }
+            }
+            .operate{
+                >div{
+                    position: relative;
+                    &:hover{
+                        >.operate-list{
+                            display: block;
+                        }
+                    }
+                }
+
+                a{
+                    color: #141414;
+                    margin-right: 5px;
+                    >i{
+                        vertical-align: inherit;
+                        font-size: 14px;
+                    }
+                    &:hover{
+                        color:$main_color;
+                    }
+                }
+                .operate-list{
+                    width: 92px;
+                    background-color: #FFF;
+                    padding: 0;
+                    position: absolute;
+                    top: 35px;
+                    left: 1px;
+                    z-index: 90;
+                    display: none;
+                    @include border-radius(0 0 3px 3px );
+                    border:1px solid #ccc;
+                    border-top:none;
+                    >li{
+                        @extend %radius-3px;
+                        height:30px;
+                        line-height: 30px;
+                        position: relative;
+                        &:hover{
+                            background-color: #f9f9f9;
+                        }
+                        >a{
+                            display: block;
+                        }
+                        i{
+                            margin-right: 3px;
+                        }
+                    }
+                    .video-number{
+                        display: inline-block;
+                        width: 13px;
+                        height: 13px;
+                        @extend %radius-100p;
+                        line-height: 13px;
+                        background-color: $main_color;
+                        @include text-shadow(1px 1px 2px rgba(0,0,0,.3));
+                    }
+                }
+                .operate-title{
+                    padding: 0;
+                    background-color: #FFF;
+                    >div{
+                        padding: 8px 12px;
+                        i{
+                            margin-left: 5px;
+                            @extend %transition-03;
+                        }
+                    }
+                    &:hover{
+                        background-color: #FFF;
+                        >div{
+                            i{
+                                @include transform(rotate(90deg));
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@include keyframes(success-linear){
+    to{
+        left:300px;
+    }
+}
+//添加视频
+.add-video-content{
+    padding: 15px;
+    background-color: $usercenter_bg_color;
+    .progress{
+        margin-top:2px;
+        width: 200px;
+        height: 14px;
+        margin-bottom: 10px;
+        overflow: hidden;
+        background-color: #f0f0f0;
+        @include border-radius(4px);
+        @include box-shadow(inset 0 1px 2px rgba(0,0,0,.1));
+    }
+    .progress-bar{
+        background-color: rgb(92, 184, 92);
+        background:$main_color linear-gradient(45deg, rgba(255, 255, 255, 0.14902) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.14902) 50%, rgba(255, 255, 255, 0.14902) 75%, transparent 75%, transparent);
+        @include background-size(40px 40px);
+        @include box-shadow(rgba(0, 0, 0, 0.15) 0px -1px 0px 0px inset);
+        @include box-sizing(border-box);
+        color: rgb(255, 255, 255);
+        display: block;
+        float: left;
+        font-size: 12px;
+        height: 20px;
+        line-height: 20px;
+        text-align: center;
+        @include transition(width .6s ease);
+        width: 266px;
+    }
+    .add-videos{
+        table{
+            border:0;
+            td.text-top{
+                vertical-align: initial;
+            }
+            td{
+                padding: 13px 0;
+                border:0;
+            }
+            .add-video-box{
+                width: 180px;
+                height: 110px;
+                overflow: hidden;
+                @include inlineblock;
+                cursor: pointer;
+                @extend %transition-03;
+                margin-right: 15px;
+                >img{
+                    width: 100%;
+                }
+            }
+            input,textarea{
+                position: relative;
+                margin-right: 20px;
+                padding:5px;
+                &:focus { @include box-shadow(0 0 2px $main_color)};
+            }
+            input.add-video-inp-width{
+                width: 445px;
+            }
+            .old-price{
+                margin-left:12px;
+            }
+            i.number{
+                margin: 0 5px;
+                font-style: normal;
+                color:$danger_color;
+            }
+            .select-video{
+                position: relative;
+                overflow: hidden;
+                &:before{
+                    content:"";
+                    width: 20px;
+                    height: 100px;
+                    background-image: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 0, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0) 100%);
+                    background-image: -moz-linear-gradient(left, rgba(255, 255, 255, 0) 0, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0) 100%);
+                    background-image: -ms-linear-gradient(left, rgba(255, 255, 255, 0) 0, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0) 100%);
+                    background-image: -o-linear-gradient(left, rgba(255, 255, 255, 0) 0, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0) 100%);
+                    background-image: linear-gradient(left, rgba(255, 255, 255, 0) 0, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0) 100%);
+                    @include transform(skewX(-45deg));
+                    position: absolute;
+                    left:-50px;
+                    top:-50px;
+                }
+                &.success-linear{
+                    &:before{
+                        @include animation(success-linear 1.5s .1s linear forwards);
+                    }
+                }
+            }
+            textarea.video-info{
+                width: 445px;
+                height: 155px;
+                resize: none;
+                border:1px solid #DDD;
+            }
+            .imgFile,.video-fileBtn{
+                @include opacity(0);
+            }
+            .select-width{
+                width: 150px;
+            }
+            label.v-error{
+                position: relative;
+                >input,textarea{
+                    &:focus{
+                        @include box-shadow(0 0 1px 1px $danger_color);
+                    }
+                }
+            }
+
+            em.v-error{
+                position: absolute;
+                font-style: normal;
+                left: 3px;
+                bottom: -34px;
+                color:$danger_color;
+            }
+            em#imgFile-error{
+                left: -285px;
+                bottom: -22px;
+            }
+            em#oldPrice-error{
+                left:75px;
+            }
+            em#info-error{
+                bottom:-98px;
+            }
+            em#videoFile-error{
+                bottom:-40px;
+            }
+            .show-video-box{
+                video{
+                    width: 457px;
+                }
+            }
+        }
+    }
+}
+//老师个人中心班级管理
+.class-management-content{
+    .screen-body{
+        padding: 10px 20px;
+        background-color: #F9F9F9;
+        position: relative;
+        &:before{
+            content:"";
+            width: 0;
+            height:0;
+            border:12px solid transparent;
+            border-top-color:#F9F9F9;
+            position: absolute;
+            bottom: -23px;
+            left: 31px;
+            z-index: 100;
+        }
+        .row-item{
+            overflow: hidden;
+            padding: 20px 0;
+            width: 100%;
+            .item-name{
+                color:#acacac;
+            }
+            .tag{
+                color:#808080;
+            }
+            select{
+                width: 220px;
+            }
+            .item-margin{
+                margin-left: 100px;
+            }
+            &.border-top{
+                border-top: 1px dashed #ccc;
+
+            }
+        }
+        select{
+            padding: 7px;
+            vertical-align: bottom;
+        }
+    }
+    .student-table-info{
+        padding-left: 20px;
+        .student-table{
+            .page{
+                margin-top: 40px;
+                span,a,input{
+                    color:#717171;
+                }
+                input{
+                    width: 100px;
+                }
+            }
+            table{
+                width: 100%;
+                border:none;
+                td{
+                    border:none;
+                }
+                thead{
+                    border-bottom: 2px solid #ECECEC;
+                    td{
+                        padding: 12px 0;
+                        color:#3a3a3a;
+                    }
+                }
+                tbody,tfoot{
+                    tr{
+                        cursor: pointer;
+                        border-bottom:1px solid #ECECEC;
+                    }
+                    td{
+                        color:#9A9A9A;
+                        input{
+                            cursor: pointer;
+                        }
+                        input[type='checkbox']:checked + label{
+                            background-color: $info-color;
+                            border-color: $info-color;
+                            &:before{
+                                text-align: center;
+                                content: "√";
+                                color:#FFF;
+                                font-weight: bold;
+                            }
+                        }
+                        a,button{
+                            color:#807E83;
+                            @include a-color(#807E83,#807E83,#807E83,#807E83);
+                        }
+                        .student-checkbox{
+                            display: inline-block;
+                            width: 15px;
+                            height: 15px;
+                            @extend %radius-3px;
+                            border:1px solid $border_color;
+                            cursor: pointer;
+                            @extend %transition-03;
+                            vertical-align: middle;
+                        }
+                    }
+                    tr.bg-grey{
+                        background-color: #FAFAFA;
+                    }
+                    tr.last-tr{
+                        td{
+                            padding: 16px 0;
+                            border-bottom:none;
+                            .margin-left{
+                                margin-left: 13px;
+                            }
+                            input{
+                                vertical-align: middle;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+//添加学生
+.add-student-popup{
+    table{
+        width: 100%;
+        border:0;
+        td{
+            border:0;
+            font-size: 14px;
+            padding: 14px 12px;
+            span{
+                display:inline-block;
+                width: 80px;
+            }
+            input,select{
+                width: 240px;
+                @include box-sizing(border-box);
+            }
+        }
+        td.v-error{
+            position: relative;
+            input{
+                border:1px solid $danger_color;
+            }
+        }
+        em.v-error{
+            position: absolute;
+            right: 30px;
+            top: 21px;
+            font-style: normal;
+            color:$danger_color;
+        }
+        tr.bg-grey{
+            background-color: #F3F3F3;
+        }
+        td,input,select{
+            color:#676767;
+        }
+        select{
+            cursor: pointer;
+        }
+        .add-student-save{
+            padding: 7px 45px;
+            border-radius: 5px;
+            @include border-radius(5px);
+            font-size: 16px;
+        }
+        .photo-box{
+            cursor: pointer;
+            width: 100px;
+            height: 100px;
+            display: inline-block;
+            border:1px solid $border_color;
+            line-height: 100px;
+            position: absolute;
+            overflow: hidden;
+            >img{
+                width: 100%;
+            }
+        }
+        .btn-select-file{
+            margin-left: 130px;
+        }
+    }
+}
+//查看学生信息弹窗
+.student-info-popup{
+    .student-img{
+        width: 140px;
+        height: 140px;
+        @extend %radius-100p;
+        overflow: hidden;
+        position: absolute;
+        top:80px;
+        img{
+            width: 100%;
+        }
+    }
+     table{
+         width: 80%;
+         margin: 55px 0 0 180px;
+         &,td{
+             color:#6e6e6e;
+             border:0;
+         }
+         td{
+             padding: 12px 0;
+             span{
+                 color:#333343;
+             }
+         }
+     }
+}
+//章节列表
+.chapter-list-table{
+    width: 100%;
+    &,td{
+        border:0
+    }
+    thead{
+        background-color: #FAFAFA;
+        td{
+            padding: 12px 0;
+        }
+    }
+    tbody{
+        td{
+            padding: 10px 0;
+        }
+    }
+}
+#ossfile{
+    div{
+        position: relative;
+        a.remove-ossfile{
+            width: 200px;
+            height: 20px;
+            display: block;
+            position: absolute;
+            right: 160px;
+            top: 16px;
+        }
+    }
+}

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no"/>
+    <title>惠学家APP下载</title>
+    <link rel="stylesheet" href="newCss/app_style.css"/>
+</head>
+<body>
+<div class="body header-margin footer-margin">
+    <section class="app-download-banner">
+        <img src="images/mobile_download_bg.jpg" alt="图片加载中">
+    </section>
+    <section class="text-center btn-download-section">
+        <a href="javascript:;" data-ios="ios家长端" data-android="http://rcapp.oss-cn-hangzhou.aliyuncs.com/app/aMiMe-huixuejia_0_9_7.apk" class="btn btn-download">点击下载家长端</a>
+    </section>
+    <section class="text-center btn-download-section">
+        <a href="javascript:;" data-ios="ios教师端" data-android="http://rcapp.oss-cn-hangzhou.aliyuncs.com/app/z6ZKe-huixuejia_p.apk " class="btn btn-download">点击下载教师端</a>
+    </section>
+    <div class="app-mask " id="app-mask">
+        <div class="">
+            <img src="images/app_mask_people.png" alt="">
+        </div>
+    </div>
+</div>
+</div>
+</body>
+<script>
+    //判断微信浏览器
+    function is_weixin(){
+        var userAgent = navigator.userAgent.toLowerCase();
+        if(userAgent.match(/MicroMessenger/i)=="micromessenger") {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    //判断是安卓还是ios
+    function is_Android(){
+        var userAgent = navigator.userAgent;
+        var flag;
+        if (userAgent.indexOf('Android') > -1) {
+            flag = true;
+        }else if(userAgent.indexOf('iPhone') >-1){
+            flag = false;
+        }
+        return flag;
+    }
+    //点击按钮获取当前适配终端的下载地址
+    window.onload = function(){
+        var btn_download = document.getElementsByClassName("btn-download");
+        for(var i=0; i< btn_download.length; i++){
+            btn_download[i].addEventListener("click",function(){
+                if(is_weixin()===true){
+                    var app_mask = document.getElementById('app-mask');
+                    app_mask.className = "app-mask toScale";
+                    return;
+            }
+            var isAndroid = is_Android(),
+                down_href = "";
+            if(isAndroid===true){
+                down_href = this.getAttribute('data-android');
+            }else if(isAndroid === false){
+                down_href = this.getAttribute('data-ios');
+            }else{
+                alert("手机机型不支持");
+                return;
+            }
+            // window.location.replace(down_href);
+            })
+        }
+    }
+
+
+</script>
+</html>

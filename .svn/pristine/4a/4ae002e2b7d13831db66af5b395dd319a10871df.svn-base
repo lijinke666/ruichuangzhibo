@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="renderer" content="webkit">
+    <title>班级管理</title>
+    <link rel="stylesheet" href="fonts/font.css" />
+    <link rel="stylesheet" href="newCss/public.css" />
+    <link rel="stylesheet" href="newCss/user_center.css">
+    <!--[if lt IE 9]>
+    <script src="newJs/html5.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<div class="top">
+    <div class="container">
+        <div class="pull-left">
+            <span class="icon icon-tel color-success"></span>服务热线：<span class="tel400">400-123-45678</span>
+            <span class="separator">|</span>
+            <a href="javascript:void(0)" class="top-winxin">
+                <span class="icon icon-weiixn color-success"></span>微信
+                <div class="top-winxinCode">
+                    <img src="images/weixin.jpg" alt="">
+                </div>
+            </a>
+            <span class="separator">|</span>
+            <span class="icon icon-comments color-success"></span><a href="#">在线咨询</a></div>
+        <div class="pull-right">
+            <a href="login.html">你好,李金珂</a>
+            <span class="separator">|</span>
+            <a href="login.html">我的消息</a>
+            <span class="separator">|</span>
+            <a href="login.html">趣学老师版APP</a>
+        </div>
+    </div>
+</div>
+<!--头部-->
+<header class="header">
+    <div class="container">
+        <a href="index.html" class="pull-left logo"><img src="images/logo.png"></a>
+        <nav class="pull-right nav fz14">
+            <ul class="clearListStyle nav-move">
+                <li class="fz16 clear-padding"><a href="index.html">老师个人中心</a></li>
+                <b class="nav-move-bar"></b>
+            </ul>
+        </nav>
+    </div>
+</header>
+<!--&lt;!&ndash;个人中心广告图&ndash;&gt;-->
+<!--<div class="container usercenter-banner">-->
+    <!--<img src="images/usercenter_banner.jpg" alt="">-->
+<!--</div>-->
+<!--&lt;!&ndash;个人中心广告图end&ndash;&gt;-->
+<div class="wrapper">
+    <aside class="user-sidebar usercenter-menu">
+        <h5 class="none"><span class="iconfont icon-shezhi"></span>个人设置 <i class="icon-right pull-right"></i></h5>
+        <menu class="usermenu text-center">
+            <a href="usercenter.html" class="">个人信息</a>
+            <a href="safeCenter.html" class="">安全设置</a>
+        </menu>
+        <h5 class="none"><span class="iconfont icon-yonghu"></span>个人管理 <i class="icon-right pull-right"></i></h5>
+        <menu class="usermenu text-center">
+            <a href="#" class="active">视频管理</a>
+            <a href="#" class="">课程管理</a>
+            <a href="#" class="">身份认证</a>
+            <a href="#" class="">钱包管理</a>
+            <a href="#" class="">订单管理</a>
+        </menu>
+        <h5 class="none"><span class="iconfont icon-wenjianjia"></span>校务管理 <i class="icon-right pull-right"></i></h5>
+        <menu class="usermenu text-center">
+            <a href="#" class="">班级管理</a>
+            <a href="#" class="">课程管理</a>
+        </menu>
+    </aside>
+    <div class="user-wrap">
+        <div class="user-title">
+            <h3 class="normal none">视频管理<span class="separator">></span><span class="fz14 color-grey">视频添加</span><span class="color-danger"> ( 带*为必填项 ) </span></h3>
+        </div>
+        <div class="user-content">
+            <p class="none"><i class="iconfont icon-shezhi mr10 fz14"></i>设置视频封面，简介及价格 </p>
+            <div class="add-video-content mt20">
+                <div class="add-videos">
+                    <form action="#" method="post" name="add-videosForm">
+                        <table class="fz12 ">
+                            <tbody>
+                            <tr>
+                                <td class="text-top"><span class="btn btn-default mr10"><i class="import mr2">*</i>视频封面</span></td>
+                                <td>
+                                    <div class="add-video-box">
+                                        <img src="images/add-video.png" alt="点击添加课程封面">
+                                    </div>
+                                    <span>图片大小不能超过5M</span>
+                                    <label><input type="file" name="imgFile" id="imgFile" class="imgFile" accept="image/*" multiple required="true"></label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><span class="btn btn-default mr10"><i class="import mr2">*</i>视频标题</span></td>
+                                <td>
+                                    <label><input type="text" class="inp add-video-inp-width biaoti checkwords" name="biaoti" id="biaoti" maxlength="20" required="true"></label>
+                                    <label><span>还可以输入<i class="number biaoti-words maxMsgShow">20</i>个字</span></label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><span class="btn btn-default mr10"><i class="import mr2">*</i>视频现价</span></td>
+                                <td>
+                                    <label><input type="text" class="inp" name="nowPrice" id="nowPrice" digits="true" required="true">元</label>
+                                    <label><span class="old-price">视频原价：</span> <input type="text" class="inp" name="oldPrice" id="oldPrice" 	digits="true" required="true">元</label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><span class="btn btn-default mr10"><i class="import mr2">*</i>视频简介</span></td>
+                                <td>
+                                    <label><textarea  class="video-info checkwords" name="info" id="info" maxlength="200" required="true"></textarea></label>
+                                    <span>还可以输入<i class="number video-info-words maxMsgShow">200</i>个字</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><span class="btn btn-default mr10"><i class="import mr2">*</i>视频分类</span></td>
+                                <td>
+                                    <select name="school" class="inp select-width num-font">
+                                        <option value="">小学</option>
+                                        <option value="">初中</option>
+                                        <option value="">高中</option>
+                                    </select>
+                                    <select name="grade" class="inp select-width num-font">
+                                        <option value="">一年级</option>
+                                        <option value="">二年级</option>
+                                        <option value="">三年级</option>
+                                        <option value="">四年级</option>
+                                        <option value="">五年级</option>
+                                        <option value="">六年级</option>
+                                        <option value="">小升初</option>
+                                    </select>
+                                    <select name="subject" id="subject" class="inp select-width num-font" >
+                                        <option value="1">语文</option>
+                                        <option value="2">数学</option>
+                                        <option value="3">英语</option>
+                                        <option value="4">物理</option>
+                                        <option value="5">化学</option>
+                                        <option value="6">生物</option>
+                                        <option value="7">地理</option>
+                                        <option value="8">历史</option>
+                                        <option value="9">政治</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><span class="btn btn-default mr10"><i class="import mr2">*</i>视频标签</span></td>
+                                <td><label><input type="text" class="inp add-video-inp-width video-tag checkwords" maxlength="8" name="tips" id="tips" required="true"></label>
+                                    <span>还可以输入<i class="number video-tag-words maxMsgShow">8</i>个字</span>
+                                </td>
+                            </tr>
+                            <tr class="">
+                                <td></td>
+                                <td colspan="2">
+                                    <div class="mt20">
+                                        <button type="submit" class="btn btn-primary mr10">保存课程信息</button>
+                                        <a href="video-manage.html" class="btn btn-default">返回</a>
+                                    </div>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </form>
+                </div>
+           </div>
+        </div>
+    </div>
+</div>
+</body>
+<script src="newJs/jquery-1.11.3.js"></script>
+<script src="newJs/script.js"></script>
+<script src="newJs/LjkUpLoad.js"></script>
+<script src="newJs/jquery.validate.min.js"></script>
+<script src="newJs/validate.config.js"></script>
+<script>
+$(function(){
+    var $add_video_form = $("form[name='add-videosForm']");
+    //判断还可输入多少字
+    $add_video_form.checkWords();
+
+
+    var ljkUpload = new LjkUpload($(".add-videos"));
+    var addVideoBox = $(".add-video-box");
+    //显示
+    ljkUpload.showImage({
+        fileSelectBtn:addVideoBox,
+        fileBtn:$("#imgFile"),
+        showEle:addVideoBox,
+        isImage:true,
+        maxSize:1024       //最大5M
+    });
+    //个人中心 修改个人资料
+    $add_video_form.validate({
+        errorClass: 'v-error',
+        errorElement: 'em',
+        debug: true,
+        highlight: function (element, errorClass) {
+            $(element).parent().addClass(errorClass);
+        },
+        unhighlight: function (element, errorClass) {
+            $(element).parent().removeClass(errorClass);
+        },
+        messages:{
+            imgFile:{
+                required:'请选择视频封面'
+            },
+            biaoti:{
+                required:'请填写视频标题',
+                minlength:'视频标题过短',
+                maxlength:'视频标题过长'
+            },
+            nowPrice:{
+                required:"请填写视频现价",
+                digits:'请输入正确的价格（整数）'
+            },
+            oldPrice:{
+                required:"请填写视频原价",
+                digits:'请输入正确的价格（整数）'
+            },
+            info:{
+                required:'请填写视频简介',
+                minlength:'视频简介过短',
+                maxlength:'视频简介过长'
+            }
+        },
+        submitHandler: function (form) {
+            var loading;
+            $.ajax({
+                url: "",
+                type: "post",
+                data: $("form[name='add-videosForm']").serialize(),
+                dataType: "json",
+                beforeSend: function () {
+                    loading = new rcLoading("请稍后..");
+                },
+                success: function (data) {
+                    loading.remove();
+                    rcAlert("添加成功", true);
+                },
+                error: function () {
+                    loading.remove();
+                    rcAlert("添加失败", false);
+                }
+            });
+        }
+    });
+})
+
+</script>
+</html>

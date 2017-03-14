@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="renderer" content="webkit">
+    <title>班级管理</title>
+    <link rel="stylesheet" href="fonts/font.css" />
+    <link rel="stylesheet" href="newCss/public.css" />
+    <link rel="stylesheet" href="newCss/style.css">
+    <!--[if lt IE 9]>
+    <script src="newJs/html5.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<!--头部-->
+<header class="header text-center login-header">
+    <a href="index.html"><img src="images/logo.png" alt=""></a>
+</header>
+<!--头部end-->
+<div class="login-box">
+    <h2 class="text-center">一学就会,乐在其中</h2>
+    <div class="select-status text-center">
+        <a href="javascript:;" class="active" name="1"><img src="images/teacher.png" alt=""><span class="fz16">老师</span></a>
+        <a href="javascript:;" class="margin" name="2"><img src="images/par.png" alt=""><span class="fz16">家长</span></a>
+        <a href="javascript:;" class="admin margin" name="3"><img src="images/admin.png" alt=""><span class="fz16">学校管理员</span></a>
+    </div>
+    <form action="/login" method="post" name="login-form">
+        <div class="login-input">
+            <fieldset class="mt20"><input type="text" class="inp inp-block" name="phone" id="phone" placeholder="请输入手机号" minlength="11" maxlength="11" value="18181356512"><i class="iconfont icon-phone fz16"></i><span class="login-msg fz16"></span></fieldset>
+            <fieldset class="mt20"><input type="password" class="inp inp-block" name="pwd" id="pwd" placeholder="请输入密码" minlength="6" maxlength="15" value="123456"><i class="iconfont icon-suo fz16"></i><span class="login-msg fz16"></span></fieldset>
+            <fieldset class="remember mt20"><input type="checkbox" class="hidden" id="remember"><label for="remember" class="fz14 color-grey remember-label"><i class="icon-gou"></i>记住我</label></fieldset>
+            <fieldset class="mt20">
+                <button type="button" class="btn btn-success btn-block btn-login">登 录</button>
+            </fieldset>
+            <p>
+                <a href="forgetpassword.html" class="color-success fz16 forgetpassword">忘记密码</a>
+                <span class="pull-right fz16">
+                    <a href="#" class="register">返回首页</a>
+                    <span class="separator">|</span>
+                    <a href="#" class="color-grey fankui">意见反馈</a>
+                </span>
+            </p>
+        </div>
+    </form>
+</div>
+</body>
+<script src="newJs/jquery-1.11.3.js"></script>
+<script src="newJs/script.js"></script>
+</html>

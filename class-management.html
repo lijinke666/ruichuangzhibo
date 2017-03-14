@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="renderer" content="webkit">
+    <title>班级管理</title>
+    <link rel="stylesheet" href="fonts/font.css" />
+    <link rel="stylesheet" href="newCss/public.css" />
+    <link rel="stylesheet" href="newCss/user_center.css">
+    <!--[if lt IE 9]>
+    <script src="newJs/html5.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<div class="top">
+    <div class="container">
+        <div class="pull-left">
+            <span class="icon icon-tel color-success"></span>服务热线：<span class="tel400">400-123-45678</span>
+            <span class="separator">|</span>
+            <a href="javascript:void(0)" class="top-winxin">
+                <span class="icon icon-weiixn color-success"></span>微信
+                <div class="top-winxinCode">
+                    <img src="images/weixin.jpg" alt="">
+                </div>
+            </a>
+            <span class="separator">|</span>
+            <span class="icon icon-comments color-success"></span><a href="#">在线咨询</a></div>
+            <div class="pull-right">
+                <a href="login.html">你好,李金珂</a>
+                <span class="separator">|</span>
+                <a href="login.html">我的消息</a>
+                <span class="separator">|</span>
+                <a href="login.html">趣学老师版APP</a>
+            </div>
+    </div>
+</div>
+<!--头部-->
+<header class="header usercenter-header">
+    <div class="container">
+        <a href="index.html" class="pull-left logo"><img src="images/logo.png"></a>
+        <nav class="pull-right nav fz14">
+            <ul class="clearListStyle nav-move">
+                <li class="fz16 clear-padding"><a href="index.html">老师个人中心</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<div class="wrapper">
+    <aside class="user-sidebar usercenter-menu">
+        <h5 class="none"><span class="iconfont icon-shezhi"></span>个人设置 <i class="icon-right pull-right"></i></h5>
+        <menu class="usermenu text-center">
+            <a href="usercenter.html" class="">个人信息</a>
+            <a href="safeCenter.html" class="">安全设置</a>
+        </menu>
+        <h5 class="none"><span class="iconfont icon-yonghu"></span>个人管理 <i class="icon-right pull-right"></i></h5>
+        <menu class="usermenu text-center">
+            <a href="#" class="">视频管理</a>
+            <a href="#" class="">课程管理</a>
+            <a href="#" class="">身份认证</a>
+            <a href="#" class="">钱包管理</a>
+            <a href="#" class="">订单管理</a>
+        </menu>
+        <h5 class="none"><span class="iconfont icon-wenjianjia"></span>校务管理 <i class="icon-right pull-right"></i></h5>
+        <menu class="usermenu text-center">
+            <a href="#" class="active">班级管理</a>
+            <a href="#" class="">课程管理</a>
+        </menu>
+    </aside>
+    <div class="user-wrap">
+        <div class="user-title">
+            <h3 class="normal none"><i class="icon-home"></i>班级管理 <span class="pull-right search fz14"><input type="text" class="inp fz12 inp-search" placeholder="班级 / 名字 / 电话号码"><i class="icon icon-search"></i></span></h3>
+        </div>
+        <div class="user-content clearfix">
+            <div class="class-management-content">
+                <form action="#" method="get">
+                    <div class="screen-body fz14">
+                        <div class="row-item">
+                            <span class="item-name">年级：</span>
+                            <select name="grade"  class="inp num-font"  id="grade">
+                                <option value="1">一年级</option>
+                                <option value="2">二年级</option>
+                                <option value="3">三年级</option>
+                                <option value="4">四年级</option>
+                                <option value="5">五年级</option>
+                                <option value="6">六年级</option>
+                            </select>
+                            <span class="item-name item-margin">班级：</span>
+                            <select name="class"  class="inp num-font"  id="class">
+                                <option value="0">全部</option>
+                                <option value="1">一班</option>
+                                <option value="2">二班</option>
+                                <option value="3">三班</option>
+                                <option value="4">四班</option>
+                                <option value="5">五班</option>
+                                <option value="6">六班</option>
+                            </select>
+                        </div>
+                        <div class="row-item border-top">
+                            <span class="item-name tag">标签：</span>
+                            <button type="submit" class="btn btn-default ">选择</button>
+                        </div>
+                    </div>
+                </form>
+                <div class="mt20 student-table-info">
+                    <button class="btn btn-info mr10 query-student">查询</button>
+                    <span class="ml5">符合条件：<span class="color-info ">50</span></span>
+                    <div class="pull-right">
+                        <button class="btn btn-primary add-student">新增学员</button>
+                        <span class="separator"></span>
+                        <button class="btn btn-default btn-export-excel"><i class="iconfont icon-daochu mr5"></i>导出</button>
+                        <span class="separator"></span>
+                        <button class="btn btn-default num-font"><i class="iconfont icon-daoru mr5"></i>导入 <i class="icon icon-down"></i></button>
+                    </div>
+                    <div class="student-table mt20" id="student-table">
+                        <table class="text-center">
+                            <thead class="fz16">
+                                <tr>
+                                    <td class="noExl"></td>
+                                    <td>名字</td>
+                                    <td>学校</td>
+                                    <td>年级</td>
+                                    <td>家长</td>
+                                    <td>班级</td>
+                                    <td>家长联系方式</td>
+                                    <td class="noExl">操作</td>
+                                </tr>
+                            </thead>
+                            <tbody class="fz14 student-tbody">
+                                <tr>
+                                    <td class="noExl"><input type="checkbox" class="hidden" id="checkbox1"><label for="checkbox1" class="student-checkbox"></label></td>
+                                    <td>张小凡1</td>
+                                    <td>云南师大附中金牛</td>
+                                    <td>初三</td>
+                                    <td>五班</td>
+                                    <td>张三</td>
+                                    <td>18181356512</td>
+                                    <td class="noExl">
+                                        <a href="javascript:void(0)" class="btn btn-default query-student-info" data-id="1" onclick="query_student_info(this)">详情</a>
+                                        <button class="btn btn-default btn-remove" data-id="1" onclick="removeTR(this)">删除</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="noExl"><input type="checkbox" class="hidden" id="checkbox2"><label for="checkbox2" class="student-checkbox"></label></td>
+                                    <td>张小凡1</td>
+                                    <td>云南师大附中金牛</td>
+                                    <td>初三</td>
+                                    <td>五班</td>
+                                    <td>张三</td>
+                                    <td>18181356512</td>
+                                    <td class="noExl">
+                                        <a href="javascript:void(0)" class="btn btn-default query-student-info" data-id="2" onclick="query_student_info(this)">详情</a>
+                                        <button class="btn btn-default btn-remove" data-id="2" onclick="removeTR(this)">删除</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="noExl"><input type="checkbox" class="hidden" id="checkbox3"><label for="checkbox3" class="student-checkbox"></label></td>
+                                    <td>张小凡1</td>
+                                    <td>云南师大附中金牛</td>
+                                    <td>初三</td>
+                                    <td>五班</td>
+                                    <td>张三</td>
+                                    <td>18181356512</td>
+                                    <td class="noExl">
+                                        <a href="javascript:void(0)" class="btn btn-default query-student-info" data-id="3" onclick="query_student_info(this)">详情</a>
+                                        <button  class="btn btn-default btn-remove" data-id="3" onclick="removeTR(this)">删除</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="noExl"><input type="checkbox" class="hidden" id="checkbox4"><label for="checkbox4" class="student-checkbox"></label></td>
+                                    <td>张小凡1</td>
+                                    <td>云南师大附中金牛</td>
+                                    <td>初三</td>
+                                    <td>五班</td>
+                                    <td>张三</td>
+                                    <td>18181356512</td>
+                                    <td class="noExl">
+                                        <a href="javascript:void(0)" class="btn btn-default query-student-info" data-id="4" onclick="query_student_info(this)">详情</a>
+                                        <button class="btn btn-default btn-remove" data-id="4" onclick="removeTR(this)">删除</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="noExl"><input type="checkbox" class="hidden" id="checkbox5"><label for="checkbox5" class="student-checkbox"></label></td>
+                                    <td>张小凡1</td>
+                                    <td>云南师大附中金牛</td>
+                                    <td>初三</td>
+                                    <td>五班</td>
+                                    <td>张三</td>
+                                    <td>18181356512</td>
+                                    <td class="noExl">
+                                        <a href="javascript:void(0)" class="btn btn-default query-student-info" data-id="5" onclick="query_student_info(this)">详情</a>
+                                        <button  class="btn btn-default btn-remove" data-id="5" onclick="removeTR(this)">删除</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="noExl"><input type="checkbox" class="hidden" id="checkbox6"><label for="checkbox6" class="student-checkbox"></label></td>
+                                    <td>张小凡1</td>
+                                    <td>云南师大附中金牛</td>
+                                    <td>初三</td>
+                                    <td>五班</td>
+                                    <td>张三</td>
+                                    <td>18181356512</td>
+                                    <td class="noExl">
+                                        <a href="javascript:void(0)" class="btn btn-default query-student-info" data-id="7" onclick="query_student_info(this)">详情</a>
+                                        <button class="btn btn-default btn-remove" data-id="6" onclick="removeTR(this)">删除</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="noExl"><input type="checkbox" class="hidden" id="checkbox7"><label for="checkbox7" class="student-checkbox"></label></td>
+                                    <td>张小凡1</td>
+                                    <td>云南师大附中金牛</td>
+                                    <td>初三</td>
+                                    <td>五班</td>
+                                    <td>张三</td>
+                                    <td>18181356512</td>
+                                    <td class="noExl">
+                                        <a href="javascript:void(0)" class="btn btn-default query-student-info" data-id="8" onclick="query_student_info(this)">详情</a>
+                                        <button class="btn btn-default btn-remove" data-id="7" onclick="removeTR(this)">删除</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="noExl"><input type="checkbox" class="hidden" id="checkbox8"><label for="checkbox8" class="student-checkbox"></label></td>
+                                    <td>张小凡1</td>
+                                    <td>云南师大附中金牛</td>
+                                    <td>初三</td>
+                                    <td>五班</td>
+                                    <td>张三</td>
+                                    <td>18181356512</td>
+                                    <td class="noExl">
+                                        <a href="javascript:void(0)" class="btn btn-default query-student-info" data-id="9" onclick="query_student_info(this)">详情</a>
+                                        <button class="btn btn-default btn-remove" data-id="8" onclick="removeTR(this)">删除</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="noExl"><input type="checkbox" class="hidden" id="checkbox9"><label for="checkbox9" class="student-checkbox"></label></td>
+                                    <td>张小凡1</td>
+                                    <td>云南师大附中金牛</td>
+                                    <td>初三</td>
+                                    <td>五班</td>
+                                    <td>张三</td>
+                                    <td>18181356512</td>
+                                    <td class="noExl">
+                                        <button class="btn btn-default query-student-info" data-id="10" onclick="query_student_info(this)">详情</button>
+                                        <button class="btn btn-default btn-remove" data-id="9" onclick="removeTR(this)">删除</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                            <tr class="text-left last-tr noExl">
+                                <td colspan="8">
+                                    <label for="check-all">
+                                        <input type="checkbox"   name="1" class="mr5 margin-left check-all hidden" id="check-all">
+                                        <label for="check-all" class="student-checkbox mr5 margin-left"></label>全选
+                                    </label>
+                                    <span class="separator"></span>
+                                    <label for="ctrl-shift">
+                                        <input type="checkbox" name="1" class="mr5 ctrl-shift hidden" id="ctrl-shift">
+                                        <label for="ctrl-shift" class="student-checkbox mr5"></label>反选
+                                    </label>
+                                    <span class="separator"></span>
+                                    <a href="javascript:void(0)" class="btn btn-default mr10 batch-remove"><i class="iconfont icon-close mr5"></i>批量删除</a>
+                                    <a href="javascript:void(0)" class="btn btn-default"><i class="iconfont icon-email mr5"></i>发送短信</a>
+                                </td>
+                            </tr>
+                            </tfoot>
+                        </table>
+                        <div class="page pull-right" id="page">
+                            <span class="mr5 fz14">1 / 36</span>
+                            <a href="#" class="btn btn-default mr5 ml5"><i class="icon icon-right"></i></a>
+                            <input type="text" class="inp mr5 ml5">
+                            <a href="#" class="btn btn-default">跳转</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--查看学生信息弹窗-->
+<div id="student-info-popup" class="rcpopup student-info-popup" style="display: none;">
+    <div class="rcpopup-title"><h2>学员信息</h2></div>
+    <div class="rcpopup-content">
+        <div class="student-img">
+            <img src="images/score_program_list1.jpg" alt="">
+        </div>
+            <table class="fz14">
+                <tbody>
+                <tr>
+                    <td>所属学校：<span class="student-info-msg">云南师大附中</span></td>
+                    <td>学生姓名：<span class="student-info-msg">张小凡</span></td>
+                    <td>家长：<span class="student-info-msg">李金珂</span></td>
+                </tr>
+                <tr>
+                    <td>年级：<span class="student-info-msg">高三</span></td>
+                    <td>班级：<span class="student-info-msg">五班</span></td>
+                    <td>性别：<span class="student-info-msg">女</span></td>
+                </tr>
+                <tr>
+                    <td>出生年月：<span class="student-info-msg">1998年12月18日</span></td>
+                    <td>家庭住址：<span class="student-info-msg">成都市环球中心E2 2-1-705</span></td>
+                    <td>联系电话：<span class="student-info-msg">18181356512</span></td>
+                </tr>
+                <tr>
+                    <td>班主任：<span class="student-info-msg">岳云鹏</span></td>
+                </tr>
+                </tbody>
+            </table>
+    </div>
+</div>
+<!--添加学生弹窗-->
+<div id="add-student-popup" class="rcpopup add-student-popup" style="display: none;">
+    <div class="rcpopup-title"><h2>新增学员</h2></div>
+    <div class="rcpopup-content">
+        <form action="#" method="#" name="add-student-form">
+            <table>
+                <tbody class="add-student-tbody">
+                <tr>
+                    <td>
+                        <span>所读学校： </span>
+                        <select name="select-school"  class="inp num-font">
+                            <option value="">云南师大附中</option>
+                            <option value="">云南师大附中</option>
+                            <option value="">云南师大附中</option>
+                            <option value="">云南师大附中</option>
+                        </select>
+                    </td>
+                    <td>
+                        <span>学生姓名：</span>
+                        <input type="text" class="inp" name="name" id="name" placeholder="学生姓名" isCN="true"maxlength="7" required="true">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span>年级： </span>
+                        <select name="select-nianji" class="inp num-font">
+                            <option value="">一年级</option>
+                            <option value="">二年级</option>
+                            <option value="">三年级</option>
+                            <option value="">四年级</option>
+                            <option value="">五年级</option>
+                            <option value="">六年级</option>
+                        </select>
+                    </td>
+                    <td>
+                        <span>班级： </span>
+                        <select name="select-class" class="inp num-font">
+                            <option value="">一班</option>
+                            <option value="">二班</option>
+                            <option value="">三班</option>
+                            <option value="">四班</option>
+                            <option value="">五班</option>
+                            <option value="">六班</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span>性别： </span>
+                        <select name="select-sex" class="inp num-font">
+                            <option value="">男</option>
+                            <option value="">女</option>
+                        </select>
+                    </td>
+                    <td>
+                        <span>出生年月： </span>
+                        <input type="date" class="inp" name="dateISO" id="dateISO" placeholder="出生年月"  dateISO="true" required="true">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span>家庭住址： </span>
+                        <input type="text" class="inp" name="address" id="address" placeholder="请输入家庭住址" required="true">
+                    </td>
+                    <td>
+                        <span>家长姓名： </span>
+                        <input type="text" class="inp" name="parentName" id="parentName" placeholder="父母姓名" isCN="true" maxlength="7" required="true">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span>联系电话： </span>
+                        <input type="text" class="inp" name="mobile" id="mobile" placeholder="请输入常用的手机或座机" mobileORtel="true" required="true">
+                    </td>
+                    <td>
+                        <span>班主任： </span>
+                        <select name="class-teacher" class="inp num-font">
+                            <option value="">老王</option>
+                            <option value="">老张</option>
+                            <option value="">小珂</option>
+                            <option value="">小芳</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span>照片</span>
+                        <div class="photo-box text-center">
+                            选择照片
+                        </div>
+                        <button type="button" class="btn btn-default ml5 btn-select-file">选择</button>
+                        <input type="file" name="photo" id="photo" class="hidden btn-file">
+                    </td>
+                </tr>
+                </tbody>
+                <tfoot>
+                <tr class="text-center">
+                    <td colspan="2">
+                        <button type="submit" class="btn btn-info add-student-save" >保存</button>
+                    </td>
+                </tr>
+                </tfoot>
+            </table>
+        </form>
+    </div>
+</div>
+</body>
+<script src="newJs/jquery-1.11.3.js"></script>
+<script src="newJs/script.js"></script>
+<script src="newJs/LjkUpLoad.js"></script>
+<script src="newJs/jquery.table2excel.min.js"></script>
+<script src="newJs/jquery.validate.min.js"></script>
+<script src="newJs/validate.config.js"></script>
+<script>
+    //单个删除
+    function removeTR( btn ){
+        var $this = $(btn),
+                $id = $this.data('id'),          //当前 id
+                rc ;
+        rcConfirm('确定要删除吗?',function( index ){
+            if( index == 1 ){
+                $.ajax({
+                    url:"",
+                    type:"post",
+                    data:{'id':$id},
+                    dataType:"json",
+                    cache:false,
+                    beforeSend:function(){
+                        rc = new rcLoading('处理中...');
+                    },
+                    success:function( data ){
+                        rc.remove();
+                        rcAlert('删除成功',true,function(){
+                            $this.parent().parent().remove();
+                        });
+                    },
+                    error:function(){
+                        rc.remove();
+                        rcAlert('删除失败',false);
+                    }
+
+                });
+            }
+        },{'确定':'btn-primary','取消':'btn-cancel'})
+    }
+    //学生详细信息
+    function query_student_info( btn ) {
+        var $student_info_pupup = $("#student-info-popup"),
+                $this = $(btn),
+                $id = $this.data('id'),
+                rc;
+        var student_info_Array = [];
+        $.ajax({
+            url: "",
+            type: "post",
+            data: {id: $id},
+            dataType: "json",
+            cache: false,
+            beforeSend: function () {
+                rc = new rcLoading('查询中,请稍后...');
+            },
+            success: function (data) {
+                rc.remove();
+                for (var i in data) {
+                    student_info_Array.push(data[i]);            //遍历当前学生信息
+                }
+                var $student_info_msg = $student_info_pupup.find(".student-info-msg");
+                $student_info_msg.each(function (i) {
+                    var $this = $(this);
+                    $this.html(student_info_Array[i]);
+                });
+                $student_info_pupup.rcPopup('show', {width: 1169, height: 590})
+            },
+            error: function () {
+                rc.remove();
+                rcAlert('查询失败',false);
+            }
+        });
+    }
+    //模糊查询
+    function search_student( val ){
+        var rc,
+            $student_tbody = $(".student-tbody");
+        $.ajax({
+            url:'',
+            type:"post",
+            data:{val:val},
+            dataType:"json",
+            cache:false,
+            beforeSend:function(){
+                rc = new rcLoading('搜索中,请稍后');
+            },
+            success:function( data ){
+                rc.remove();
+            },
+            error:function(){
+                rc.remove();
+                var $tr ="";
+                for( var i=0; i<3; i++){
+                    $tr += "<tr>" +
+                            "<td>" +
+                            "<input type='checkbox' class='hidden' id='searchCheckBox"+i+"'><label for='searchCheckBox"+i+"' class='student-checkbox'></label></td>" +
+                            "<td>"+val+"</td>" +
+                            "<td>"+val+"</td>" +
+                            "<td>"+val+"</td>" +
+                            "<td>"+val+"</td>" +
+                            "<td>"+val+"</td>" +
+                            "<td>"+val+"</td>" +
+                            "<td>" +
+                            "<a href='javascript:void(0)' class='btn btn-default' onclick='query_student_info(this)'>详情</a> " +
+                            "<button class='btn btn-default btn-remove' data-id='7' onclick='removeTR(this)'>删除</button>" +
+                            "</td>" +
+                            "</tr>";
+                }
+                $student_tbody.html( $tr);
+            }
+        })
+    }
+    $(function() {
+        var $student_table = $("#student-table>table");        //学生信息表格
+        var $check_all = $student_table.find('.check-all'),    //全选
+            $ctrl_shift = $student_table.find(".ctrl-shift"),  //反选
+            $checkBox = $student_table.find('td>input');         //单选框
+        //表格导出成excel表
+        $(".btn-export-excel").click(function(){
+            rcConfirm('确定导出为Excel表吗?',function( index ){
+                if( index== 1){
+                    $student_table.find("tr>td.noExl").remove();
+                    $student_table.table2excel({
+                        exclude: ".noExl",
+                        name: "RCZB",
+                        filename: "睿创智播学生信息表",
+                        exclude_img: true,
+                        exclude_links: true,
+                        exclude_inputs: false
+                    });
+                    rcAlert('导出成功',true);
+                    window.location.reload();
+                }
+            },{'确定':'btn-primary','取消':'btn-cancel'})
+
+        });
+
+        //显示学生照片
+        var ljkUpLoad = new LjkUpload();
+        ljkUpLoad.showImage({
+            fileSelectBtn: $(".btn-select-file,.photo-box"),
+            fileBtn: $(".btn-file"),
+            showEle: $(".photo-box"),
+            isImage: true,
+            maxSize: 1024
+        });
+        //单选
+        $checkBox.on('change', function () {
+            var $this = $(this);
+            var isChecked = $this.prop('checked');
+            if (isChecked === true) {
+                $this.parent().parent().addClass('bg-grey');
+            } else {
+                $this.parent().parent().removeClass('bg-grey');
+            }
+        });
+
+        //全选
+        $check_all.on("click", function () {
+            var _this_ = $(this);
+            if (_this_.hasClass('all')) {
+                _this_.removeClass('all');
+                $student_table.find('td>input').each(function () {
+                    var $this = $(this);
+                    $this.get(0).checked = false;
+                    $checkBox.change();
+                });
+                return
+            }
+            _this_.addClass('all');
+            $student_table.find('td>input').each(function () {
+                var $this = $(this);
+                $this.get(0).checked = true;
+                $checkBox.change();
+            })
+        });
+
+        //反选
+        $ctrl_shift.on('click', function () {
+            $student_table.find('td>input').each(function () {
+                var $this = $(this);
+                if ($this.is(':checked')) {
+                    $this.get(0).checked = false;
+                } else {
+                    $this.get(0).checked = true;
+                }
+                $checkBox.change();
+
+            })
+        });
+
+        //批量删除
+        $(".batch-remove").on('click', function () {
+            var ishaveCheck = false,         //判断是否没有选中任何列表项
+                    $idArray = [];
+            $student_table.find('td>input').each(function () {
+                var $this = $(this);
+                if ($this.prop('checked')) {
+                    ishaveCheck = true;
+                    var $id = $this.parent().siblings().find('.btn-remove').data('id');
+                    $idArray.push($id);
+                }
+            });
+            if (ishaveCheck === false) {
+                return rcAlert('请选择要删除的列表项');
+            }
+
+            rcConfirm('确定要删除吗?', function (index) {
+                var rc;
+                if (index == 1) {
+                    $.ajax({
+                        url: '',
+                        type: "post",
+                        data: {idArray: $idArray},
+                        dataType: "json",
+                        cache: false,
+                        beforeSend: function () {
+                            rc = new rcLoading('处理中...');
+                        },
+                        success: function (data) {
+                            rc.remove();
+                            rcAlert('删除成功', true, function () {
+                                window.location.reload();
+                            });
+                        },
+                        error: function () {
+                            rc.remove();
+                            rcAlert('删除失败', false);
+                        }
+                    })
+                }
+            }, {'确定': 'btn-primary', '取消': 'btn-cancel'})
+        });
+
+        //回车与按键搜索
+        var $inp_search = $('.inp-search');       //搜索框
+        $inp_search.on('keydown', function (e) {
+            var target = e || window.event,
+                    $this = $(this);
+            if (target.keyCode == 13) {                  //回车键
+                var $val = $this.val();
+                search_student($val);
+            }
+        }).next().on('click', function () {          //搜索按钮
+            var $val = $inp_search.val();
+            search_student($val);
+        });
+
+        //添加学员弹窗
+        $(".add-student").on('click', function () {
+            $('.add-student-popup').rcPopup('show', {width: 1169, height: 560})
+        });
+
+        //表格隔行换色
+        $(".add-student-tbody>tr:even").addClass("bg-grey");
+
+        //添加学员表单验证
+        var $add_student_form = $("form[name='add-student-form']");
+        $add_student_form.validate({
+            errorClass: 'v-error',
+            errorElement: 'em',
+            debug: true,
+            highlight: function (element, errorClass) {
+                $(element).parent().addClass(errorClass);
+            },
+            unhighlight: function (element, errorClass) {
+                $(element).parent().removeClass(errorClass);
+            },
+            messages: {
+                name: {
+                    required: "请输入姓名"
+                },
+                address: {
+                    required: "请输入家庭住址"
+                },
+                dateISO: {
+                    required: "请选择出生年月"
+                },
+                parentName: {
+                    required: "请输入父母姓名"
+                },
+                mobile: {
+                    required: "请输入联系电话"
+                }
+
+            },
+            submitHandler: function (form) {
+                var rc;
+                $.ajax({
+                    url: "",
+                    type: "post",
+                    data: $add_student_form.serialize(),
+                    dataType: "json",
+                    cache: false,
+                    beforeSend: function () {
+                        rc = new rcLoading('处理中,请稍后...');
+                    },
+                    success: function (data) {
+                        rc.remove();
+                        rcAlert(data.info ? data.info : '添加成功', true, function () {
+                            window.location.reload();
+                        });
+                    },
+                    error: function () {
+                        rc.remove();
+                        rcAlert('添加失败', false);
+                    }
+                })
+            }
+        })
+
+    });
+
+</script>
+</html>

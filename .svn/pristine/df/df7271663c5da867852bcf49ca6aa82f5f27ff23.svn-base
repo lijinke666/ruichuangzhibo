@@ -1,0 +1,63 @@
+@charset "utf-8";
+//是否为亮色，(分为亮/深色。亮色时hover与active会加深，但深色时会变浅)
+$is-light: false;
+
+/*主色*/
+$main_color: #1ad699;
+/*配色*/
+$ornament_color:#40D2BD;
+/*红色*/
+$danger_color: #e60100;
+/*绿色*/
+$success_color:#3bce83;
+/*一般*/
+$info_color:#2897f9;
+/*蓝色*/
+$main_blue:#70BEFF;
+/*进度条绿色*/
+$progress_bar_color:#26af80;
+/*黄色*/
+$warning_color:#EF9B39;
+/*灰色*/
+$grey_color:#999;
+/*网页背景色*/
+$bg_color: #fdfdfd;
+/*个人中心灰色*/
+$usercenter_grey : #FAFAFA;
+/*个人中心内容背景色*/
+$usercenter_bg_color:#FAFAFA;
+/*边框线颜色*/
+$border_color:#e5e5e5;
+/*文字默认颜色*/
+$font_color:#141414;
+/*链接文字颜色*/
+$a_color:#484848;
+/*已访问链接文字颜色*/
+$a_visited_color: #666;
+/*链接文字hover颜色*/
+$a_hover_color: $main_color;
+/*链接文字active颜色*/
+$a_active_color: $a_color;
+/*主要内容区域宽度*/
+$wrap_width:1169px;
+/*输入框内容文字颜色*/
+$input_value_color:#c7bdb9;
+
+/*=============铵钮=============*/
+
+//默认颜色
+$btn_default: #FFF;
+//主要颜色
+$btn_primary: $main-color;
+//次要颜色
+$btn_ornament:$ornament-color;
+//红色
+$btn_danger:$danger_color;
+//绿色
+$btn_success:$success_color;
+//一般
+$btn_info:$info_color;
+//黄色
+$btn_warning:$warning_color;
+//灰色
+$btn_grey:$grey_color;

@@ -1,0 +1,604 @@
+@charset "utf-8";
+/* Scss Document */
+
+// 引入compass的库 
+@import "compass/css3";
+@import "blueprint/colors";
+@import 'compass/support';
+@import "compass/css3/box";
+
+//引入基础样式
+@import "include/reset.scss";
+@import "include/config.scss";
+@import 'include/base.scss';
+
+
+html,body{ height: 100%;}
+body { background: $bg_color; border:none;  font-family: Arial, 'Microsoft YaHei'; *font-family: 'Microsoft YaHei';  font-size: 12px; line-height: 1.5; color: $font_color;}
+a{text-decoration: none; @extend %transition-03;}
+a:link { color:$a_color;}
+a:visited {color:$a_visited_color; }
+a:hover {  color:$a_hover_color;}
+a:active {  color:$a_active_color;}
+.clearListStyle{margin: 0; padding: 0; list-style: none;    
+    li{ margin: 0; padding: 0; list-style: none;}    
+}
+.none { margin:0;}
+.block{ display: block;}
+
+.pull-left{float: left;}
+.pull-right{float: right;}
+.pull-center{ margin: 0 auto; @extend .clearfix;}
+.text-left{ text-align: left;}
+.text-right{text-align: right;}
+.text-center{text-align: center;}
+
+.fz12{font-size: 12px;}
+.fz14{font-size: 14px;}
+.fz16{font-size: 16px;}
+.fz18{font-size: 18px;}
+.fz20{font-size: 20px;}
+.fz22{font-size: 22px;}
+.fz24{font-size: 24px;}
+
+.color-main{ color: $main_color;}
+.color-ornament{ color: $ornament_color;}
+.color-white{ color: #FFF;}
+.color-default{ color: $font_color;}
+.color-grey2{ color:#6d6d6d !important;}
+.color-grey{ color: $grey_color;}
+.color-danger{ color:$danger_color;}
+.color-success{ color:$success_color;}
+.color-info{ color: $info_color;}
+.color-warning{ color:$warning_color; }
+.normal{ font-weight: 500;}
+.font_normal{ font-style: normal;}
+.bold{ font-weight: bold;}
+.show{ display: block;}
+.hidden{display: none;}
+.mt10{margin-top: 10px;}
+.mt20{margin-top: 20px;}
+.mt30{margin-top: 30px;}
+.mb20{margin-bottom: 20px;}
+.mb10{margin-bottom: 10px;}
+.mb30{margin-bottom: 30px;}
+.mr10{margin-right: 10px; vertical-align: initial;}
+.mr30{margin-right: 30px; vertical-align: initial;}
+.mr5{margin-right: 5px; vertical-align: initial;}
+.mr2{margin-right: 2px; vertical-align: initial}
+.ml10{ margin-left: 10px;}
+.ml5{ margin-left: 5px;}
+.ml2{ margin-left: 2px;}
+.relative{ position: relative;}
+.absolute{ position: absolute;bottom:0;}
+.clear { clear: both;}
+.clearfix { @include clearfix; }
+.ellipsis{@include ellipsis;}
+.ellipsis{@include ellipsis;}
+.ellipsis-2{@include ellipsis-2;}
+
+.num-font { font-family: Tahoma, Geneva, Arial, 'Microsoft YaHei', sans-serif;}
+
+.user-title-font{ font-size: 16px; color:$font_color; font-weight: normal;}   //标题
+.user-title-active{ padding-bottom: 5px;  color: $main_color; border-bottom: 2px solid $main_color;
+  &:link{ color:$main_color}}  //选中
+.import{  color:$danger_color;  margin-right: 5px;
+}
+.initial{ vertical-align: initial}
+//文字选中背景色
+::selection{color:#fff;background:$main_color;}
+::-moz-selection{color:#fff;background:$main_color;}
+//滚动条样式
+::-webkit-scrollbar {
+    width: 12px;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #999;
+    @include border-radius(15px);
+}
+::-webkit-scrollbar-track {
+    background-color: #e5e5e5;
+}
+/*按钮*/
+
+.btn{@include inlineblock; padding: 6px 12px; @include border-radius(3px) ;border-width: 1px; border-style: solid; text-align: center; font-size: 14px; white-space: nowrap; vertical-align: middle; cursor: pointer; @include appearance(none);
+    @extend %transition-03;
+    &:hover{ text-decoration: none;}
+    &:active { @include box-shadow(inset 0 3px 5px rgba(0,0,0,.15)); }
+    &.disabled,&.disabled:visited,&.disabled:hover { background:#DDD; border-color:#AAA; color:#999; cursor:text;}
+    &.btn-sm{padding: 3px 6px; font-size: 12px;
+        &.btn-rounded{ @include border-radius(3px);}
+    }
+    &.btn-lg{padding: 10px 16px; font-size: 18px;
+        &.btn-rounded{ @include border-radius(6px);}
+    }
+    &.btn-rounded{@include border-radius(4px);}    
+    &.btn-border{ background: none;}
+    &.btn-borderless{ background: none; border: none;}
+    
+}
+.btn-default,.btn-default:visited{ background-color: $btn_default; border-color:#E9E9E9; color: $font_color;
+    &:hover{background-color: hovercolor($btn_default, 3%); border-color: #BBB; color:$font_color;}
+    &:active{background-color: hovercolor($btn_default, 8%); border-color: #BBB; color:$font_color;}
+    &.btn-border{  color: $font_color;
+        &:active{ color: $font_color;}
+    }
+}
+.btn-primary{ @include btn($btn_primary,$btn_primary,#FFF);}
+.btn-ornament{ @include btn($btn_ornament,$btn_ornament,#FFF);}
+.btn-info{ @include btn($btn_info,$btn_info,#FFF);}
+.btn-danger{ @include btn($btn_danger,$btn_danger,#FFF);}
+.btn-success{ @include btn($btn_success,$btn_success,#FFF);}
+.btn-warning{ @include btn($btn_warning,$btn_warning,#FFF);}
+.btn-grey{ @include btn($btn_grey,$btn_grey,#FFF);}
+
+
+
+.btn-block {display:block; width: 100%; padding-left: 0; padding-right: 0; box-sizing: border-box;}
+
+
+
+/* 输入框 */
+.inp {min-height: 24px;  border:1px solid #F0F0F0; padding:5px 5px 5px 10px; font-size: inherit;  display: inline-block; background-color:#fff; @extend %transition-03; @extend %radius-2px;}//去掉屎黄色背景@include box-shadow( 0 0 0 1000px #FFF inset)
+.inp-block { display:block; width:100%;}
+.inp-noborder{ border: none;}
+.pagination{
+    margin-top: 35px;
+    padding: 20px 0;
+	a, span{@include inlineblock; padding: 0 15px; border: 1px solid $border_color; line-height: 35px; vertical-align: middle; background:#fff; margin-right: 10px;
+		&:hover{ background-color: #F8F8F8; text-decoration: none;}
+		&.active, &.current { background:$main_color; border-color:$main_color; color:#fff;}
+	}
+}
+
+.col-3{ width: 25%; float: left;}
+.col-4{ width: 33.33%; float: left;}
+.col-6{ width: 50%; float: left;}
+.col-8{ width: 66.66%; float: left;}
+.col-9{ width: 75%; float: left;}
+.col-12{ width: 100%; float: left;}
+
+/* 分隔符 */
+.separator { margin:0 10px; color:#e5e5e5;}
+
+/* 弹出层 */
+.modal{width: 100%; height: 100%; display: none; position: fixed; left: 0; top: 0; z-index: 101;
+    .btn-close{ position: absolute; top: 6px;  right: 15px; color: #CCC; cursor:pointer; font-size: 24px;
+        @extend %transition-05;
+        &:hover{ color: $main_color;}
+    }
+}
+.mask{width: 100%; height: 100%; background-color: rgba(0,0,0,.3);        filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#4c000000,endColorstr=#4c000000);}
+.modal-wrap{
+    width: 710px; height: 510px; margin:auto; background-color: #FFF; position: absolute; left: 0; top: 0; right: 0; bottom: 0; z-index: 100; @include box-shadow(1px 1px 50px rgba(0,0,0,.3));
+    @include border-radius(2px);
+    .modal-side{ width: 164px; height: 100%; float: left; background-color: #e05a3f; overflow: hidden; position: relative;
+    }
+    .modal-r{ width: 526px; padding: 10px; float: right;}
+    
+}
+
+.ctrl-modal{
+    width: 500px; height: 290px;  background-color: #FFF; position: absolute; left:0;right:0;bottom:0;top:0; margin:auto;z-index: 100;
+    @include box-shadow(1px 1px 50px rgba(0,0,0,.3));
+    @extend %scale0;
+    @include animation(Popup-animate .35s .1s ease-in-out  forwards );
+    .modal-title{ padding: 14px 20px; background-color: #f5f5f5;
+        h2{ font-weight: 500; color: #606060; font-size: 20px;}
+    }
+    h1{ font-size: 26px; color: #6d6d6d; text-align: center; font-weight: 500;}
+    table{width: 100%; height:100%; margin-top: -28px; border: none; text-align: center;}
+    td{ border: none;  padding: 0; vertical-align: middle;}
+    .btnbox{height: 96px;}
+    .btn{width: 148px; height: 42px; margin: 0 6px;  font-size: 20px; line-height: 42px; @include text-shadow(1px 1px 2px rgba(0,0,0,.3))}
+    .btn-cancel{ background-color: #d0c2c0; color: #FFF;}
+    .gou{ color: $main_color; font-size: 68px; line-height: 1rem;}
+    .true{ color: $main_color; font-size: 20px;}
+    .cha{ color: $danger_color; font-size: 68px; line-height: 1rem;}
+    .false{ color: $danger_color; font-size: 20px;}
+    .tanhao{ color:#fa784b; font-size: 68px; line-height: 1rem;}
+}
+@include keyframes(Popup-animate){
+    0%{
+        @include opacity(.75);
+        @include transform(scale(1) translateY(-50px));
+    }
+    100%{
+        @include opacity(1);
+        @include transform(scale(1) translateY(0px));
+    }
+}
+.confirm-table {
+    table{
+        margin-top: 0 !important;
+    }
+}
+.modalcont{width: 420px;
+    .modalform{width: 324px; margin: 0 auto;}
+    .modal-header{ margin-top: 30px; font-size: 18px; color: $main_color; font-weight: bold;}
+    fieldset{width: 100%; height: 42px; margin-top: 16px;}
+    .fieldname{width: 65px; height: 40px; float: left; margin-right: -1px; padding: 0 10px; background-color: #f9f9f9; border: 1px solid $border_color; line-height: 40px; color: #949494; font-size: 14px;}
+    .fieldinp{width: 237px;  height: 42px;   padding: 0 10px; box-sizing: border-box;  background-color: #FFF; border: 1px solid $border_color; float: left; position: relative;  
+        &.full{width: 100%;}
+        select{ width: 100%; height: 42px; padding: 0; border: none; background: none; font-size: 14px;}
+        input{ width: 100%; height:40px; border: none; padding: 0; line-height: 40px; font-size: 14px;}
+        &.yzm{ padding-right:0;
+            input{ width: 120px;}
+        }
+        .Validform_checktip{ position: absolute; left: 0; top: 40px; color: #F00; font-size: 12px;}
+        &.imgyz{width: 130px;
+            input{ width: 100%; padding: 0;}
+        }        
+     }
+     .imgyanzheng{width: 94px; height: 40px; border: 1px solid #e7dddc; float: right;}     
+    .btn-yanzheng{ width: 90px;  height: 32px; float: right; margin: 4px 4px 0 0; background: #ccaca6; border: none; color: #FFF;}
+    .btn-submit{height: 42px; padding: 0;}
+    
+}
+/* popup */
+.rcpopup {
+    .rcpopup-title { border-bottom:1px solid $border_color; padding:10px 20px;
+        h2 { font-size:20px; font-weight:500;}
+    }
+    .rcpopup-content { margin:35px 40px;}
+}
+//加载动画
+.loading{
+    width: 130px;
+    height: 130px;
+    position: absolute;
+    left:0;
+    top:0;
+    bottom:0;
+    right:0;
+    margin: auto;
+    p{
+        @include text-shadow(1px 2px 1px rgba(0,0,0,.3))
+    }
+    .sk-circle {
+        $circleCount: 12;
+        $animationDuration: 1.2s;
+        width: 130px;
+        height: 130px;
+        position: relative;
+        .sk-child {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        .sk-child:before {
+            content: '';
+            display: block;
+            margin: 0 auto;
+            width: 16px;
+            height: 16px;
+            background-color: #FFF;
+            @extend %radius-100p;
+            @include animation (sk-circleBounceDelay $animationDuration infinite ease-in-out both);
+        }
+
+        @for $i from 2 through $circleCount {
+            .sk-circle#{$i} { @include transform( rotate(360deg / $circleCount * ($i - 1)) ); }
+        }
+
+        @for $i from 2 through $circleCount {
+            .sk-circle#{$i}:before { @include animation-delay( - $animationDuration + $animationDuration / $circleCount * ($i - 1) ); }
+        }
+    }
+}
+@include keyframes(sk-circleBounceDelay){
+    0%, 80%, 100% { @include transform(scale(0)) }
+    40% { @include transform(scale(1.0)) }
+}
+.justify_fix { display: inline-block; width: 100%; height: 0; overflow: hidden; }
+.container{ width: $wrap_width; margin: 0 auto; @include clearfix;}
+.top{ height: 48px; background-color: #FFF; line-height: 48px; color:#666; border-bottom:1px solid #efefef; font-size:14px; position: relative;z-index: 100;
+	.pull-left {
+        line-height:48px;
+        .separator{
+            margin: 0 20px;
+        }
+    }
+    .tel400{ font-size: 14px; font-weight:600;}
+    .icon{ font-size: 20px; margin-top:-3px; margin-right: 10px;}
+    .icon-tel { width: 20px; height: 20px; line-height: 20px; text-align: center; display: inline-block; font-size: 16px; }
+    a{ color:#666;
+       &:hover{
+           color:$main_color;
+       }
+    }
+	.icon-comments {
+        font-size: 17px;
+        vertical-align: sub;
+		&:hover { color:$main_color;}
+	}
+	.icon-weiixn {  position:relative;
+		&:hover { color:$success_color;}
+		//&:hover span { display:block;}
+		//span { display:none; position:absolute; left:-62px; top:30px; background:#fff; padding:5px; border:1px solid #ddd; @include box-shadow(0px 10px 30px rgba(0,0,0,.1));
+		//	&:before { position: absolute; content: ""; overflow: hidden; border: 8px solid transparent; border-bottom-color: #ddd; margin-top: -16px; margin-right:-4px; top: 0; right: 50%;}
+		//}
+		//img { width:140px;}
+	}
+    .top-winxin{
+        position: relative;
+        &:hover{
+            .top-winxinCode{
+                @include transform(scale(1.0));
+                display:block\9;
+            }
+        }
+    }
+    .top-winxinCode{
+        position: absolute;
+        padding: 5px;
+        border: 1px solid $border_color;
+        @extend %radius-2px;
+        @include box-shadow(0 0 2px 1px rgba(0,0,0,.1));
+        background: #fff;
+        top: 30px;
+        left: -28px;
+        @extend %transition-03;
+        @include transform-origin(top,center);
+        @include transform(scale(0));
+        display:none\9;
+        z-index: 999;
+        &:before{
+            content: '';
+            width: 0;
+            height: 0;
+            border:10px solid transparent;
+            border-bottom-color: rgba(247, 247, 247, 0.7);
+            position: absolute;
+            top:-20px;
+            left:30%;
+            margin-left: -10px;
+        }
+    }
+    .top-login-btn{
+        a{
+            min-width: 70px;
+            height: 28px;
+            line-height: 28px;
+            padding: 0 8px;
+            color: #6c6c6c;
+            border:none;
+            background-color: #f2f2f2;
+            &:hover{
+                background-color: darken(#f2f2f2,2%);
+            }
+        }
+    }
+}
+//.usercenter-header{
+//    background-color: $main_color !important;
+//    color:#FFF;
+//}
+.header{height: 96px; background: #FFF;
+    .logo{ margin-top: 15px;}
+    .loginreg{ margin-top: 34px;
+        .btn{width: 80px; height: 26px; padding: 0; line-height: 26px; margin-left: 10px;}
+    }
+    .nav{
+        position: relative;
+        margin: 33px 0 0 120px;
+        li{ padding: 0 35px; display: inline-block; line-height: 30px;
+            &.active{
+                a{color: $main_color;}
+            }
+            &.last-padding{
+                padding: 0 18px 0 35px;
+            }
+            &.clear-padding{
+                padding: 0;
+                color:#666;
+            }
+        }
+        .nav-move-bar{
+            position: absolute;
+            width: 0;
+            height: 3px;
+            background-color:$main_color;
+            bottom:-33px;
+            left:0;
+            @extend %transition-03;
+        }
+        a{@include a-color(#333,#333,$main_color,#333); display: block;}
+    }
+
+}
+.footer{
+    background-color: #393939;
+    padding: 50px 0;
+    border-top: 3px solid $main_color;
+    .flinks{
+        color:#FFF;
+        margin-bottom: 15px;
+        a{
+            margin-right:20px;
+            white-space:nowrap;
+            color:#989898;
+            @include text-shadow(1px 1px 2px rgba(0,0,0,0.2));
+            font-size: 13px;
+            &:link{
+                color:#989898;
+            }
+            &:hover{
+                color:$main_color;
+            }
+        }
+        .contact-us{
+            span{
+                position: relative;
+                display: inline-block;
+                width: 30px;
+                height: 30px;
+                background-color: #232323;
+                color:#989898;
+                cursor: pointer;
+                @extend %radius-100p;
+                text-align: center;
+                line-height:30px;
+                vertical-align: middle;
+                margin-left: 8px;
+                @include text-shadow(1px 1px 2px rgba(0,0,0,0.2));
+                @extend %transition-03;
+                a{
+                    display: block;
+                    margin: 0 auto;
+                    &:hover{
+                        color:#FFF;
+                    }
+                }
+                &:hover{
+                    background-color: $main_color;
+                    color:#FFF;
+                    .tips{
+                        @include transform(scale(1));
+                        display:block\9;
+                    }
+                }
+                .tips{
+                    position: absolute;
+                    width: 200px;
+                    height: 25px;
+                    @include box-sizing(border-box);
+                    line-height:25px;
+                    padding: 0 6px;
+                    @include border-radius(30px);
+                    @include text-shadow(1px 1px 2px rgba(0,0,0,0.2));
+                    color:#FFF;
+                    background-color: $main_color;
+                    top:-38px;
+                    left:50%;
+                    margin-left: -100px;
+                    @include transform(scale(0));
+                    display:none\9;
+                    @extend %transition-03;
+                    @include transform-origin(bottom,center);
+                    font-style: normal;
+                    &:before{
+                        content: "";
+                        position: absolute;
+                        border:7px solid transparent;
+                        border-top-color:$main_color;
+                        left:50%;
+                        bottom:-13px;
+                        margin-left: -7px;
+                    }
+                }
+            }
+        }
+    }
+    .copyright{
+        color:#989898;
+        font-size: 13px;
+        span{
+            margin:  15px;
+        }
+    }
+}
+
+//回到顶部
+$floatBarBox_height:70px;
+.floatBar{
+    position: fixed;
+    right:0;
+    bottom:200px;
+    z-index: 9999;
+    background-color:#FFF;
+    @include box-shadow( -1px 1px 3px 3px #f3f3f3);
+    .weixin:hover{
+        ~ .floatBar-weixin{
+            @include transform(scale(1));
+            display: block\9;
+        }
+    }
+    .phone:hover{
+        ~ .floatBar-phone{
+            @include transform(scale(1));
+            display: block\9;
+        }
+    }
+    .floatBar-weixin,.floatBar-phone{
+        position: absolute;
+        background-color: #FFF;
+        @extend %transition-03;
+        @include transform(scale(0));
+        display: none\9;
+        @include transform-origin(right)
+    }
+    .floatBar-weixin{
+        @include box-shadow( 0px 0px 1px 3px #f3f3f3);
+        top:-35px;
+        padding: 8px;
+        left:-198px;
+        &:before{
+            content: "";
+            width: 0;
+            height: 0;
+            border:15px solid transparent;
+            border-left-color:#FFF;
+            position: absolute;
+            left: 177px;
+            bottom: 20px;
+        }
+    }
+    .floatBar-phone{
+        top:7px;
+        left: -277px;
+        padding: 12px;
+        @include box-shadow( 0px 0px 1px 3px #f3f3f3);
+        &:before{
+            content: "";
+            width: 0;
+            height: 0;
+            border:15px solid transparent;
+            border-left-color:#FFF;
+            position: absolute;
+            left: 241px;
+            bottom: 11px;
+        }
+        i{
+            vertical-align: middle;
+        }
+    }
+    .floatBar-box{
+        text-align: center;
+        width:$floatBarBox_height;
+        height: $floatBarBox_height;
+        line-height:$floatBarBox_height;
+        border-bottom:1px solid #edf1f2;
+        cursor: pointer;
+        overflow: hidden;
+        position: relative;
+        &:hover{
+            .first-box{
+                margin-top: -$floatBarBox_height;
+            }
+        }
+
+        .first-box,.hidden-box{
+            width: $floatBarBox_height;
+            height: $floatBarBox_height;
+            @extend %transition-03;
+        }
+        .first-box{
+            i{
+                font-style: normal;
+                font-size: 24px;
+            }
+        }
+        .hidden-box{
+            background-color: $main_color;
+            color:#FFF;
+            @include box-shadow(1px 2px 2px rgba(0,0,0,.2));
+        }
+
+
+    }
+}
+

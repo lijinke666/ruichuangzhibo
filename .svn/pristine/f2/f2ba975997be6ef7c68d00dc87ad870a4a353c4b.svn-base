@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="renderer" content="webkit">
+    <title>移动APP</title>
+    <link rel="stylesheet" href="fonts/font.css" />
+    <link rel="stylesheet" href="newCss/public.css" />
+    <link rel="stylesheet" href="newCss/style.css">
+    <!--[if lt IE 9]>
+    <script src="newJs/html5.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<div class="top">
+    <div class="container">
+        <div class="pull-left">
+            <span class="icon icon-tel color-success"></span>服务热线：<span class="tel400">400-123-45678</span>
+            <span class="separator">|</span>
+            <a href="javascript:void(0)" class="top-winxin">
+                <span class="icon icon-weiixn color-success"></span>微信
+                <div class="top-winxinCode">
+                    <img src="images/weixin.jpg" alt="">
+                </div>
+            </a>
+            <span class="separator">|</span>
+            <span class="icon icon-comments color-success"></span><a href="#">在线咨询</a></div>
+        <div class="pull-right top-login-btn">
+            <a href="login.html" class="btn">登录</a>
+        </div>
+    </div>
+</div>
+<!--头部-->
+<header class="header">
+    <div class="container">
+        <a href="index.html" class="pull-left logo"><img src="images/logo.png"></a>
+        <nav class="pull-right nav fz14">
+            <ul class="clearListStyle nav-move">
+                <li class=""><a href="index.html">首页</a></li>
+                <li class=""><a href="#">视频中心</a></li>
+                <li class=""><a href="#">学习圈</a></li>
+                <li class=""><a href="#">课程中心</a></li>
+                <li class="active last-padding"><a href="#">移动APP</a></li>
+                <b class="nav-move-bar"></b>
+            </ul>
+        </nav>
+    </div>
+</header>
+<!--头部end-->
+<!--51趣学移动客户端-->
+<div class="app-banner">
+    <div class="container">
+        <div class="pull-left app-banner-image banner-item-h2-animate">
+            <img src="images/app_banner_mobile.png" alt="">
+        </div>
+        <div class="pull-right app-banner-info ">
+            <h1 class="normal color-white banner-item-title-animateDown"><img src="images/app_banner_h1.png" alt=""></h1>
+            <ul class="">
+                <li class="clearfix android banner-item-title-animateUp">
+                    <a href="#">
+                        <div class="pull-left logo"><img src="images/app_banner_android.png" alt=""></div>
+                        <div class=>
+                            <p class="none fz22">Android版下载</p>
+                            <span class="fz14">当前版本：1.1.0</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="clearfix banner-item-title-animateUp">
+                    <a href="#">
+                        <div class="pull-left logo"><img src="images/app_banner_ios.png" alt=""></div>
+                        <div>
+                            <p class="none fz22">iPhone版下载</p>
+                            <span class="fz14">当前版本：1.1.0</span>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!--51趣学移动客户端end-->
+<!--专业在线中小学培训机构-->
+<div class="app-train">
+    <div class="container">
+        <div class="pull-left app-train-image">
+            <img src="images/app_mobile1.png" alt="">
+        </div>
+        <div class="pull-left app-train-info">
+            <div>
+                <img src="images/app_mobile1_info.png" alt="">
+            </div>
+            <div class="link">
+                <a href="#" class="fz16">了解详情</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!--专业在线中小学培训机构end-->
+<!--视频课程-->
+<div class="app-video clearfix">
+    <div class="container">
+        <div class="pull-left app-video-image">
+            <div>
+                <img src="images/app_video_info.png" alt="">
+            </div>
+            <div class="link">
+                <a href="#" class="fz16">了解详情</a>
+            </div>
+        </div>
+        <div class="pull-left app-video-info">
+            <ul class="clearListStyle">
+                <li class="item1 "><img src="images/app_video_image1.png" alt=""></li>
+                <li class="item2"><img src="images/app_video_image2.png" alt=""></li>
+                <li class="item3"><img src="images/app_video_image3.png" alt=""></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!--视频课程end-->
+<!--在线1对1课程-->
+<div class="app-class">
+    <div class="container">
+        <ul class=" app-class-image">
+            <li class="pull-left item1">
+                <img src="images/app_class_image1.png" alt="">
+            </li>
+            <li class="pull-left item2">
+                <img src="images/app_class_image2.png" alt="">
+            </li>
+            <li class="pull-left item3">
+                <img src="images/app_class_image3.png" alt="">
+            </li>
+        </ul>
+        <div class="app-class-info">
+            <img src="images/app_class_info.png" alt="">
+        </div>
+    </div>
+</div>
+<!--在线1对1课程end-->
+<!--移动校园首页-->
+<div class="app-school">
+    <div class="container">
+        <div class="pull-left app-school-info">
+            <img src="images/app_school_info.png" alt="">
+        </div>
+        <div class="pull-left app-school-image">
+            <img src="images/app_school_image.png" alt="">
+        </div>
+    </div>
+</div>
+<!--移动校园首页end-->
+<!--家校互动-->
+<div class="app-interaction">
+    <div class="container">
+        <div class="pull-left app-interaction-image">
+            <img src="images/app_interaction_image.png" alt="">
+        </div>
+        <div class="pull-left app-interaction-info">
+            <img src="images/app_interaction_info.png" alt="">
+        </div>
+    </div>
+</div>
+<!--家校互动end-->
+<!--底部-->
+<footer class="footer clearfix">
+    <div class="container flinks">
+        <a href="#" target="_blank">趣学优势</a>
+        <a href="#" target="_blank">趣学名师</a>
+        <a href="#" target="_blank">趣学成就</a>
+        <a href="#" target="_blank">公开课</a>
+        <a href="#" target="_blank">题库</a>
+        <a href="#" target="_blank">加入我们</a>
+        <div class="pull-right contact-us">
+            <span><a href="#"><i class="iconfont icon-tingli"></i><i class="tips">在线客服</i></a></span>
+            <span><i class="icon-home"></i><i class="tips">成都睿创智播科技有限公司</i></span>
+            <span><i class="icon-map"></i><i class="tips">成都市环球中心E2</i></span>
+        </div>
+    </div>
+    <div class="container copyright">
+        Copyright © 2015-2016 <span>www.ruichuangzhibo.com </span><span>商务合作联系:张三 </span>邮箱:ruichuangzhibo@126.com
+    </div>
+</footer>
+
+<!--回到顶部-->
+<div class="floatBar">
+    <div class="floatBar-box phone">
+        <div class="first-box"><i class="icon icon-tel"></i></div>
+        <div class="hidden-box fz14">客服电话</div>
+    </div>
+    <div class="floatBar-box weixin">
+        <div class="first-box"><i class="icon icon-weiixn"></i></div>
+        <div class="hidden-box fz14">微信</div>
+    </div>
+    <div class="floatBar-box backTop hidden">
+        <div class="first-box fz16"><i class="icon icon-up"></i></div>
+        <div class="hidden-box fz14">回到顶部</div>
+    </div>
+    <div class="floatBar-phone fz18 color-main"><i class="icon-tel"></i>客服热线：18181356512</div>
+    <div class="floatBar-weixin">
+        <img src="images/weixin.jpg" alt="">
+    </div>
+</div>
+</body>
+<script src="newJs/jquery-1.11.3.js"></script>
+<script src="newJs/script.js"></script>
+<script>
+    //标题进入动画
+    function add_title_animate(ele, animateName) {
+        ele.addClass(animateName);
+    }
+    $(function(){
+        var $win = $(window);
+        $win.on("scroll",function(){
+            var $scrollTop = $(document).scrollTop(),
+                $documentHeight = $(document).height();
+            if($scrollTop >= $documentHeight){
+                $win.off("scroll");
+            }
+            var $app_train = $(".app-train"),
+                $app_video = $(".app-video"),
+                $app_class = $(".app-class"),
+                $app_school= $(".app-school"),
+                $app_interaction = $(".app-interaction");
+
+            var $app_trainOffsetTop =  $app_train.offset().top,
+                $app_videoOffsetTop = $app_video.offset().top,
+                $app_classOffsetTop = $app_class.offset().top,
+                $app_schoolOffsetTop = $app_school.offset().top,
+                $app_interactionOffsetTop = $app_interaction.offset().top;
+
+            if( $scrollTop >= $app_trainOffsetTop - 300 ){
+                add_title_animate($app_train.find(".app-train-image"),"interaction-img1-animate");
+                add_title_animate($app_train.find(".app-train-info"),"banner-item-title-animateDown")
+            }
+
+            if( $scrollTop >= $app_videoOffsetTop - 350 ){
+                add_title_animate($app_video.find(".app-video-image"),"banner-item-title-animateDown");
+                var $app_videoLiSize = $app_video.find(".app-video-info li");
+                $.each($app_videoLiSize,function(i){
+                    var $this = $(this);
+                    add_title_animate($this,"app-video-info-animate"+(i+1))
+                })
+            }
+
+            if( $scrollTop >= $app_classOffsetTop - 450 ){
+                add_title_animate($app_class.find(".app-class-info"),"banner-item-p-animate");
+                var $app_classLiSize = $app_class.find(".app-class-image>li");
+                $.each($app_classLiSize,function(i){
+                    var $this = $(this);
+                    add_title_animate($this,"banner-item-title-animateUp"+(i+1))
+                })
+            }
+
+            if( $scrollTop >= $app_schoolOffsetTop - 300 ){
+                add_title_animate($app_school.find(".app-school-info"),"banner-item-title-animateDown");
+                add_title_animate($app_school.find(".app-school-image"),"banner-item-p-animate")
+            }
+
+            if( $scrollTop >= $app_interactionOffsetTop - 350 ){
+                add_title_animate($app_interaction.find(".app-interaction-image"),"banner-item-title-animateDown");
+                add_title_animate($app_interaction.find(".app-interaction-info"),"banner-item-title-animateUp");
+            }
+        })
+    })
+</script>
+</html>

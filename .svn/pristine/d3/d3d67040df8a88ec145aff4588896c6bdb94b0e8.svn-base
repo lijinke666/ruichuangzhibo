@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="renderer" content="webkit">
+    <title>班级管理</title>
+    <link rel="stylesheet" href="fonts/font.css" />
+    <link rel="stylesheet" href="newCss/public.css" />
+    <link rel="stylesheet" href="newCss/user_center.css">
+    <!--[if lt IE 9]>
+    <script src="newJs/html5.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<div class="top">
+    <div class="container">
+        <div class="pull-left">
+            <span class="icon icon-tel color-success"></span>服务热线：<span class="tel400">400-123-45678</span>
+            <span class="separator">|</span>
+            <a href="javascript:void(0)" class="top-winxin">
+                <span class="icon icon-weiixn color-success"></span>微信
+                <div class="top-winxinCode">
+                    <img src="images/weixin.jpg" alt="">
+                </div>
+            </a>
+            <span class="separator">|</span>
+            <span class="icon icon-comments color-success"></span><a href="#">在线咨询</a>
+        </div>
+        <div class="pull-right">
+            <a href="login.html">你好,李金珂</a>
+            <span class="separator">|</span>
+            <a href="login.html">我的消息</a>
+            <span class="separator">|</span>
+            <a href="login.html">趣学老师版APP</a>
+        </div>
+    </div>
+</div>
+<!--头部-->
+<header class="header">
+    <div class="container">
+        <a href="index.html" class="pull-left logo"><img src="images/logo.png"></a>
+        <nav class="pull-right nav fz14">
+            <ul class="clearListStyle nav-move">
+                <li class="fz16 clear-padding"><a href="index.html">老师个人中心</a></li>
+                <b class="nav-move-bar"></b>
+            </ul>
+        </nav>
+    </div>
+</header>
+<!--个人中心广告图-->
+<div class="usercenter-banner">
+    <img src="images/usercenter_banner.jpg" alt="">
+</div>
+<!--个人中心广告图end-->
+<div class="wrapper">
+    <aside class="user-sidebar usercenter-menu">
+        <h5 class="none"><span class="iconfont icon-shezhi"></span>个人设置 <i class="icon-right pull-right"></i></h5>
+        <menu class="usermenu text-center">
+            <a href="usercenter.html" class="active">个人信息</a>
+            <a href="safeCenter.html" class="">安全设置</a>
+        </menu>
+        <h5 class="none"><span class="iconfont icon-yonghu"></span>个人管理 <i class="icon-right pull-right"></i></h5>
+        <menu class="usermenu text-center">
+            <a href="video-manage.html" class="">视频管理</a>
+            <a href="#" class="">课程管理</a>
+            <a href="#" class="">身份认证</a>
+            <a href="#" class="">钱包管理</a>
+            <a href="#" class="">订单管理</a>
+        </menu>
+        <h5 class="none"><span class="iconfont icon-wenjianjia"></span>校务管理 <i class="icon-right pull-right"></i></h5>
+        <menu class="usermenu text-center">
+            <a href="#" class="">班级管理</a>
+            <a href="#" class="">课程管理</a>
+        </menu>
+    </aside>
+    <div class="user-wrap">
+        <div class="user-title">
+            <h3 class="normal none">个人设置<span class="separator">></span><span class="fz14 color-grey">我的个人信息</span></h3>
+        </div>
+        <div class="user-content">
+            <div class="content userInfo">
+                <a href="userInfo.html" class="btn btn-warning pull-right color-danger fz12">编辑</a>
+                <div class="clearfix">
+                    <table class="usercenter-table">
+                        <thead>
+                            <tr>
+                                <td class="text-right">头像 ：</td>
+                                <td>
+                                    <div class="header-image">
+                                        <img src="images/headImg.jpg" alt="头像">
+                                    </div>
+                                </td>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                            <tr>
+                                <td class="text-right">姓名 ：</td>
+                                <td>张三</td>
+                            </tr>
+                            <tr>
+                                <td class="text-right">性别 ：</td>
+                                <td>女</td>
+                            </tr>
+                            <tr>
+                                <td class="text-right">教龄 ：</td>
+                                <td>5-10年</td>
+                            </tr>
+                            <tr>
+                                <td class="text-right">手机号 ：</td>
+                                <td>18080408272</td>
+                            </tr>
+                            <tr>
+                                <td class="text-right">可授课程 ：</td>
+                                <td>初中数学</td>
+                            </tr>
+                            <tr>
+                                <td class="text-right">常用地址 ：</td>
+                                <td>还未填写</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script src="newJs/jquery-1.11.3.js"></script>
+<script src="newJs/script.js"></script>
+</html>

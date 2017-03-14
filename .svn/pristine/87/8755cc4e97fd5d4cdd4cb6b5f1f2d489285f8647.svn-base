@@ -1,0 +1,42 @@
+var gulp = require('./node_modules/gulp'),
+    cssmin = require('./node_modules/gulp-clean-css'),
+    jsmin = require('./node_modules/gulp-uglify'),
+    url_version = require('./node_modules/gulp-make-css-url-version'),
+    browserSync = require('./node_modules/browser-sync');
+//压缩css
+gulp.task('cssMin',function(){
+    gulp.src(['./newCss/style.css','./newCss/public.css','./newCss/user_center.css','./newCss/app_style.css'])
+        .pipe(url_version())        //添加md5  防止使用缓存
+        .pipe(cssmin({
+            advanced: false,//类型：Boolean 默认：true [是否开启高级优化（合并选择器等）]
+            compatibility: 'ie8',//保留ie8及以下兼容写法 类型：String 默认：''or'*' [启用兼容模式； 'ie7'：IE7兼容模式，'ie8'：IE8兼容模式，'*'：IE9+兼容模式]
+            keepBreaks: false,//类型：Boolean 默认：false [是否保留换行]
+            keepSpecialComments: '*' //保留所有特殊前缀 当你用autoprefixer生成的浏览器前缀，如果不加这个参数，有可能将会删除你的部分前缀
+        }))
+        .pipe(gulp.dest('./newCss-min'));
+})
+//压缩js
+gulp.task('jsMin',function(){
+    gulp.src('./newJs/*js')
+        .pipe(jsmin({
+            mangle: false //类型：Boolean 默认：true 是否修改变量名
+        }))
+        .pipe(gulp.dest('./newJs-min'));
+})
+//自动刷新
+gulp.task('browserSync',function(){
+        browserSync({
+                server:{
+                        baseDir:'./'
+                },
+                files:[
+                    '*.html',
+                    'newCss/*.css',
+                    'fonts/font.css'
+                ]
+        })
+})
+//监听css
+gulp.task('watchCss',function(){
+    gulp.watch('./newCss/*.css',['cssMin']);
+})

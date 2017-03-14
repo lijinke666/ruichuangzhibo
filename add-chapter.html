@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="renderer" content="webkit">
+    <title>班级管理</title>
+    <link rel="stylesheet" href="fonts/font.css" />
+    <link rel="stylesheet" href="newCss/public.css" />
+    <link rel="stylesheet" href="newCss/user_center.css">
+    <!--[if lt IE 9]>
+    <script src="newJs/html5.min.js"></script>
+    <![endif]-->
+    <style>
+    </style>
+</head>
+<body>
+<div class="top">
+    <div class="container">
+        <div class="pull-left">
+            <span class="icon icon-tel color-success"></span>服务热线：<span class="tel400">400-123-45678</span>
+            <span class="separator">|</span>
+            <a href="javascript:void(0)" class="top-winxin">
+                <span class="icon icon-weiixn color-success"></span>微信
+                <div class="top-winxinCode">
+                    <img src="images/weixin.jpg" alt="">
+                </div>
+            </a>
+            <span class="separator">|</span>
+            <span class="icon icon-comments color-success"></span><a href="#">在线咨询</a></div>
+        <div class="pull-right">
+            <a href="login.html">你好,李金珂</a>
+            <span class="separator">|</span>
+            <a href="login.html">我的消息</a>
+            <span class="separator">|</span>
+            <a href="login.html">趣学老师版APP</a>
+        </div>
+    </div>
+</div>
+<!--头部-->
+<header class="header">
+    <div class="container">
+        <a href="index.html" class="pull-left logo"><img src="images/logo.png"></a>
+        <nav class="pull-right nav fz14">
+            <ul class="clearListStyle nav-move">
+                <li class="fz16 clear-padding"><a href="index.html">老师个人中心</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<!--个人中心广告图-->
+<!--<div class="container usercenter-banner">-->
+    <!--<img src="images/usercenter_banner.jpg" alt="">-->
+<!--</div>-->
+<!--个人中心广告图end-->
+<div class="wrapper">
+    <aside class="user-sidebar usercenter-menu">
+        <h5 class="none"><span class="iconfont icon-shezhi"></span>个人设置 <i class="icon-right pull-right"></i></h5>
+        <menu class="usermenu text-center">
+            <a href="usercenter.html" class="">个人信息</a>
+            <a href="safeCenter.html" class="">安全设置</a>
+        </menu>
+        <h5 class="none"><span class="iconfont icon-yonghu"></span>个人管理 <i class="icon-right pull-right"></i></h5>
+        <menu class="usermenu text-center">
+            <a href="#" class="active">视频管理</a>
+            <a href="#" class="">课程管理</a>
+            <a href="#" class="">身份认证</a>
+            <a href="#" class="">钱包管理</a>
+            <a href="#" class="">订单管理</a>
+        </menu>
+        <h5 class="none"><span class="iconfont icon-wenjianjia"></span>校务管理 <i class="icon-right pull-right"></i></h5>
+        <menu class="usermenu text-center">
+            <a href="#" class="">班级管理</a>
+            <a href="#" class="">课程管理</a>
+        </menu>
+    </aside>
+    <div class="user-wrap">
+        <div class="user-title ">
+            <h3 class="normal none">视频管理<span class="separator">></span><span class="fz14 color-grey mr10">上传章节视频</span><span class="fz14">已上传 <i class="chapter-num">2</i>节 </span></h3>
+        </div>
+        <div class="user-content">
+            <p class="none"><i class="iconfont icon-shezhi mr10 fz14"></i>上传章节视频 </p>
+            <div class="add-video-content mt20">
+                <div class="add-videos add-chapter">
+                    <form action="http://www.baidu.com" method="post" name="add-chapterForm">
+                        <table class="fz12 ">
+                            <tbody>
+                            <tr>
+                                <td><span class="btn btn-default mr10"><i class="import mr2">*</i>系列名称</span></td>
+                                <td>
+                                    <label><input type="text" class="inp add-video-inp-width" name="chapterName" id="chapterName" value="系列名称11" readonly maxlength="20" ></label>
+
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><span class="btn btn-default mr10"><i class="import mr2">*</i>视频标题</span></td>
+                                <td>
+                                    <label><input type="text" class="inp add-video-inp-width biaoti checkwords" name="biaoti" id="biaoti" maxlength="20" required="true">元</label>
+                                    <label><span>还可以输入<i class="number biaoti-words maxMsgShow">20</i>个字</span></label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="initial"><span class="btn btn-default mr10"><i class="import mr2">*</i>视频描述</span></td>
+                                <td>
+                                    <label><textarea  class="video-info checkwords" name="info" id="info" maxlength="200" required="true"></textarea></label>
+                                    <span>还可以输入<i class="number video-info-words maxMsgShow">200</i>个字</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="initial"><span class="btn btn-default"><i class="import mr2">*</i>选择视频</span></td>
+                                <td>
+                                    <label id="container"><a href="javascript:void(0)" class="btn btn-grey  mr10" id="selectfiles">选择视频</a><a href="javascript:void(0)" class="btn btn-success  mr5" id="postfiles">上传视频</a></label>
+                                    <div id="ossfile" class="mt20"></div>
+                                    <pre id="console"></pre>
+                                </td>
+                            </tr>
+                            <tr class="">
+                                <td></td>
+                                <td colspan="2">
+                                    <div class="mt20">
+                                        <button type="submit" class="btn btn-primary mr10">保存章节</button>
+                                        <a href="video-manage.html" class="btn btn-default">返回</a>
+                                    </div>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </form>
+                </div>
+           </div>
+        </div>
+    </div>
+</div>
+</body>
+<script src="newJs/jquery-1.11.3.js"></script>
+<script src="newJs/script.js"></script>
+<script src="newJs/plupload.full.min.js"></script>
+<script src="newJs/upload.js"></script>
+<script src="newJs/jquery.validate.min.js"></script>
+<script src="newJs/validate.config.js"></script>
+<script>
+$(function(){
+    var $add_chapter_form = $("form[name='add-chapterForm']");
+    //判断还可输入多少字
+    $add_chapter_form.checkWords();
+//    var ljkUpload = new LjkUpload($(".add-chapter"));
+//    ljkUpload.showImage({
+//        fileSelectBtn:$(".select-video"),
+//        fileBtn:$("#videoFile"),
+//        showEle:$(".show-video-box"),
+//        isImage:false,
+//        maxSize:200*1024       //200M
+//    });
+
+    //个人中心 修改个人资料
+    $add_chapter_form.validate({
+        errorClass: 'v-error',
+        errorElement: 'em',
+        debug: true,
+        highlight: function (element, errorClass) {
+            $(element).parent().addClass(errorClass);
+        },
+        unhighlight: function (element, errorClass) {
+            $(element).parent().removeClass(errorClass);
+        },
+        messages:{
+            videoFile:{
+                required:'请选择视频'
+            },
+            biaoti:{
+                required:'请填写视频标题',
+                minlength:'视频标题过短',
+                maxlength:'视频标题过长'
+            },
+            info:{
+                required:'请填写视频简介',
+                minlength:'视频简介过短',
+                maxlength:'视频简介过长'
+            }
+        },
+        submitHandler: function (form) {
+            var rc;
+            if(!$('body').hasClass("upload")){
+                rcAlert('请上传章节视频');
+                return false;
+            }
+            $.ajax({
+                url:"",
+                type:"post",
+                data:$add_chapter_form.serialize(),
+                dataType:"json",
+                beforeSend:function(){
+                    rc = new rcLoading('处理中,请稍后');
+                },
+                success:function(){
+                    rc.remove();
+                    rcAlert('添加成功',true)
+                },
+                error:function(){
+                    rc.remove();
+                    rcAlert('添加失败',false)
+                }
+            })
+        }
+    });
+})
+
+</script>
+</html>

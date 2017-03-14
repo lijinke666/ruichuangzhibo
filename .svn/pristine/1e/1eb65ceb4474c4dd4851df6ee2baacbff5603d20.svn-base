@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="renderer" content="webkit">
+    <title>班级管理</title>
+    <link rel="stylesheet" href="fonts/font.css" />
+    <link rel="stylesheet" href="newCss/public.css" />
+    <link rel="stylesheet" href="newCss/style.css">
+    <!--[if lt IE 9]>
+    <script src="newJs/html5.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<!--头部-->
+<header class="header text-center login-header">
+    <a href="index.html"><img src="images/logo.png" alt=""></a>
+</header>
+<!--头部end-->
+<div class="forgetpassword-box">
+    <h2 class="normal text-center">忘记 / 修改登录密码</h2>
+    <p class="color-grey text-center">通过注册手机号码重设密码</p>
+    <div class="select-status text-center">
+        <a href="javascript:;" class="active " name="1"><img src="images/teacher.png" alt=""><span class="fz16">老师</span></a>
+        <a href="javascript:;" class="margin" name="2"><img src="images/par.png" alt=""><span class="fz16">家长</span></a>
+    </div>
+    <form action="/login" method="post" name="forgetForm">
+        <div class="forgetpassword-input">
+            <fieldset class="mt20"><span class="fz16 forgetpassword-title ">手机号：</span><span class="relative"><input type="text" class="inp" name="mobile" id="mobile" placeholder="请输入手机号" minlength="11" maxlength="11" required="true"><i class="iconfont icon-phone fz16"></i><span class="login-msg fz16"></span></span></fieldset>
+            <fieldset class="mt20"><span class="fz16 forgetpassword-title">新密码：</span><span class="relative"><input type="password" class="inp" name="password" id="password" placeholder="请输入密码" minlength="6" maxlength="15" ><i class="iconfont icon-suo fz16"></i><span class="login-msg fz16"></span></span></fieldset>
+            <fieldset class="mt20"><span class="fz16 forgetpassword-title">确认密码：</span><span class="relative"><input type="password" class="inp" name="confirm_password" id="confirm_password" placeholder="请再次确认密码" minlength="6" maxlength="15"><i class="iconfont icon-hudong fz16"></i><span class="login-msg fz16"></span></span></fieldset>
+            <fieldset class="mt20">
+                <span class="fz16 forgetpassword-title">图形验证：</span>
+                <span class="relative">
+                    <input type="text" class="inp inp-width" name="verifycode" id="verifycode" placeholder="请输入图形验证码" minlength="3" maxlength="6" ><i class="iconfont icon-right fz16"></i><span class="login-msg fz16"></span>
+                    <span class="verifycode text-center">
+                        <img src="images/forgetverify.png" alt="加载中">
+                    </span>
+                </span>
+            </fieldset>
+            <fieldset class="mt20">
+                <span class="fz16 forgetpassword-title ">短信验证：</span>
+                <span class="relative">
+                    <input type="text" class="inp inp-width" name="sendcode" id="sendcode" placeholder="请输入6位验证码" minlength="4" maxlength="6" required="true"><i class="iconfont icon-suo fz16"></i><span class="login-msg fz16"></span>
+                    <button type="button" class="btn btn-cancel send-code" data-hasverify="true" data-url="http://www.baidu.com" id="send_code">发送验证码</button>
+                </span>
+            </fieldset>
+            <fieldset class="mt20">
+                <button type="submit" class="btn btn-success btn-block btn-login">确认修改</button>
+            </fieldset>
+            <p>
+                <a href="#" class="color-success fz16 forgetpassword">忘记密码</a>
+                <span class="pull-right fz16">
+                    <a href="login.html" class="register">返回登录</a>
+                    <span class="separator">|</span>
+                    <a href="#" class="color-grey fankui">意见反馈</a>
+                </span>
+            </p>
+        </div>
+    </form>
+</div>
+</body>
+<script src="newJs/jquery-1.11.3.js"></script>
+<script src="newJs/script.js"></script>
+<script src="newJs/jquery.validate.min.js"></script>
+<script src="newJs/validate.config.js"></script>
+<script>
+
+    $(function() {
+        $("form[name='forgetForm']").validate({
+            errorClass: 'v-error',
+            errorElement: 'em',
+            debug: true,
+            highlight: function (element, errorClass) {
+                $(element).parent().addClass(errorClass);
+            },
+            unhighlight: function (element, errorClass) {
+                $(element).parent().removeClass(errorClass);
+            },
+            rules: {
+                password: {
+                    required: true,
+                    minlength: 6,
+                    maxlength: 15
+                },
+                confirm_password: {
+                    required: true,
+                    minlength: 6,
+                    maxlength: 15,
+                    equalTo: "#password"
+                }
+            },
+            messages: {
+                mobile: {
+                    required: "请输入手机号码",
+                    minlength: "请输入正确的手机号"
+                },
+                password: {
+                    required: "请输入新密码",
+                    minlength: "新密码长度6-15位"
+                },
+                confirm_password: {
+                    required: "请再次输入新密码",
+                    equalTo: "两次密码不一致"
+                }
+            },
+            submitHandler: function (form) {
+                var loading;
+                var type = 1,
+                    $select_status = $(".select-status>a");
+                $.each($select_status,function(){
+                    var $this = $(this);
+                    if($this.hasClass("active")){
+                        type = $this.attr("name");
+                    }
+                });
+                $.ajax({
+                    url:"",
+                    type:"post",
+                    data:$("form[name='forgetForm']").serialize()+"&type="+type,
+                    dataType:"json",
+                    beforeSend:function(){
+                        loading = new rcLoading("请稍后..");
+                    },
+                    success:function( data ){
+                        loading.remove();
+                        rcAlert("修改成功",true);
+                        location.replace("login.html")
+                    },
+                    error:function(){
+                        loading.remove();
+                        rcAlert("修改失败",false);
+                    }
+                });
+            }
+
+        });
+    });
+</script>
+</html>

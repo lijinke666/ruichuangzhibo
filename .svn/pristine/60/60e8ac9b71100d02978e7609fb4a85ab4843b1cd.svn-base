@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="renderer" content="webkit">
+    <title>视频管理</title>
+    <link rel="stylesheet" href="fonts/font.css" />
+    <link rel="stylesheet" href="newCss/public.css" />
+    <link rel="stylesheet" href="newCss/user_center.css">
+    <!--[if lt IE 9]>
+    <script src="newJs/html5.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<div class="top">
+    <div class="container">
+        <div class="pull-left">
+            <span class="icon icon-tel color-success"></span>服务热线：<span class="tel400">400-123-45678</span>
+            <span class="separator">|</span>
+            <a href="javascript:void(0)" class="top-winxin">
+                <span class="icon icon-weiixn color-success"></span>微信
+                <div class="top-winxinCode">
+                    <img src="images/weixin.jpg" alt="">
+                </div>
+            </a>
+            <span class="separator">|</span>
+            <span class="icon icon-comments color-success"></span><a href="#">在线咨询</a>
+        </div>
+        <div class="pull-right">
+            <a href="login.html">你好,李金珂</a>
+            <span class="separator">|</span>
+            <a href="login.html">我的消息</a>
+            <span class="separator">|</span>
+            <a href="login.html">趣学老师版APP</a>
+        </div>
+    </div>
+</div>
+<!--头部-->
+<header class="header">
+    <div class="container">
+        <a href="index.html" class="pull-left logo"><img src="images/logo.png"></a>
+        <nav class="pull-right nav fz14">
+            <ul class="clearListStyle nav-move">
+                <li class="fz16 clear-padding"><a href="index.html">老师个人中心</a></li>
+                <b class="nav-move-bar"></b>
+            </ul>
+        </nav>
+    </div>
+</header>
+<div class="wrapper">
+    <aside class="user-sidebar usercenter-menu">
+        <h5 class="none"><span class="iconfont icon-shezhi"></span>个人设置 <i class="icon-right pull-right"></i></h5>
+        <menu class="usermenu text-center">
+            <a href="usercenter.html" class="">个人信息</a>
+            <a href="safeCenter.html" class="">安全设置</a>
+        </menu>
+        <h5 class="none"><span class="iconfont icon-yonghu"></span>个人管理 <i class="icon-right pull-right"></i></h5>
+        <menu class="usermenu text-center">
+            <a href="#" class="active">视频管理</a>
+            <a href="#" class="">课程管理</a>
+            <a href="#" class="">身份认证</a>
+            <a href="#" class="">钱包管理</a>
+            <a href="#" class="">订单管理</a>
+        </menu>
+        <h5 class="none"><span class="iconfont icon-wenjianjia"></span>校务管理 <i class="icon-right pull-right"></i></h5>
+        <menu class="usermenu text-center">
+            <a href="#" class="">班级管理</a>
+            <a href="#" class="">课程管理</a>
+        </menu>
+    </aside>
+    <div class="user-wrap">
+        <div class="user-title">
+            <h3 class="normal none">个人管理<span class="separator">></span><span class="fz14 color-grey">视频管理</span></h3>
+        </div>
+        <div class="user-content">
+            <a href="add-video.html" class="btn btn-primary"><i class="iconfont icon-add mr5"></i>添加课程</a>
+            <div class="teacher-videos mt20">
+                <table class="fz12 text-center">
+                    <thead>
+                        <tr>
+                            <td><i class="iconfont icon-fengmiantu"></i>封面图</td>
+                            <td><i class="iconfont icon-name"></i>课程名称</td>
+                            <td><i class="iconfont icon-name2"></i>类别</td>
+                            <td><i class="iconfont icon-price"></i>价格</td>
+                            <td><i class="iconfont icon-zhishu"></i>指数</td>
+                            <td><i class="iconfont icon-time"></i>创建时间</td>
+                            <td><i class="iconfont icon-suo"></i>状态</td>
+                            <td><i class="iconfont icon-shezhi"></i>操作</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="teacher-videos-img text-center">
+                                    <img src="images/course1.png" alt="">
+                                </div>
+                            </td>
+                            <td><span class="btn btn-default">初中英语提高</span></td>
+                            <td><span class="btn btn-default">初二数学</span></td>
+                            <td><span class="btn btn-default">&yen;998</span></td>
+                            <td><span class="btn btn-default"><i class="iconfont icon-play"></i>127 || <i class="iconfont icon-zhishu"></i>0</span></td>
+                            <td><span class="btn btn-default">2016-05-06</span></td>
+                            <td class="color-danger"><span class="btn btn-success"><i class="iconfont icon-success"></i>通过审核</span></td>
+                            <td class="operate ">
+                                <div>
+                                    <div class=" btn btn-default operate-title">
+                                        <div>选择操作 <i class="icon-right"></i></div>
+                                    </div>
+                                    <ul class="clearListStyle operate-list">
+                                        <li><a href="add-video.html"><i class="iconfont icon-bianji"></i>编辑课程</a></li>
+                                        <li><a href="add-chapter.html"><i class="iconfont icon-bianji2"></i>编辑章节<span class="video-number text-center color-white fz12">2</span></a></li>
+                                        <li><a href="chapter-list.html"><i class="iconfont icon-add"></i>添加章节</a></li>
+                                        <li><a href="javascript:void(0)" class="remove-class" data-id="1"><i class="iconfont icon-false"></i>删除课程</a></li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="teacher-videos-img text-center">
+                                    <img src="images/course2.png" alt="">
+                                </div>
+                            </td>
+                            <td><span class="btn btn-default">初中英语提高</span></td>
+                            <td><span class="btn btn-default">初二数学</span></td>
+                            <td><span class="btn btn-default">&yen;998</span></td>
+                            <td><span class="btn btn-default"><i class="iconfont icon-play"></i>127 || <i class="iconfont icon-zhishu"></i>0</span></td>
+                            <td><span class="btn btn-default">2016-05-06</span></td>
+                            <td class="color-danger"><span class="btn btn-grey"><i class="iconfont icon-false"></i>未经审核</span></td>
+                            <td class="operate ">
+                                <div>
+                                    <div class=" btn btn-default operate-title">
+                                        <div>选择操作 <i class="icon-right"></i></div>
+                                    </div>
+                                    <ul class="clearListStyle operate-list">
+                                        <li><a href="#"><i class="iconfont icon-bianji"></i>编辑课程</a></li>
+                                        <li><a href="#"><i class="iconfont icon-bianji2"></i>编辑章节</a></li>
+                                        <li><a href="#"><i class="iconfont icon-add"></i>添加章节</a></li>
+                                        <li><a href="javascript:void(0)" class="remove-class" data-id="2"><i class="iconfont icon-false"></i>删除课程</a></li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="teacher-videos-img text-center">
+                                    <img src="images/course3.png" alt="">
+                                </div>
+                            </td>
+                            <td><span class="btn btn-default">初中英语提高</span></td>
+                            <td><span class="btn btn-default">初二数学</span></td>
+                            <td><span class="btn btn-default">&yen;998</span></td>
+                            <td><span class="btn btn-default"><i class="iconfont icon-play"></i>127 || <i class="iconfont icon-zhishu"></i>0</span></td>
+                            <td><span class="btn btn-default">2016-05-06</span></td>
+                            <td class="color-danger"><span class="btn btn-grey"><i class="iconfont icon-false"></i>未经审核</span></td>
+                            <td class="operate">
+                                <div>
+                                    <div class=" btn btn-default operate-title">
+                                        <div>选择操作 <i class="icon-right"></i></div>
+                                    </div>
+                                    <ul class="clearListStyle operate-list">
+                                        <li><a href="add-video.html"><i class="iconfont icon-bianji"></i>编辑课程</a></li>
+                                        <li><a href="add-chapter.html"><i class="iconfont icon-bianji2"></i>编辑章节<span class="video-number text-center color-white fz12">2</span></a></li>
+                                        <li><a href="chapter-list.html"><i class="iconfont icon-add"></i>添加章节</a></li>
+                                        <li><a href="javascript:void(0)" class="remove-class" data-id="3"><i class="iconfont icon-false"></i>删除课程</a></li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="pagination text-center" id="page">
+                    <span class="current">1</span>
+                    <a class="num" href="">2</a>
+                    <a class="num" href="">3</a>
+                    <a class="num" href="">4</a>
+                    <a class="num" href="">5</a>
+                    <a class="num" href="">6</a>
+                    <a class="next" href="">&gt;&gt;</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script src="newJs/jquery-1.11.3.js"></script>
+<script src="newJs/script.js"></script>
+<script>
+    $(function(){
+        var $remove_video = $('.remove-class');
+        $remove_video.on('click',function(){
+            var $this = $(this),
+                $id = $this.data('id'),
+                rc;
+            rcConfirm('确定要删除本课程吗?',function( index ){
+                if( index ==1 ){
+                    $.ajax({
+                        url:"",
+                        type:"get",
+                        data:{id:$id},
+                        dataType:"json",
+                        beforeSend:function(){
+                            rc = new rcLoading('处理中...');
+                        },
+                        success:function(){
+                            rc.remove();
+                            rcAlert('删除成功',true)
+                        },
+                        error:function(){
+                            rc.remove();
+                            rcAlert('删除失败,请刷新重试',false);
+                        }
+                    })
+                }
+            },{'确定':'btn-primary','取消':'btn-cancel'})
+        })
+    })
+</script>
+</html>

@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="renderer" content="webkit">
+    <title>编辑我的个人信息</title>
+    <link rel="stylesheet" href="fonts/font.css" />
+    <link rel="stylesheet" href="newCss/public.css" />
+    <link rel="stylesheet" href="newCss/user_center.css">
+    <!--[if lt IE 9]>
+    <script src="newJs/html5.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<div class="top">
+    <div class="container">
+        <div class="pull-left">
+            <span class="icon icon-tel color-success"></span>服务热线：<span class="tel400">400-123-45678</span>
+            <span class="separator">|</span>
+            <a href="javascript:void(0)" class="top-winxin">
+                <span class="icon icon-weiixn color-success"></span>微信
+                <div class="top-winxinCode">
+                    <img src="images/weixin.jpg" alt="">
+                </div>
+            </a>
+            <span class="separator">|</span>
+            <span class="icon icon-comments color-success"></span><a href="#">在线咨询</a></div>
+            <div class="pull-right">
+                <a href="login.html">你好,李金珂</a>
+                <span class="separator">|</span>
+                <a href="login.html">我的消息</a>
+                <span class="separator">|</span>
+                <a href="login.html">趣学老师版APP</a>
+            </div>
+    </div>
+</div>
+<!--头部-->
+<header class="header usercenter-header">
+    <div class="container">
+        <a href="index.html" class="pull-left logo"><img src="images/logo.png"></a>
+        <nav class="pull-right nav fz14">
+            <ul class="clearListStyle nav-move">
+                <li class="fz16 clear-padding"><a href="index.html">老师个人中心</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<div class="wrapper">
+    <aside class="user-sidebar usercenter-menu">
+        <h5 class="none"><span class="iconfont icon-shezhi"></span>个人设置 <i class="icon-right pull-right"></i></h5>
+        <menu class="usermenu text-center">
+            <a href="usercenter.html" class="active">个人信息</a>
+            <a href="safeCenter.html" class="">安全设置</a>
+        </menu>
+        <h5 class="none"><span class="iconfont icon-yonghu"></span>个人管理 <i class="icon-right pull-right"></i></h5>
+        <menu class="usermenu text-center">
+            <a href="#" class="">视频管理</a>
+            <a href="#" class="">课程管理</a>
+            <a href="#" class="">身份认证</a>
+            <a href="#" class="">钱包管理</a>
+            <a href="#" class="">订单管理</a>
+        </menu>
+        <h5 class="none"><span class="iconfont icon-wenjianjia"></span>校务管理 <i class="icon-right pull-right"></i></h5>
+        <menu class="usermenu text-center">
+            <a href="#" class="">班级管理</a>
+            <a href="#" class="">课程管理</a>
+        </menu>
+    </aside>
+    <div class="user-wrap">
+        <div class="user-title">
+            <h3 class="normal none">基本信息<span class="separator"></span><span class="color-danger fz14">( *为必填 )</span></h3>
+        </div>
+        <div class="user-content">
+            <form action="#" method="post" name="basic-info-form" class="basic-info-form">
+            <!--基本信息-->
+            <section class="pagination-compile-content basic-info-section">
+                <div class="personal-info-content">
+                    <div class=""><i class="import">*</i>本人真实信息 <span class="color-danger">（必填）</span></div>
+                    <div class="mt10 basic-info">
+                        <div class="pull-left head-img">
+                            <img src="images/headImg.jpg" alt="头像">
+                        </div>
+                        <div class="pull-left basic-msg">
+                            <p class="none"><i class="import">*</i>请输入真实姓名 <span class="color-danger">（必填）</span></p>
+                            <div class="mt10">
+                                <input type="text" name="realname" id="realname" class="inp" placeholder="请输入真实姓名" isCN="true" required="true">
+                                <span>
+                                    <input type="radio" class="hidden selectSex" name="selectSex" id="boy" checked><label for="boy" class="label boy">男</label>
+                                    <input type="radio" class="hidden selectSex" name="selectSex" id="girl"><label for="girl" class="label girl">女</label>
+                                </span>
+                            </div>
+                            <div class="mt10 fz12 color-danger">身份认证成功后，姓名不可修改</div>
+                            <div class="mt10 select-date">
+                                <select name="year" id="year" class="inp num-font addYear">
+                                </select>
+                                <select name="month" id="month" class="inp num-font">
+                                    <option value="">1月</option>
+                                    <option value="">2月</option>
+                                    <option value="">3月</option>
+                                    <option value="">4月</option>
+                                    <option value="">5月</option>
+                                    <option value="">6月</option>
+                                    <option value="">7月</option>
+                                    <option value="">8月</option>
+                                    <option value="">9月</option>
+                                    <option value="">10月</option>
+                                    <option value="">11月</option>
+                                    <option value="">12月</option>
+                                </select>
+
+                                <select name="day" id="day" class="inp num-font">
+                                    <option value="">1日</option>
+                                    <option value="">2日</option>
+                                    <option value="">3日</option>
+                                    <option value="">4日</option>
+                                    <option value="">5日</option>
+                                    <option value="">6日</option>
+                                    <option value="">7日</option>
+                                    <option value="">8日</option>
+                                    <option value="">9日</option>
+                                    <option value="">10日</option>
+                                    <option value="">11日</option>
+                                    <option value="">12日</option>
+                                    <option value="">13日</option>
+                                    <option value="">14日</option>
+                                    <option value="">15日</option>
+                                    <option value="">16日</option>
+                                    <option value="">17日</option>
+                                    <option value="">18日</option>
+                                    <option value="">19日</option>
+                                    <option value="">20日</option>
+                                    <option value="">21日</option>
+                                    <option value="">22日</option>
+                                    <option value="">23日</option>
+                                    <option value="">24日</option>
+                                    <option value="">25日</option>
+                                    <option value="">26日</option>
+                                    <option value="">27日</option>
+                                    <option value="">28日</option>
+                                    <option value="">29日</option>
+                                    <option value="">30日</option>
+                                    <option value="">31日</option>
+                                </select>
+                            </div>
+                            <div class="mt10">出生日期</div>
+                        </div>
+                    </div>
+                    <div class="clearfix mt20">
+                        <p class=""><i class="import">*</i>一句话简介 <span class="color-danger">（必填）</span></p>
+                        <div class="only-introduction relative">
+                            <span>
+                                <input type="text" class="inp checkwords" name="jianjie" id="jianjie" placeholder="请填写简介" maxlength="30" required="true">
+                            </span>
+                            <span class="ml10">
+                                <span class="color-danger fz12 absolute">还可以输入<i class="maxMsgShow font_normal">30</i>个字</span>
+                            </span>
+                        </div>
+                        <p class="mt30">自我介绍</p>
+                        <div class="self-introduction relative">
+                            <span>
+                                <textarea name="selfIntroduction" id="selfIntroduction" class="inp checkwords" placeholder="介绍一下自己让学生更快认识你" maxlength="100"></textarea>
+                            </span>
+                            <span>
+                                <span class="ml10">
+                                    <span class="color-danger fz12 absolute">还可以输入<i class="maxMsgShow font_normal">100</i>个字</span>
+                                </span>
+                            </span>
+                        </div>
+                        <p class=""><i class="import">*</i>我的身份（选择职位，方便学生找到你哦~）</p>
+                        <div class="select-status">
+                            <label><input type="radio" class="hidden" name="select-status" id="lingdao"><label for="lingdao" class="label lingdao">学校领导</label></label>
+                            <span class="separator"></span>
+                            <label><input type="radio" class="hidden" name="select-status" id="zhuren"><label for="zhuren" class="label zhuren">班主任</label></label>
+                            <span class="separator"></span>
+                            <label><input type="radio" class="hidden" name="select-status" id="jiaoshi" checked="checked"><label for="jiaoshi" class="label jiaoshi">普通教师</label></label>
+                        </div>
+                        <div class="mt30  education">
+                            <ul class="clearListStyle">
+                                <li>
+                                    <div>学历</div>
+                                    <select name="xueli" id="xueli" class="inp num-font">
+                                        <option value="">博士及以上</option>
+                                        <option value="">研究生</option>
+                                        <option value="">本科</option>
+                                        <option value="">大专</option>
+                                        <option value="">高中</option>
+                                        <option value="">初中</option>
+                                        <option value="">小学及以下</option>
+                                    </select>
+                                </li>
+                                <li>
+                                    <div>毕业院校</div>
+                                    <input type="text" name="yuanxiao" id="yuanxiao" class="inp" placeholder="毕业/就读院校">
+                                </li>
+                                <li>
+                                    <div>所学专业</div>
+                                    <input type="text" name="zuanye" id="zuanye" class="inp" placeholder="专业">
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!--基本信息end-->
+            <!--教学背景-->
+            <section class="mt30">
+                <div class="user-title">
+                    <h3 class="normal none">教学背景<span class="separator"></span><span class="color-danger fz14">( *为必填 )</span></h3>
+                </div>
+                <div class="pagination-compile-content teaching-background-section">
+                    <div class="pull-left mr10">
+                        <p>教龄 <span class="color-danger">（必填）</span></p>
+                        <select class="inp num-font" name="jiaolin" id="jiaolin">
+                            <option>1年</option>
+                            <option>2年</option>
+                            <option>3年</option>
+                            <option>4年</option>
+                            <option>5年-10年</option>
+                            <option>10年以上</option>
+                        </select>
+                    </div>
+                    <div class="pull-left">
+                        <p>单位/机构/学校</p>
+                        <input type="text" class="inp" name="jigou" id="jigou" placeholder="单位/机构/学校(20字以内)">
+                    </div>
+                    <div class="clearfix">
+                        <p>教学科目 <span class="color-danger">（必填）</span></p>
+                        <select name="kemu" id="kemu" class="inp num-font mr10">
+                            <option value="">语文</option>
+                            <option value="">数学</option>
+                            <option value="">英语</option>
+                            <option value="">物理</option>
+                            <option value="">化学</option>
+                            <option value="">生物</option>
+                            <option value="">政治</option>
+                            <option value="">地理</option>
+                            <option value="">历史</option>
+                        </select>
+                    </div>
+                    <div>
+                        <p>个人标签 <span class="color-danger">（必填）</span></p>
+                        <input type="text" class="inp mr10" name="biaoqian" id="biaoqian"  checkTags="true" minlength="2" maxlength="6" placeholder="请填写标签" required="true">
+                        <button type="button" class="btn btn-primary add-tags">添加</button>
+                    </div>
+                    <p class="color-grey2">标签的准确醒比数量更重要，请将单个标签控制在2个字到6个字以内（标签仅限使用汉字、且最多输入10个）</p>
+                    <div class="teacher-tag">
+                        <!--标签选择区域-->
+                        <textarea name="tagValArray" id="tagValArray" class="hidden tagValArray"></textarea>
+                    </div>
+                    <div class="mt20">
+                        <button type="submit" class="btn btn-primary mr10">保存</button>
+                        <button type="reset" class="btn btn-default">取消</button>
+                    </div>
+                </div>
+            </section>
+            </form>
+            <!--教学背景end-->
+            <!--过往经历-->
+            <section class="mt30 old-experience-section">
+                <form action="#" method="post" name="old-experience-form" class="old-experience-form">
+                    <div class="user-title">
+                        <h3 class="normal none">过往经历<span class="separator"></span><span class="color-danger fz14">( *为必填 )</span></h3>
+                    </div>
+                    <div class="pull-left mr30 mb20">
+                        <p><i class="import">*</i>开始时间 <span class="color-danger">（必填）</span></p>
+                        <select class="inp num-font mr10 addYear" name="startYear" id="startYear">
+                        </select>
+                        <select class="inp num-font" name="startMonth" id="startMonth">
+                            <option>1月</option>
+                            <option>2月</option>
+                            <option>3月</option>
+                            <option>4月</option>
+                            <option>5月</option>
+                            <option>6月</option>
+                            <option>7月</option>
+                            <option>8月</option>
+                            <option>9月</option>
+                            <option>10月</option>
+                            <option>11月</option>
+                            <option>12月</option>
+                        </select>
+                    </div>
+                    <div class="pull-left mb20">
+                        <p><i class="import">*</i>结束时间 <span class="color-danger">（必填）</span></p>
+                        <select class="inp num-font mr10 addYear" name="endYear" id="endYear"></select>
+                        <select class="inp num-font" name="endMonth" id="endMonth">
+                            <option>1月</option>
+                            <option>2月</option>
+                            <option>3月</option>
+                            <option>4月</option>
+                            <option>5月</option>
+                            <option>6月</option>
+                            <option>7月</option>
+                            <option>8月</option>
+                            <option>9月</option>
+                            <option>10月</option>
+                            <option>11月</option>
+                            <option>12月</option>
+                        </select>
+                    </div>
+                    <p class="clearfix none mt20"><i class="import">*</i>描述过往经历 （50字~300字）</p>
+                    <p class="clearfix none mt10 color-danger">详细描述你的教学经历、学习经历、工作经历等、有助于学员更好的了解你</p>
+                    <div class="mt10 old-experience relative">
+                        <span>
+                            <textarea name="oldExperience" id="oldExperience" class="inp checkwords" placeholder="请填写..." minlength="50" maxlength="300" required="true"></textarea>
+                        </span>
+                        <span class="ml10">
+                             <span class="color-danger fz12 absolute">还可以输入<i class="maxMsgShow font_normal">300</i>个字</span>
+                        </span>
+                    </div>
+                    <div class="mt20">
+                        <button type="submit" class="btn btn-primary mr10">保存</button>
+                        <button type="reset" class="btn btn-default">取消</button>
+                    </div>
+                </form>
+            </section>
+            <!--过往经历end-->
+            <!--相关案例-->
+            <section class="mt30 old-experience-section">
+                <form action="#" method="post" name="case-form" class="case-form">
+                    <div class="user-title">
+                        <h3 class="normal none">相关案例<span class="separator"></span><span class="color-danger fz14">( *为必填 )</span></h3>
+                    </div>
+                    <div class="pull-left mr30 mb20">
+                        <p><i class="import">*</i>案例名称 <span class="color-danger">（必填）</span></p>
+                        <input type="text" class="inp anli-input" name="caseName" id="caseName" minlength="2" maxlength="15" required="true">
+                    </div>
+                    <div class="pull-left mb20">
+                        <p><i class="import">*</i>结束时间 <span class="color-danger">（必填）</span></p>
+                        <select class="inp num-font mr10 addYear" name="caseEndYear" id="caseEndYear"></select>
+                        <select class="inp num-font" name="caseEndMonth" id="caseEndMonth">
+                            <option>1月</option>
+                            <option>2月</option>
+                            <option>3月</option>
+                            <option>4月</option>
+                            <option>5月</option>
+                            <option>6月</option>
+                            <option>7月</option>
+                            <option>8月</option>
+                            <option>9月</option>
+                            <option>10月</option>
+                            <option>11月</option>
+                            <option>12月</option>
+                        </select>
+                    </div>
+                    <p class="clearfix none mt20"><i class="import">*</i>描述相关案例 （50字~300字）</p>
+                    <p class="clearfix none mt10 color-danger">详细描述你的相关案例有助于学员更好的了解你</p>
+                    <div class="mt10 old-experience relative">
+                        <span>
+                            <textarea name="caseMsg" id="caseMsg" class="inp checkwords" placeholder="请填写..."  minlength="50" maxlength="300" required="true"></textarea>
+                        </span>
+                        <span class="ml10">
+                             <span class="color-danger fz12 absolute">还可以输入<i class="maxMsgShow font_normal">300</i>个字</span>
+                        </span>
+                    </div>
+                    <div class="mt20">
+                        <button type="submit" class="btn btn-primary mr10">保存</button>
+                        <button type="reset" class="btn btn-default">取消</button>
+                    </div>
+                </form>
+            </section>
+            <!--相关案例end-->
+        </div>
+    </div>
+</div>
+<div id="headerImg-popup" class="rcpopup headImg-popup" style="display: none;">
+    <div class="rcpopup-title"><h2>头像上传</h2></div>
+    <div class="rcpopup-content upload-img">
+        <div class="upload-image-box text-center color-white fz16rem mt10">
+            <!--拖动缩放区域-->
+            <div class="move-image hasImg">
+            </div>
+            <!--切割区域-->
+            <div class="clip-image"></div>
+        </div>
+        <div class="mt10 color-main fz14">
+            拖动滑竿,鼠标滚轮可缩放图片
+        </div>
+        <div class="mt10">
+            <!--滑竿-->
+            <a href="javascript:void(0)" class="down">-</a><input type="range" max="3.0" min="0.1" value="1.0" step="0.01" class="inp" id="range"><a href="javascript:void(0)" class="up">+</a>
+        </div>
+        <aside class="text-center mt20">
+            <input type="file" accept="image/*" multiple id="file-btn" class="hidden">
+            <button class="btn btn-grey upload-select-btn">选择图片</button>
+            <button class="btn btn-primary upload-upload-btn">立即上传</button>
+        </aside>
+    </div>
+</div>
+</body>
+<script src="newJs/jquery-1.11.3.js"></script>
+<script src="newJs/script.js"></script>
+<script src="newJs/LjkUpLoad.js"></script>
+<script src="newJs/jquery.validate.min.js"></script>
+<script src="newJs/validate.config.js"></script>
+<script>
+    $(function() {
+        var $add_tags = $('.add-tags'),       //添加标签按钮
+            last_val = "";
+        $add_tags.on('click',function(){
+            var tagArray = [];         //存放标签
+            var $teacher_tag = $(".teacher-tag"),
+                $tag_val = $("input[name='biaoqian']").val(),
+                checkTag = /^[\u4e00-\u9fa5]{2,7}$/;
+            if($tag_val == last_val){
+                return rcAlert('请添加标签,不可重复');
+            }
+            if(!checkTag.test($tag_val)){
+                return rcAlert('请输入正确的个人标签');
+            }
+            last_val = $tag_val;
+            tagArray.push($tag_val+"|");
+            var tagValArray = $('.tagValArray');
+            $.each(tagArray,function(i,item){
+                tagValArray.val(tagValArray.val()+tagArray[i])
+            })
+            $teacher_tag.append($('<span>'+$tag_val+'</span>'));
+        });
+        //个人中心 修改个人资料
+        //基本信息
+        $("form[name='basic-info-form']").validate({
+            errorClass: 'v-error font_normal',
+            errorElement: 'em',
+            debug: true,
+            messages:{
+                jianjie:{
+                    required:"请填写简介",
+                    maxlength:"最多可输入30字"
+                },
+                biaoqian:{
+                    required:"请填写个人标签",
+                    minlength:"请将标签控制在2字到6字以内",
+                    maxlength:"请将标签控制在2字到6字以内"
+                }
+            },
+            highlight: function (element, errorClass) {
+                $(element).parent().addClass(errorClass);
+            },
+            unhighlight: function (element, errorClass) {
+                $(element).parent().removeClass(errorClass);
+            },
+            submitHandler: function (form) {
+                var loading;
+                $.ajax({
+                    url: "",
+                    type: "post",
+                    data: $("form[name='basic-info-form']").serialize(),
+                    dataType: "json",
+                    beforeSend: function () {
+                        loading = new rcLoading("提交中..");
+                    },
+                    success: function (data) {
+                        loading.remove();
+                        rcAlert("保存成功", true);
+                    },
+                    error: function () {
+                        loading.remove();
+                        rcAlert("保存失败", false);
+                    }
+                });
+            }
+        });
+        //过往经历
+        $("form[name='old-experience-form']").validate({
+            errorClass: 'v-error font_normal',
+            errorElement: 'em',
+            debug: true,
+            messages:{
+                oldExperience:{
+                    required:"请填写你的过往经历",
+                    minlength:"过往经历不能小于50字",
+                    maxlength:"过往经历不能大于300字"
+                }
+            },
+            highlight: function (element, errorClass) {
+                $(element).parent().addClass(errorClass);
+            },
+            unhighlight: function (element, errorClass) {
+                $(element).parent().removeClass(errorClass);
+            },
+            submitHandler: function (form) {
+                var loading;
+                $.ajax({
+                    url: "",
+                    type: "post",
+                    data: $("form[name='old-experience-form']").serialize(),
+                    dataType: "json",
+                    beforeSend: function () {
+                        loading = new rcLoading("提交中..");
+                    },
+                    success: function (data) {
+                        loading.remove();
+                        rcAlert("保存成功", true);
+                    },
+                    error: function () {
+                        loading.remove();
+                        rcAlert("保存失败", false);
+                    }
+                });
+            }
+        });
+        //相关案例
+        $("form[name='case-form']").validate({
+            errorClass: 'v-error font_normal',
+            errorElement: 'em',
+            debug: true,
+            messages:{
+                caseName:{
+                    required:"请填写案例名称",
+                    minlength:"案例名称过短",
+                    maxlength:"案例名称过长"
+                },
+                caseMsg:{
+                    required:"请描述你的相关案例",
+                    minlength:"相关案例描述最小50字",
+                    maxlength:"相关案例描述最多300字"
+                }
+            },
+            highlight: function (element, errorClass) {
+                $(element).parent().addClass(errorClass);
+            },
+            unhighlight: function (element, errorClass) {
+                $(element).parent().removeClass(errorClass);
+            },
+            submitHandler: function (form) {
+                var loading;
+                $.ajax({
+                    url: "",
+                    type: "post",
+                    data: $("form[name='case-form']").serialize(),
+                    dataType: "json",
+                    beforeSend: function () {
+                        loading = new rcLoading("提交中..");
+                    },
+                    success: function (data) {
+                        loading.remove();
+                        rcAlert("保存成功", true);
+                    },
+                    error: function () {
+                        loading.remove();
+                        rcAlert("保存失败", false);
+                    }
+                });
+            }
+        });
+
+
+        //检测最多输入多少字
+        $('.user-content').checkWords();
+        //添加年份
+        $('.user-content').addYear();
+        //头像上传
+        var $header_image = $(".head-img"),
+             $headerImg_popup =   $("#headerImg-popup");
+        $header_image.on("click",function(){
+            $headerImg_popup.rcPopup("show",{width:800,height:600});
+            var ljkUpload = new LjkUpload($(".upload-img"));
+            var $file_btn = $headerImg_popup.find(".upload-select-btn"),     //文件选择按钮
+                $move_image = $headerImg_popup.find(".move-image"),    //裁剪框
+                $range = $headerImg_popup.find("#range");               //滑块
+
+            //缩放
+            ljkUpload.rangeToScale({
+                range:$range,
+                ele:$move_image
+            });
+            //拖拽
+            ljkUpload.moveImage({
+                ele:$move_image,
+                isDown:false,
+                isPc:ljkUpload.isPc()
+            });
+            //显示
+            ljkUpload.showImage({
+                fileSelectBtn:$file_btn,
+                fileBtn:$("input[type='file']"),
+                showEle:$move_image,
+                isImage:true
+            });
+            //裁剪
+            ljkUpload.clipImage({
+                success:function( Src ){                  //裁剪完成回调函数
+                    var rc;
+                    $.ajax({
+                        url:"",
+                        type:"post",
+                        data:{headImg:Src},
+                        dataType:"json",
+                        beforeSend:function(){
+                            rc = new rcLoading('上传中,请稍后');
+                        },
+                        success:function( data ){
+                            rc.remove();
+                            rcAlert("上传成功",true,function(){
+                                $headerImg_popup.rcPopup("hide");
+                                $header_image.find("img").attr("src",Src);
+                            });
+                        },
+                        error:function(){
+                            rc.remove();
+                            rcAlert("上传失败!请刷新重试",false);
+                        }
+                    })
+                }
+            })
+        });
+    });
+</script>
+</html>

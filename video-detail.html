@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="renderer" content="webkit">
+    <title>播放视频</title>
+    <link rel="stylesheet" href="fonts/font.css" />
+    <link rel="stylesheet" href="newCss/public.css" />
+    <link rel="stylesheet" href="newCss/style.css">
+    <link rel="stylesheet" href="newCss/video-js.min.css">
+    <!--[if lt IE 9]>
+    <script src="newJs/videojs-ie8.min.js"></script>
+    <script src="newJs/html5.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<div class="top">
+    <div class="container">
+        <div class="pull-left">
+            <span class="icon icon-tel color-success"></span>服务热线：<span class="tel400">400-123-45678</span>
+            <span class="separator">|</span>
+            <a href="javascript:void(0)" class="top-winxin">
+                <span class="icon icon-weiixn color-success"></span>微信
+                <div class="top-winxinCode">
+                    <img src="images/weixin.jpg" alt="">
+                </div>
+            </a>
+            <span class="separator">|</span>
+            <span class="icon icon-comments color-success"></span><a href="#">在线咨询</a></div>
+        <div class="pull-right">
+            <a href="login.html">你好,李金珂</a>
+            <span class="separator">|</span>
+            <a href="login.html">我的消息</a>
+            <span class="separator">|</span>
+            <a href="login.html">趣学老师版APP</a>
+        </div>
+    </div>
+</div>
+<!--头部-->
+<header class="header">
+    <div class="container">
+        <a href="index.html" class="pull-left logo"><img src="images/logo.png"></a>
+        <nav class="pull-right nav fz14">
+            <ul class="clearListStyle nav-move">
+                <li class=""><a href="index.html">首页</a></li>
+                <li class="active"><a href="video-center.html">视频中心</a></li>
+                <li class=""><a href="#">学习圈</a></li>
+                <li class=""><a href="#">课程中心</a></li>
+                <li class="last-padding"><a href="app.html">移动APP</a></li>
+                <b class="nav-move-bar"></b>
+            </ul>
+        </nav>
+    </div>
+</header>
+<!--头部end-->
+<div class="container">
+    <!--导航-->
+    <div class="fz14 videos-crumbs">
+        <a href="#">首页</a>
+        <span class="separator">/</span>
+        <a href="#">视频中心</a>
+        <span class="separator">/</span>
+        <a href="#">Python语言基础</a>
+    </div>
+    <!--视频标题-->
+    <div class="video-detail-title">
+        <h2 class="normal fz20 color-main">Python语言基础</h2>
+        <p class="color-grey">课程描述：Python6666</p>
+    </div>
+    <!--视频播放区域-->
+    <div class="video-play-section">
+        <div class="pull-left video-play-box">
+            <video  id="video" data-nextVideo="11" class="video-js vjs-tech vjs-big-play-centered " controls preload="auto" width="750" height="440"
+                    data-setup='{}'>
+                <source src=""  type="video/flv"/>
+                <p class="vjs-no-js">你的浏览器版本过低,请使用现代浏览器已获得最佳体验</p>
+            </video>
+        </div>
+        <div class="pull-right video-play-info">
+            <div class="info-title">
+                <h2 class="normal none color-white fz18">课程章节</h2>
+            </div>
+            <div class="info-list">
+                <ul class="clearListStyle">
+                    <li class="fz14"><a href="#"><i class="color-grey icon-clock mr10"></i><i class="icon-right pull-right"></i>1.小学语文阅读理解</a></li>
+                    <li class="fz14"><a href="#"><i class="color-grey icon-clock mr10"></i><i class="icon-right pull-right"></i>1.小学语文阅读理解</a></li>
+                    <li class="fz14"><a href="#"><i class="color-grey icon-clock mr10"></i><i class="icon-right pull-right"></i>1.小学语文阅读理解</a></li>
+                    <li class="fz14"><a href="#"><i class="color-grey icon-clock mr10"></i><i class="icon-right pull-right"></i>1.小学语文阅读理解</a></li>
+                    <li class="fz14"><a href="#"><i class="color-grey icon-clock mr10"></i><i class="icon-right pull-right"></i>1.小学语文阅读理解</a></li>
+                    <li class="fz14"><a href="#"><i class="color-grey icon-clock mr10"></i><i class="icon-right pull-right"></i>1.小学语文阅读理解</a></li>
+                    <li class="fz14"><a href="#"><i class="color-grey icon-clock mr10"></i><i class="icon-right pull-right"></i>1.小学语文阅读理解</a></li>
+                    <li class="fz14"><a href="#"><i class="color-grey icon-clock mr10"></i><i class="icon-right pull-right"></i>1.小学语文阅读理解</a></li>
+                    <li class="fz14"><a href="#"><i class="color-grey icon-clock mr10"></i><i class="icon-right pull-right"></i>1.小学语文阅读理解</a></li>
+                    <li class="fz14"><a href="#"><i class="color-grey icon-clock mr10"></i><i class="icon-right pull-right"></i>1.小学语文阅读理解</a></li>
+                    <li class="fz14"><a href="#"><i class="color-grey icon-clock mr10"></i><i class="icon-right pull-right"></i>1.小学语文阅读理解</a></li>
+                    <li class="fz14"><a href="#"><i class="color-grey icon-clock mr10"></i><i class="icon-right pull-right"></i>1.小学语文阅读理解</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!--视频操作-->
+<div class="container video-operation">
+    <div class="operation">
+        <div class="download text-center pull-left">
+            <ul class="clearListStyle">
+                <li class="margin">
+                    <a href="">
+                        <div class="mb10"><i class="iconfont icon-shouchang"></i></div>
+                        <span class="fz16">收藏</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <div class="mb10"><i class="iconfont icon-download"></i></div>
+                        <span class="fz16">下载</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="share pull-left text-center">
+            <ul class="clearListStyle">
+                <li class="margin">
+                    <a href="" class="qzone">
+                        <div class="mb10"><i class="iconfont icon-qzone"></i></div>
+                    </a>
+                </li>
+                <li>
+                    <a href="" class="sina">
+                        <div class="mb10"><i class="iconfont icon-sina2"></i></div>
+                        <span class="fz16">分享给朋友</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="" class="weixin">
+                        <div class="mb10"><i class="iconfont icon-weixin2"></i></div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="star pull-left">
+            <div>
+                <span class="fz16 mr10">课程评分:</span>
+                <i class="iconfont icon-star2 active"></i>
+                <i class="iconfont icon-star2 active"></i>
+                <i class="iconfont icon-star2 active"></i>
+                <i class="iconfont icon-star2 active"></i>
+                <i class="iconfont icon-star2 active"></i></div>
+            <div class="margin-top star-grade">
+                <span class="fz16 mr10">你的评分:</span>
+                <i class="iconfont icon-star2 "></i>
+                <i class="iconfont icon-star2 "></i>
+                <i class="iconfont icon-star2 "></i>
+                <i class="iconfont icon-star2 "></i>
+                <i class="iconfont icon-star2 "></i>
+                <span class="ml5 star-grade-msg"></span>
+                <em class="success-tips tips color-main ml5"><i class="iconfont icon-true color-main mr5"></i>评分成功</em>
+                <em class="error-tips tips color-danger ml5"><i class="iconfont icon-false color-danger mr5"></i>评分失败</em>
+                <svg id="grade-success">
+                    <rect class="">111</rect>
+                </svg>
+            </div>
+        </div>
+    </div>
+</div>
+<!--评论区域-->
+<div class="container clearfix video-comment-section">
+    <div class="pull-left comment-list-box">
+        <div class="comment-title">
+            <h4 class="normal none color-main fz20">学习交流</h4>
+        </div>
+        <div class="comment-input mt20">
+            <div>
+                <h5 class="color-grey normal fz14"><i class="icon-comments color-grey mr5"></i>我要评论</h5>
+                <textarea class="inp  comment-msg mt10 fz16 checkwords" maxlength="100" placeholder="将你的学习心得,吐槽,感受分享给大家吧.."></textarea>
+            </div>
+            <span class="comment-maxSize color-grey">还可以输入<span class="color-danger mr5 ml5 maxMsgShow">100</span>个字</span>
+            <a href="javascript:;" class="btn btn-primary mt20 submit-comment">发表评论</a>
+        </div>
+        <!--评论列表-->
+        <section class="comment-list mt20">
+            <ul class="clearListStyle">
+                <li>
+                    <div class="comment-list-headImg pull-left">
+                        <img src="images/admin.png" alt="头像加载中">
+                    </div>
+                    <div class="comment-list-info">
+                        <div class="comment-list-name fz12"><a href="#">萌萌的逗比</a></div>
+                        <div class="comment-list-content fz14">啦啦啦啦德玛西亚，快使用双结棍很哼哈哈哈啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊快使用双结棍很哼哈哈哈啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊</div>
+                        <div class="comment-list-time color-grey fz12">
+                            <span>时间: 2015-08-29</span>
+                            <a href="javascript:;" class="pull-right">回复</a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="comment-list-headImg pull-left">
+                        <img src="images/admin.png" alt="头像加载中">
+                    </div>
+                    <div class="comment-list-info">
+                        <div class="comment-list-name fz12"><a href="#">萌萌的逗比</a></div>
+                        <div class="comment-list-content fz14">啦啦啦啦德玛西亚，快使用双结棍很哼哈哈哈啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊快使用双结棍很哼哈哈哈啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊</div>
+                        <div class="comment-list-time color-grey fz12">
+                            <span>时间: 2015-08-29</span>
+                            <a href="javascript:;" class="pull-right">回复</a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="comment-list-headImg pull-left">
+                        <img src="images/admin.png" alt="头像加载中">
+                    </div>
+                    <div class="comment-list-info">
+                        <div class="comment-list-name fz12"><a href="#">萌萌的逗比</a></div>
+                        <div class="comment-list-content fz14">啦啦啦啦德玛西亚，快使用双结棍很哼哈</div>
+                        <div class="comment-list-time color-grey fz12">
+                            <span>时间: 2015-08-29</span>
+                            <a href="javascript:;" class="pull-right">回复</a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <!--分页-->
+            <div class="pagination text-center clearfix mt20 mb30" id="page">
+                <span class="current">1</span>
+                <a class="num" href="">2</a>
+                <a class="num" href="">下一页</a>
+                <a class="num" href="">尾页</a>
+            </div>
+        </section>
+        <!--评论列表end-->
+    </div>
+    <div class="pull-right video-teacher">
+        <div class="teacher-title">
+            <h4 class="normal none color-default fz20">老师介绍</h4>
+        </div>
+        <div class="teacher-content">
+            <section>
+                <div class="teacher-headImg pull-left">
+                    <img src="images/headImg.jpg" alt="老师头像">
+                </div>
+                <div class="pull-left text-center-info">
+                    <div>数学讲师：赵日天</div>
+                    <a href="#" class="btn btn-primary mt10">查看他的课程</a>
+                </div>
+            </section >
+            <section class="clearfix">
+                <p>初中教研主任,多加知名网校中学数学主讲名师,教龄十余年,快乐教学,快速提分!</p>
+                <p class="color-grey">8年级春季同步精讲+解题技巧 <span class="fz12">(包含直播,录播,必考题型)</span></p>
+                <p class="color-grey">课程信息：<span class="color-main">2016.5.20-2016.6.30</span></p>
+                <p class="color-grey">直播课时间: <span class="color-main">每周三,周六 20:00-21:00</span></p>
+                <p class="color-grey">学习条件: <span>注册后免费学习  <a href="#" class="color-main">(没有账号?现在去注册)</a></span></p>
+            </section>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="video-lists clearfix">
+        <ul class="clearListStyle">
+            <li class="video-item">
+                <div class="video-image">
+                    <a href="video-detail.html"><img src="images/video_list.gif" alt="图片加载中"></a>
+                </div>
+                <div class="video-title">
+                    <h2 class="fz16"><a href="video-detail.html">Python语言基础</a></h2>
+                </div>
+                <div class="video-price mt10">
+                    <span class="fz14">免费课程</span>
+                    <span class="pull-right fz14"><i class="iconfont icon-play mr5 fz16"></i>99</span>
+                </div>
+            </li>
+            <li class="video-item">
+                <div class="video-image">
+                    <a href="video-detail.html"><img src="images/video_list.gif" alt="图片加载中"></a>
+                </div>
+                <div class="video-title">
+                    <h2 class="fz16"><a href="video-detail.html">Python语言基础</a></h2>
+                </div>
+                <div class="video-price mt10">
+                    <span class="fz14">免费课程</span>
+                    <span class="pull-right fz14"><i class="iconfont icon-play mr5 fz16"></i>99</span>
+                </div>
+            </li>
+            <li class="video-item">
+                <div class="video-image">
+                    <a href="video-detail.html"><img src="images/video_list.gif" alt="图片加载中"></a>
+                </div>
+                <div class="video-title">
+                    <h2 class="fz16"><a href="video-detail.html">Python语言基础</a></h2>
+                </div>
+                <div class="video-price mt10">
+                    <span class="fz14">免费课程</span>
+                    <span class="pull-right fz14"><i class="iconfont icon-play mr5 fz16"></i>99</span>
+                </div>
+            </li>
+            <li class="video-item">
+                <div class="video-image">
+                    <a href="video-detail.html"><img src="images/video_list.gif" alt="图片加载中"></a>
+                </div>
+                <div class="video-title">
+                    <h2 class="fz16"><a href="video-detail.html">Python语言基础</a></h2>
+                </div>
+                <div class="video-price mt10">
+                    <span class="fz14">免费课程</span>
+                    <span class="pull-right fz14"><i class="iconfont icon-play mr5 fz16"></i>99</span>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+<!--底部-->
+<footer class="footer clearfix">
+    <div class="container flinks">
+        <a href="#" target="_blank">趣学优势</a>
+        <a href="#" target="_blank">趣学名师</a>
+        <a href="#" target="_blank">趣学成就</a>
+        <a href="#" target="_blank">公开课</a>
+        <a href="#" target="_blank">题库</a>
+        <a href="#" target="_blank">加入我们</a>
+        <div class="pull-right contact-us">
+            <span><a href="#"><i class="iconfont icon-tingli"></i><i class="tips">在线客服</i></a></span>
+            <span><i class="icon-home"></i><i class="tips">成都睿创智播科技有限公司</i></span>
+            <span><i class="icon-map"></i><i class="tips">成都市环球中心E2</i></span>
+        </div>
+    </div>
+    <div class="container copyright">
+        Copyright © 2015-2016 <span>www.ruichuangzhibo.com </span><span>商务合作联系:张三 </span>邮箱:ruichuangzhibo@126.com
+    </div>
+</footer>
+
+<!--回到顶部-->
+<div class="floatBar">
+    <div class="floatBar-box phone">
+        <div class="first-box"><i class="icon icon-tel"></i></div>
+        <div class="hidden-box fz14">客服电话</div>
+    </div>
+    <div class="floatBar-box weixin">
+        <div class="first-box"><i class="icon icon-weiixn"></i></div>
+        <div class="hidden-box fz14">微信</div>
+    </div>
+    <div class="floatBar-box backTop hidden">
+        <div class="first-box fz16"><i class="icon icon-up"></i></div>
+        <div class="hidden-box fz14">回到顶部</div>
+    </div>
+    <div class="floatBar-phone fz18 color-main"><i class="icon-tel"></i>客服热线：18181356512</div>
+    <div class="floatBar-weixin">
+        <img src="images/weixin.jpg" alt="">
+    </div>
+</div>
+</body>
+<script src="newJs/jquery-1.11.3.js"></script>
+<script src="newJs/script.js"></script>
+<script src="newJs/video.min.js"></script>
+<script>
+    function createCommentList( commentListSize ,headImgSrc , nickName , msg , time){
+        var list = '';
+        for( var i=1; i<= commentListSize ; i++ ){
+            list += "<li>" +
+                    "<div class='comment-list-headImg pull-left'>" +
+                    "<img src='"+headImgSrc+"' alt='头像加载中'>" +
+                    "</div>" +
+                    "<div class='comment-list-info'>" +
+                    "<div class='comment-list-name fz12'>" +
+                    "<a href='#'>"+nickName+"</a>"+
+                    "</div>" +
+                    "<div class='comment-list-content fz14'>"+msg+"</div>" +
+                    "<div class='comment-list-time color-grey fz12'> " +
+                    "<span>时间："+time+"</span>" +
+                    "<a href='javascript:;' class='pull-right'>回复</a> " +
+                    "</div>" +
+                    "</div>" +
+                    "</li>"
+        }
+        return $(list);
+    }
+    $(function(){
+        //星星评分
+        var starArray = ['很差劲','没帮助','一般吧','讲得不错','受益匪浅'],
+            $star_grade = $(".star-grade").find("i"),
+                $grade_msg = $(".star-grade-msg");
+        $star_grade.on("mouseover",function(){
+            var $this = $(this),
+                $index = $this.index();
+            $star_grade.removeClass("active");
+            $.each($star_grade,function(i){
+                var $that = $(this);
+                $that.addClass("active");
+                if( i >= $index -1){
+                    return false;
+                }
+            });
+            $grade_msg.html(starArray[$index-1])
+        }).click(function(){
+            var starNum = 0;
+            switch ($grade_msg.html()){
+                case "很差劲":
+                    starNum = 1;
+                    break;
+                case "没帮助":
+                    starNum = 2;
+                    break;
+                case "一般吧":
+                    starNum = 3;
+                    break;
+                case "讲得不错":
+                    starNum = 4;
+                    break;
+                case "受益匪浅":
+                    starNum = 5;
+            }
+            $.ajax({
+                url:"",
+                type:"post",
+                data:{starNum:starNum},
+                dataType:"json",
+                success:function(){
+                    $star_grade.parent().addClass("success");
+                    $star_grade.off("mouseover");
+                    $(".success-tips").slideDown();
+                },
+                error:function(){
+                    $star_grade.parent().addClass("error");
+                    $(".error-tips").slideDown();
+                }
+            })
+
+        });
+        //最大输入
+        $(".comment-input").checkWords();
+        //ie8使用flash播放
+        videojs.options.flash.swf = "newJs/video-js.swf";
+        var $comment_textarea = $(".comment-msg"),          //评论框
+            $submit_comment  =  $('.submit-comment');       //评论按钮
+
+        //点击发表评论
+        $submit_comment.on('click',function(){
+            var $comment_msg = $comment_textarea.val(),
+                $comment_list = $('.comment-list>ul');
+            if(!$comment_msg.length){
+                rcAlert('请填写评论');
+                return;
+            }
+            var $comment_msgReplace = $comment_msg.replace(/\s/g,""),
+                rc;
+            $.ajax({
+                url:"",
+                type:"post",
+                data:{},
+                dataType:"json",
+                cache:false,
+                beforeSend:function(){
+                    rc = new rcLoading("发表中..");
+                },
+                success:function( data ){
+                    rc.remove();
+                    rcAlert('评论成功',true);
+                    $comment_textarea.val('');
+                    var $list = createCommentList(1,"images/admin.png","赵日天",$comment_msgReplace,"2016-06-6");
+                    $comment_list.find("li").first().before($list);
+                },
+                error:function(){
+                    rc.remove();
+                    rcAlert('评论失败',false);
+                }
+            });
+
+        });
+        $comment_textarea.on("keydown",function(e){
+            var target = e || window.event;
+            if( target.keyCode == 13 ){
+                $submit_comment.click();
+            }
+        });
+
+    });
+</script>
+</html>

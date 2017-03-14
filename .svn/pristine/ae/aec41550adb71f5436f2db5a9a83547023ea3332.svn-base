@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="renderer" content="webkit">
+    <title>班级管理</title>
+    <link rel="stylesheet" href="fonts/font.css" />
+    <link rel="stylesheet" href="newCss/public.css" />
+    <link rel="stylesheet" href="newCss/user_center.css">
+    <!--[if lt IE 9]>
+    <script src="newJs/html5.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<div class="top">
+    <div class="container">
+        <div class="pull-left">
+            <span class="icon icon-tel color-success"></span>服务热线：<span class="tel400">400-123-45678</span>
+            <span class="separator">|</span>
+            <a href="javascript:void(0)" class="top-winxin">
+                <span class="icon icon-weiixn color-success"></span>微信
+                <div class="top-winxinCode">
+                    <img src="images/weixin.jpg" alt="">
+                </div>
+            </a>
+            <span class="separator">|</span>
+            <span class="icon icon-comments color-success"></span><a href="#">在线咨询</a></div>
+            <div class="pull-right">
+                <a href="login.html">你好,李金珂</a>
+                <span class="separator">|</span>
+                <a href="login.html">我的消息</a>
+                <span class="separator">|</span>
+                <a href="login.html">趣学老师版APP</a>
+            </div>
+    </div>
+</div>
+<!--头部-->
+<header class="header usercenter-header">
+    <div class="container">
+        <a href="index.html" class="pull-left logo"><img src="images/logo.png"></a>
+        <nav class="pull-right nav fz14">
+            <ul class="clearListStyle nav-move">
+                <li class="fz16 clear-padding"><a href="index.html">老师个人中心</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<div class="wrapper">
+    <aside class="user-sidebar usercenter-menu">
+        <h5 class="none"><span class="iconfont icon-shezhi"></span>个人设置 <i class="icon-right pull-right"></i></h5>
+        <menu class="usermenu text-center">
+            <a href="usercenter.html" class="active">个人信息</a>
+            <a href="safeCenter.html" class="">安全设置</a>
+        </menu>
+        <h5 class="none"><span class="iconfont icon-yonghu"></span>个人管理 <i class="icon-right pull-right"></i></h5>
+        <menu class="usermenu text-center">
+            <a href="#" class="">视频管理</a>
+            <a href="#" class="">课程管理</a>
+            <a href="#" class="">身份认证</a>
+            <a href="#" class="">钱包管理</a>
+            <a href="#" class="">订单管理</a>
+        </menu>
+        <h5 class="none"><span class="iconfont icon-wenjianjia"></span>校务管理 <i class="icon-right pull-right"></i></h5>
+        <menu class="usermenu text-center">
+            <a href="#" class="">班级管理</a>
+            <a href="#" class="">课程管理</a>
+        </menu>
+    </aside>
+    <div class="user-wrap">
+        <div class="user-title">
+            <h3 class="normal none">个人设置<span class="separator">></span><span class="fz14 color-grey">我的个人信息</span><span class="color-danger"> ( 带*为必填项 ) </span></h3>
+        </div>
+        <div class="user-content">
+            <div class="content userInfo">
+                <div class="clearfix">
+                    <form action="#" method="post" name="userInfo-form">
+                    <table class="userInfo-table">
+                        <thead>
+                            <tr>
+                                <td class="text-right"><i class="import">*</i>头像 ：</td>
+                                <td>
+                                    <div class="header-image">
+                                        <img src="images/headImg.jpg" alt="头像">
+                                        <div class="color-white text-center fz14">上传图片</div>
+                                    </div>
+                                    <span class="color-grey">点击上传你的头像</span>
+                                </td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="text-right"><i class="import">*</i>姓名 ：</td>
+                                <td><input type="text" class="inp" name="realname" id="realname" placeholder="请输入真实姓名" onkeyup="WidthCheck(this,12)" isCN="true" required="true"></td>
+                            </tr>
+                            <tr>
+                                <td class="text-right"><i class="import">*</i>性别 ：</td>
+                                <td class="select-sex">
+                                   <input type="radio" name="sex" id="boy" checked class="hidden"> <label for="boy" class="boy">男</label>
+                                    <input type="radio" name="sex" id="girl" class="hidden"><label for="girl" class="girl">女</label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-right"><i class="import">*</i>教龄 ：</td>
+                                <td>
+                                    <select name="age" class="inp">
+                                        <option value="">1-2年</option>
+                                        <option value="">2-3年</option>
+                                        <option value="">3-4年</option>
+                                        <option value="">10年以上</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-right"><i class="import">*</i>手机号 ：</td>
+                                <td><input type="text" class="inp " name="mobile" id="mobile"  placeholder="请输入11位手机号" mobile="true" required="true"></td>
+                            </tr>
+                            <tr>
+                                <td class="text-right"><i class="import">*</i>可授课程 ：</td>
+                                <td>
+                                    <select name="class"  class="inp">
+                                        <option value="">小学语文</option>
+                                        <option value="">小学数学</option>
+                                        <option value="">小学英语</option>
+                                        <option value="">小学历史</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-right">常用地址 ：</td>
+                                <td>
+                                    <input type="text" class="inp address" name="address" id="address" placeholder="请填写家庭住址信息"><span class="color-grey"></span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td colspan="2 "><button class="btn btn-primary margin-right">保存个人信息</button><a href="usercenter.html" class="btn btn-default" type="reset">取消</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="headerImg-popup" class="rcpopup headImg-popup" style="display: none;">
+    <div class="rcpopup-title"><h2>头像上传</h2></div>
+    <div class="rcpopup-content upload-img">
+        <div class="upload-image-box text-center color-white fz16rem mt10">
+            <!--拖动缩放区域-->
+            <div class="move-image hasImg">
+            </div>
+            <!--切割区域-->
+            <div class="clip-image"></div>
+        </div>
+        <div class="mt10 color-main fz14">
+            拖动滑竿可缩放图片
+        </div>
+        <div class="mt10">
+            <!--滑竿-->
+            <a href="javascript:void(0)" class="down">-</a><input type="range" max="3.0" min="0.1" value="1.0" step="0.01" class="inp" id="range"><a href="javascript:void(0)" class="up">+</a>
+        </div>
+        <aside class="text-center mt20">
+            <input type="file" accept="image/*" multiple id="file-btn" class="hidden">
+            <button class="btn btn-grey upload-select-btn">选择图片</button>
+            <button class="btn btn-primary upload-upload-btn">立即上传</button>
+        </aside>
+    </div>
+</div>
+</body>
+<script src="newJs/jquery-1.11.3.js"></script>
+<script src="newJs/script.js"></script>
+<script src="newJs/LjkUpLoad.js"></script>
+<script src="newJs/jquery.validate.min.js"></script>
+<script src="newJs/validate.config.js"></script>
+<script>
+    $(function() {
+        //头像上传
+        var $header_image = $(".header-image"),
+             $headerImg_popup =   $("#headerImg-popup");
+        $header_image.on("click",function(){
+            $headerImg_popup.rcPopup("show",{width:800,height:600});
+            var ljkUpload = new LjkUpload($(".upload-img"));
+            var $file_btn = $headerImg_popup.find(".upload-select-btn"),     //文件选择按钮
+                $move_image = $headerImg_popup.find(".move-image"),    //裁剪框
+                $range = $headerImg_popup.find("#range");               //滑块
+
+            //缩放
+            ljkUpload.rangeToScale({
+                range:$range,
+                ele:$move_image
+            });
+            //拖拽
+            ljkUpload.moveImage({
+                ele:$move_image,
+                isDown:false,
+                isPc:ljkUpload.isPc()
+            });
+            //显示
+            ljkUpload.showImage({
+                fileSelectBtn:$file_btn,
+                fileBtn:$("input[type='file']"),
+                showEle:$move_image,
+                isImage:true
+            });
+            //裁剪
+            ljkUpload.clipImage({
+                success:function( Src ){                  //裁剪完成回调函数
+                    var rc;
+                    $.ajax({
+                        url:"",
+                        type:"post",
+                        data:{headImg:Src},
+                        dataType:"json",
+                        beforeSend:function(){
+                            rc = new rcLoading('上传中,请稍后');
+                        },
+                        success:function( data ){
+                            rc.remove();
+                            rcAlert("上传成功",true,function(){
+                                $headerImg_popup.rcPopup("hide");
+                                $header_image.find("img").attr("src",Src);
+                            });
+
+                        },
+                        error:function(){
+                            rc.remove();
+                            rcAlert("上传失败!请刷新重试",false);
+                        }
+                    })
+                }
+            })
+        });
+
+        //个人中心 修改个人资料
+        $("form[name='userInfo-form']").validate({
+            errorClass: 'v-error',
+            errorElement: 'em',
+            debug: true,
+            highlight: function (element, errorClass) {
+                $(element).parent().addClass(errorClass);
+            },
+            unhighlight: function (element, errorClass) {
+                $(element).parent().removeClass(errorClass);
+            },
+            submitHandler: function (form) {
+                var loading;
+                $.ajax({
+                    url: "",
+                    type: "post",
+                    data: $("form[name='userInfo-form']").serialize(),
+                    dataType: "json",
+                    beforeSend: function () {
+                        loading = new rcLoading("提交中..");
+                    },
+                    success: function (data) {
+                        loading.remove();
+                        rcAlert("保存成功", true);
+                    },
+                    error: function () {
+                        loading.remove();
+                        rcAlert("保存失败", false);
+                    }
+                });
+            }
+
+        });
+    });
+</script>
+</html>

@@ -1,0 +1,858 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+	<meta name="format-detection" content="telephone=no">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<meta name="renderer" content="webkit">
+	<title>首页</title>
+	<link rel="stylesheet" href="fonts/font.css" />
+	<link rel="stylesheet" href="newCss/public.css" />
+	<link rel="stylesheet" href="newCss/style.css">
+	<!--[if lt IE 9]>
+	<script src="newJs/html5.min.js"></script>
+	<![endif]-->
+</head>
+	<body>
+		<div class="top">
+			<div class="container">
+				<div class="pull-left">
+					<span class="icon icon-tel color-success"></span>服务热线：<span class="tel400">400-123-45678</span>
+					<span class="separator">|</span>
+					<a href="javascript:void(0)" class="top-winxin">
+					<span class="icon icon-weiixn color-success"></span>微信
+						<div class="top-winxinCode">
+							<img src="images/weixin.jpg" alt="">
+						</div>
+					</a>
+					<span class="separator">|</span>
+					<span class="icon icon-comments color-success"></span><a href="#">在线咨询</a>
+				</div>
+				<div class="pull-right top-login-btn">
+					<a href="login.html" class="btn">登录</a>
+				</div>
+			</div>
+		</div>
+		<!--头部-->
+		<header class="header">
+			<div class="container">
+				<a href="index.html" class="pull-left logo"><img src="images/logo.png"></a>
+				<nav class="pull-right nav fz14">
+					<ul class="clearListStyle nav-move">
+						<li class="active"><a href="index.html">首页</a></li>
+						<li class=""><a href="video-center.html">视频中心</a></li>
+						<li class=""><a href="#">学习圈</a></li>
+						<li class=""><a href="#">课程中心</a></li>
+						<li class="last-padding"><a href="app.html">移动APP</a></li>
+						<b class="nav-move-bar"></b>
+					</ul>
+				</nav>
+			</div>
+		</header>
+		<!--头部end-->
+		<!--轮播图-->
+		<div class="banner">
+			<div class="banner-wrap">
+				<ul class="clearListStyle banner-move">
+					<li class="item">
+						<a href="javascript:;"><img src="images/banner1.jpg" alt="名师1对1"></a>
+						<div class="banner-move-item banner-move-item1">
+							<h2 class="name "><strong><span class="mr5">51</span>趣学</strong></h2>
+							<h2 class="fz20 none"><span class="mr10">名师</span><span class="mr10">1</span>对<span class="mr10">1</span><b>辅导</b></h2>
+							<p class="text"><strong><span class="mr5">名师授课</span>在线互动</strong></p>
+							<a class="btn color-white fz20">高中<span>|</span>初中<span>|</span>小学全科辅导</a>
+						</div>
+					</li>
+					<li class="item">
+						<a href="javascript:;"><img src="images/banner2.jpg" alt="在线上课"></a>
+						<div class="banner-move-item banner-move-item2">
+							<h2 class=""><img src="images/banner_axsk.png" alt=""></h2>
+							<p class="fz24 color-white ml5">极简操作 <span class="separator"></span> 多屏互动 <span class="separator"></span> 课堂录制</p>
+							<a href="#" class="btn color-white text-center">免费试听</a>
+						</div>
+					</li>
+					<li class="item">
+						<a href="javascript:;"><img src="images/banner5.jpg" alt="名师1对1"></a>
+						<div class="banner-move-item banner-move-item5 text-right">
+							<h2 class="name normal color-main"><span class="mr5">51</span>趣学</h2>
+							<h2 class="none color-info">专业在线</h2>
+							<h2 class="text color-info">中小学培训机构</h2>
+							<p class="fz20">针对中小学生在线学习特点,保证孩子学习效果</p>
+							<a class="btn color-white fz20">申请免费名师一对一试听课</a>
+						</div>
+					</li>
+					<li class="item">
+						<a href="javascript:;"><img src="images/banner3.jpg" alt="体验课"></a>
+					</li>
+					<li class="item">
+						<a href="javascript:;"><img src="images/banner4.jpg" alt="1对1辅导"></a>
+					</li>
+				</ul>
+			</div>
+			<div class="banner-list"></div>
+			<div class="container arrow-box">
+				<a href="javascript:;" class="arrow left-arrow"><img src="images/left-arrow.png" alt="" ></a>
+				<a href="javascript:;" class="arrow right-arrow"><img src="images/right-arrow.png" alt="" ></a>
+			</div>
+		</div>
+		<!--轮播end-->
+		<!--课程列表-->
+		<div class="all-course-content">
+			<h2 class="none  text-center">课程分类</h2>
+			<p class="fz16 text-center color-grey">盖含更多知识</p>
+			<b class="title-line"></b>
+			<ul class="clearListStyle container text-center color-white">
+				<li class="content item1">
+					<div>
+						<i class="iconfont icon-xiaoxue"></i>
+					</div>
+					<h3>小学课程</h3>
+					<span class="fz18">51趣学免费试听课</span>
+				</li>
+				<li class="margin"></li>
+				<li class="content item2">
+					<div>
+						<i class="iconfont icon-chuzhong"></i>
+					</div>
+					<h3>初中课程</h3>
+					<span class="fz18">51趣学免费试听课</span>
+				</li>
+				<li class="margin"></li>
+				<li class="content item3">
+					<div>
+						<i class="iconfont icon-gaozhong"></i>
+					</div>
+					<h3>高中课程</h3>
+					<span class="fz18">51趣学免费试听课</span>
+				</li>
+				<li class="margin"></li>
+				<li class="content item4">
+					<div>
+						<i class="iconfont icon-chongci"></i>
+					</div>
+					<h3>精品冲刺课程</h3>
+					<span class="fz18">VIP免费公开课</span>
+				</li>
+			</ul>
+		</div>
+		<!--课程列表end-->
+		<!--短期高效提分方案-->
+		<div class="score-program-section">
+			<div class="container">
+				<div class="score-program text-center">
+					<h2 class="none normal animate">短期高效提分方案</h2>
+					<p class="fz16 color-grey animate">
+						花同样的时间获得更多的知识
+						<b class="title-line"></b>
+					</p>
+					<ul class="clearListStyle score-program-list">
+						<li class="item">
+							<div class="score-program-list-img">
+								<img src="images/score_program_list1.jpg" alt="芬实基础">
+							</div>
+							<div class="score-program-list-text">
+								<p class="fz16 none">芬实基础</p>
+								<p class="fz14 none">定制个性化讲义</p>
+								<p class="fz14 none">精讲考试重点难点，稳拿基础分</p>
+							</div>
+						</li>
+						<li class="margin"></li>
+						<li class="item">
+							<div class="score-program-list-img">
+								<img src="images/score_program_list2.jpg" alt="答题技巧">
+							</div>
+							<div class="score-program-list-text">
+								<p class="fz16 none">答题技巧</p>
+								<p class="fz14 none">定制个性化讲义</p>
+								<p class="fz14 none">精讲考试重点难点，稳拿基础分</p>
+							</div>
+						</li>
+						<li class="margin"></li>
+						<li class="item">
+							<div class="score-program-list-img">
+								<img src="images/score_program_list3.jpg" alt="专题讲义">
+							</div>
+							<div class="score-program-list-text">
+								<p class="fz16 none">专题精炼</p>
+								<p class="fz14 none">定制个性化讲义</p>
+								<p class="fz14 none">精讲考试重点难点，稳拿基础分</p>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!--短期高效提分方案end-->
+		<!--家校互动-->
+		<div class="interaction">
+			<div class="container">
+				<section class="interaction-border">
+					<div class="pull-left interaction-img">
+						<div class="interaction-imgZindex1">
+							<img src="images/interaction.png" alt="">
+						</div>
+						<div class="interaction-imgZindex2">
+							<img src="images/app_interaction_image.png" alt="">
+						</div>
+					</div>
+					<div class="pull-left interaction-text">
+						<img src="images/app_interaction_info.png" alt="家校互动">
+					</div>
+				</section>
+			</div>
+		</div>
+		<!--家校互动end-->
+		<!--更轻松的学习体验-->
+		<div class="study-experience">
+			<div class="container">
+				<div class="study-experience-info pull-left">
+					<h2 class="color-white">课程在线辅导</h2>
+					<h2 class="color-white">百位技术导师,在线全程辅导</h2>
+					<h2 class="color-white">让学习变得有乐趣</h2>
+					<div class="fz14">
+						<p class="none">老师来自清华、北大、复旦、交大、浙大 </p>
+						<p class="none">等名校名师经3轮严格筛选，专业化教师培 </p>
+						<p class="none">训确保教学质量名校水平的独家教学课件，</p>
+						<p class="none">轻松解析学科难点</p>
+					</div>
+					<div class="study-experience-a">
+						<a href="#" class="btn">马上咨询课程</a>
+						<svg>
+							<rect x="50" y="50" rx="10" ry="10" width="175" height="48"></rect>
+						</svg>
+					</div>
+				</div>
+				<div class="study-experience-phone pull-right">
+					<img src="images/phone.png" alt="">
+				</div>
+			</div>
+		</div>
+		<!--更轻松的学习体验end-->
+		<!--科目介绍-->
+		<div class="course-title-box clearfix">
+			<div class="container text-center course-title">
+				<h2>九大科目快速提分</h2>
+				<p class="fz18">200人强大教研团队，专业研究全国各省命题规律、中高考热点，为你个性化定制1对1专属课程
+					<b class="title-line"></b>
+				</p>
+			</div>
+			<div class="container margin-top">
+				<section class="text-center fz22 level-toggle">
+					<p class="border-bottom select-level on">高中</p>
+					<p class="select-level">初中</p>
+				</section>
+				<ul class="clearListStyle course-title-list ">
+					<li>
+						<section class="courseIcon text-center">
+							<div>
+								<i class="iconfont icon-huojian"></i>
+							</div>
+							<strong>高考冲刺</strong>
+						</section>
+						<section class="courseInfo">
+							<div><i class="iconfont icon-huojian fz20"></i><span class="fz20">高考冲刺</span></div>
+							<ul class="clearListStyle">
+								<li><a href="#">高考冲刺aaaaaa</a></li>
+								<li><a href="#">高考冲刺aaaaaa</a></li>
+								<li><a href="#">高考冲刺aaaaaa</a></li>
+								<li><a href="#">高考冲刺aaaaaa</a></li>
+								<li><a href="#">高考冲刺aaaaaa</a></li>
+							</ul>
+						</section>
+					</li>
+					<li>
+						<section class="courseIcon text-center">
+							<div>
+								<i class="iconfont icon-shuxue"></i>
+							</div>
+							<strong>高中数学</strong>
+						</section>
+						<section class="courseInfo">
+							<div><i class="iconfont icon-shuxue fz20"></i><span class="fz20">高中数学</span></div>
+							<ul class="clearListStyle">
+								<li><a href="#">高考冲刺aaaaaa</a></li>
+								<li><a href="#">高考冲刺aaaaaa</a></li>
+								<li><a href="#">高考冲刺aaaaaa</a></li>
+								<li><a href="#">高考冲刺aaaaaa</a></li>
+								<li><a href="#">高考冲刺aaaaaa</a></li>
+							</ul>
+						</section>
+					</li>
+					<li>
+						<section class="courseIcon text-center">
+							<div>
+								<i class="iconfont icon-wuli"></i>
+							</div>
+							<strong>高中物理</strong>
+						</section>
+						<section class="courseInfo">
+							<div><i class="iconfont icon-wuli fz20"></i><span class="fz20">高中物理</span></div>
+							<ul class="clearListStyle">
+								<li><a href="#">高考冲刺aaaaaa</a></li>
+								<li><a href="#">高考冲刺aaaaaa</a></li>
+								<li><a href="#">高考冲刺aaaaaa</a></li>
+								<li><a href="#">高考冲刺aaaaaa</a></li>
+								<li><a href="#">高考冲刺aaaaaa</a></li>
+							</ul>
+						</section>
+					</li>
+					<li>
+						<section class="courseIcon text-center">
+							<div>
+								<i class="iconfont icon-huaxue"></i>
+							</div>
+							<strong>高中化学</strong>
+						</section>
+						<section class="courseInfo">
+							<div><i class="iconfont icon-huaxue fz20"></i><span class="fz20">高中化学</span></div>
+							<ul class="clearListStyle">
+								<li><a href="#">高考冲刺aaaaaa</a></li>
+								<li><a href="#">高考冲刺aaaaaa</a></li>
+								<li><a href="#">高考冲刺aaaaaa</a></li>
+								<li><a href="#">高考冲刺aaaaaa</a></li>
+								<li><a href="#">高考冲刺aaaaaa</a></li>
+							</ul>
+						</section>
+					</li>
+					<li>
+						<section class="courseIcon text-center">
+							<div>
+								<i class="iconfont icon-yingyu"></i>
+							</div>
+							<strong>高中英语</strong>
+						</section>
+						<section class="courseInfo">
+							<div><i class="iconfont icon-yingyu fz20"></i><span class="fz20">高中英语</span></div>
+							<ul class="clearListStyle">
+								<li><a href="#">高考冲刺aaaaaa</a></li>
+								<li><a href="#">高考冲刺aaaaaa</a></li>
+								<li><a href="#">高考冲刺aaaaaa</a></li>
+								<li><a href="#">高考冲刺aaaaaa</a></li>
+								<li><a href="#">高考冲刺aaaaaa</a></li>
+							</ul>
+						</section>
+					</li>
+					<li>
+						<section class="courseIcon text-center">
+							<div>
+								<i class="iconfont icon-zhuanti"></i>
+							</div>
+							<strong>高中专题培训</strong>
+						</section>
+						<section class="courseInfo">
+							<div><i class="iconfont icon-zhuanti fz20"></i><span class="fz20">高中专题培训</span></div>
+							<ul class="clearListStyle">
+								<li><a href="#">高考冲刺aaaaaa</a></li>
+								<li><a href="#">高考冲刺aaaaaa</a></li>
+								<li><a href="#">高考冲刺aaaaaa</a></li>
+								<li><a href="#">高考冲刺aaaaaa</a></li>
+								<li><a href="#">高考冲刺aaaaaa</a></li>
+							</ul>
+						</section>
+					</li>
+					<li>
+
+						<section class="courseIcon text-center">
+							<div>
+								<i class="iconfont icon-shengwu"></i>
+							</div>
+							<strong>高中生物</strong>
+						</section>
+						<section class="courseInfo">
+							<div><i class="iconfont icon-shengwu fz20"></i><span class="fz20">高中生物</span></div>
+							<ul class="clearListStyle">
+								<li><a href="#">高考冲刺aaaaaa</a></li>
+								<li><a href="#">高考冲刺aaaaaa</a></li>
+								<li><a href="#">高考冲刺aaaaaa</a></li>
+								<li><a href="#">高考冲刺aaaaaa</a></li>
+								<li><a href="#">高考冲刺aaaaaa</a></li>
+							</ul>
+						</section>
+					</li>
+					<li>
+						<section class="courseIcon text-center">
+							<div>
+								<i class="iconfont icon-zhonghe"></i>
+							</div>
+							<strong>高中文综</strong>
+						</section>
+						<section class="courseInfo">
+							<div><i class="iconfont icon-zhonghe fz20"></i><span class="fz20">高中文综</span></div>
+							<ul class="clearListStyle">
+								<li><a href="#">高考冲刺aaaaaa</a></li>
+								<li><a href="#">高考冲刺aaaaaa</a></li>
+								<li><a href="#">高考冲刺aaaaaa</a></li>
+								<li><a href="#">高考冲刺aaaaaa</a></li>
+								<li><a href="#">高考冲刺aaaaaa</a></li>
+							</ul>
+						</section>
+					</li>
+					<li>
+						<section class="courseIcon text-center">
+							<div>
+								<i class="iconfont icon-tingli"></i>
+							</div>
+							<strong>高中口语</strong>
+						</section>
+						<section class="courseInfo">
+							<div><i class="icon-bell fz20"></i><span class="fz20">高中口语</span></div>
+							<ul class="clearListStyle">
+								<li><a href="#">高考冲刺aaaaaa</a></li>
+								<li><a href="#">高考冲刺aaaaaa</a></li>
+								<li><a href="#">高考冲刺aaaaaa</a></li>
+								<li><a href="#">高考冲刺aaaaaa</a></li>
+								<li><a href="#">高考冲刺aaaaaa</a></li>
+							</ul>
+						</section>
+					</li>
+				</ul>
+				<ul class="clearListStyle course-title-list ">
+					<li>
+						<section class="courseIcon text-center">
+							<div>
+								<i class="iconfont icon-huojian"></i>
+							</div>
+							<strong>中考冲刺</strong>
+						</section>
+						<section class="courseInfo">
+							<div><i class="iconfont icon-huojian fz20"></i><span class="fz20">中考冲刺</span></div>
+							<ul class="clearListStyle">
+								<li><a href="#">高考冲刺aaaaaa</a></li>
+								<li><a href="#">高考冲刺aaaaaa</a></li>
+								<li><a href="#">高考冲刺aaaaaa</a></li>
+								<li><a href="#">高考冲刺aaaaaa</a></li>
+								<li><a href="#">高考冲刺aaaaaa</a></li>
+							</ul>
+						</section>
+					</li>
+					<li>
+						<section class="courseIcon text-center">
+							<div>
+								<i class="iconfont icon-shuxue"></i>
+							</div>
+							<strong>初中数学</strong>
+						</section>
+						<section class="courseInfo">
+							<div><i class="iconfont icon-shuxue fz20"></i><span class="fz20">初中数学</span></div>
+							<ul class="clearListStyle">
+								<li><a href="#">高考冲刺aaaaaa</a></li>
+								<li><a href="#">高考冲刺aaaaaa</a></li>
+								<li><a href="#">高考冲刺aaaaaa</a></li>
+								<li><a href="#">高考冲刺aaaaaa</a></li>
+								<li><a href="#">高考冲刺aaaaaa</a></li>
+							</ul>
+						</section>
+					</li>
+					<li>
+						<section class="courseIcon text-center">
+							<div>
+								<i class="iconfont icon-wuli"></i>
+							</div>
+							<strong>初中物理</strong>
+						</section>
+						<section class="courseInfo">
+							<div><i class="iconfont icon-wuli fz20"></i><span class="fz20">初中物理</span></div>
+							<ul class="clearListStyle">
+								<li><a href="#">高考冲刺aaaaaa</a></li>
+								<li><a href="#">高考冲刺aaaaaa</a></li>
+								<li><a href="#">高考冲刺aaaaaa</a></li>
+								<li><a href="#">高考冲刺aaaaaa</a></li>
+								<li><a href="#">高考冲刺aaaaaa</a></li>
+							</ul>
+						</section>
+					</li>
+					<li>
+						<section class="courseIcon text-center">
+							<div>
+								<i class="iconfont icon-huaxue"></i>
+							</div>
+							<strong>初中化学</strong>
+						</section>
+						<section class="courseInfo">
+							<div><i class="iconfont icon-huaxue fz20"></i><span class="fz20">初中化学</span></div>
+							<ul class="clearListStyle">
+								<li><a href="#">高考冲刺aaaaaa</a></li>
+								<li><a href="#">高考冲刺aaaaaa</a></li>
+								<li><a href="#">高考冲刺aaaaaa</a></li>
+								<li><a href="#">高考冲刺aaaaaa</a></li>
+								<li><a href="#">高考冲刺aaaaaa</a></li>
+							</ul>
+						</section>
+					</li>
+					<li>
+						<section class="courseIcon text-center">
+							<div>
+								<i class="iconfont icon-yingyu"></i>
+							</div>
+							<strong>初中英语</strong>
+						</section>
+						<section class="courseInfo">
+							<div><i class="iconfont icon-yingyu fz20"></i><span class="fz20">初中英语</span></div>
+							<ul class="clearListStyle">
+								<li><a href="#">高考冲刺aaaaaa</a></li>
+								<li><a href="#">高考冲刺aaaaaa</a></li>
+								<li><a href="#">高考冲刺aaaaaa</a></li>
+								<li><a href="#">高考冲刺aaaaaa</a></li>
+								<li><a href="#">高考冲刺aaaaaa</a></li>
+							</ul>
+						</section>
+					</li>
+					<li>
+						<section class="courseIcon text-center">
+							<div>
+								<i class="iconfont icon-zhuanti"></i>
+							</div>
+							<strong>初中专题培训</strong>
+						</section>
+						<section class="courseInfo">
+							<div><i class="iconfont icon-zhuanti fz20"></i><span class="fz20">初中专题培训</span></div>
+							<ul class="clearListStyle">
+								<li><a href="#">高考冲刺aaaaaa</a></li>
+								<li><a href="#">高考冲刺aaaaaa</a></li>
+								<li><a href="#">高考冲刺aaaaaa</a></li>
+								<li><a href="#">高考冲刺aaaaaa</a></li>
+								<li><a href="#">高考冲刺aaaaaa</a></li>
+							</ul>
+						</section>
+					</li>
+					<li>
+						<section class="courseIcon text-center">
+							<div>
+								<i class="iconfont icon-shengwu"></i>
+							</div>
+							<strong>初中生物</strong>
+						</section>
+						<section class="courseInfo">
+							<div><i class="iconfont icon-shengwu fz20"></i><span class="fz20">初中生物</span></div>
+							<ul class="clearListStyle">
+								<li><a href="#">高考冲刺aaaaaa</a></li>
+								<li><a href="#">高考冲刺aaaaaa</a></li>
+								<li><a href="#">高考冲刺aaaaaa</a></li>
+								<li><a href="#">高考冲刺aaaaaa</a></li>
+								<li><a href="#">高考冲刺aaaaaa</a></li>
+							</ul>
+						</section>
+					</li>
+					<li>
+						<section class="courseIcon text-center">
+							<div>
+								<i class="iconfont icon-zhonghe"></i>
+							</div>
+							<strong>初中文综</strong>
+						</section>
+						<section class="courseInfo">
+							<div><i class="iconfont icon-zhonghe fz20"></i><span class="fz20">初中文综</span></div>
+							<ul class="clearListStyle">
+								<li><a href="#">高考冲刺aaaaaa</a></li>
+								<li><a href="#">高考冲刺aaaaaa</a></li>
+								<li><a href="#">高考冲刺aaaaaa</a></li>
+								<li><a href="#">高考冲刺aaaaaa</a></li>
+								<li><a href="#">高考冲刺aaaaaa</a></li>
+							</ul>
+						</section>
+					</li>
+					<li>
+						<section class="courseIcon text-center">
+							<div>
+								<i class="iconfont icon-tingli"></i>
+							</div>
+							<strong>初中口语</strong>
+						</section>
+						<section class="courseInfo">
+							<div><i class="icon-bell fz20"></i><span class="fz20">初中口语</span></div>
+							<ul class="clearListStyle">
+								<li><a href="#">高考冲刺aaaaaa</a></li>
+								<li><a href="#">高考冲刺aaaaaa</a></li>
+								<li><a href="#">高考冲刺aaaaaa</a></li>
+								<li><a href="#">高考冲刺aaaaaa</a></li>
+								<li><a href="#">高考冲刺aaaaaa</a></li>
+							</ul>
+						</section>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!--随时随地学习-->
+		<div class="all-apps">
+			<div class="container text-center all-apps-title">
+				<h2 class="color-white">随时随地学习</h2>
+				<p class="fz18 color-white">多终端感受智能学习体验</p>
+				<ul class="clearListStyle all-apps-list">
+					<li class="item item1">
+						<div>
+							<i class="iconfont icon-pc"></i>
+						</div>
+						<p class="fz14">pc网页端</p>
+					</li>
+					<li class="margin"></li>
+					<li class="item">
+						<div>
+							<i class="iconfont icon-ios"></i>
+						</div>
+						<p class="fz14">iOS手机端</p>
+					</li>
+					<li class="margin"></li>
+					<li class="item">
+						<div>
+							<i class="iconfont icon-android"></i>
+						</div>
+						<p class="fz14">Android手机端</p>
+					</li>
+					<li class="margin"></li>
+					<li class="item">
+						<div>
+							<img src="images/weixin.jpg" alt="">
+						</div>
+						<p class="fz14">手机扫描下载APP</p>
+					</li>
+				</ul>
+				<div class="clearfix apps-download mt10">
+					<a href="#" class="btn btn-primary">App Store 下载</a>
+					<a href="#" class="btn btn-primary">下载 Android APK</a>
+				</div>
+			</div>
+		</div>
+		<!--随时随地学习end-->
+		<!--合作院校-->
+		<div class="cooperation-school">
+			<h2 class="normal text-center">我们的合作院校</h2>
+			<b class="title-line"></b>
+			<div class="container">
+				<ul class="clearListStyle">
+					<li><img src="images/universities_01.png" alt=""></li>
+					<li><img src="images/universities_02.png" alt=""></li>
+					<li><img src="images/universities_03.png" alt=""></li>
+					<li><img src="images/universities_04.png" alt=""></li>
+				</ul>
+			</div>
+		</div>
+		<!--合作院校end-->
+		<!--底部-->
+		<footer class="footer clearfix">
+			<div class="container flinks">
+				<a href="#" target="_blank">趣学优势</a>
+				<a href="#" target="_blank">趣学名师</a>
+				<a href="#" target="_blank">趣学成就</a>
+				<a href="#" target="_blank">公开课</a>
+				<a href="#" target="_blank">题库</a>
+				<a href="#" target="_blank">加入我们</a>
+				<div class="pull-right contact-us">
+					<span><a href="#"><i class="iconfont icon-tingli"></i><i class="tips">在线客服</i></a></span>
+					<span><i class="icon-home"></i><i class="tips">成都睿创智播科技有限公司</i></span>
+					<span><i class="icon-map"></i><i class="tips">成都市环球中心E2</i></span>
+				</div>
+			</div>
+			<div class="container copyright">
+				Copyright © 2015-2016 <span>www.ruichuangzhibo.com </span><span>商务合作联系:张三 </span>邮箱:ruichuangzhibo@126.com
+			</div>
+		</footer>
+		<!--回到顶部-->
+		<div class="floatBar">
+			<div class="floatBar-box phone">
+				<div class="first-box"><i class="icon icon-tel"></i></div>
+				<div class="hidden-box fz14">客服电话</div>
+			</div>
+			<div class="floatBar-box weixin">
+				<div class="first-box"><i class="icon icon-weiixn"></i></div>
+				<div class="hidden-box fz14">微信</div>
+			</div>
+			<div class="floatBar-box backTop hidden">
+				<div class="first-box fz16"><i class="icon icon-up"></i></div>
+				<div class="hidden-box fz14">回到顶部</div>
+			</div>
+			<div class="floatBar-phone fz18 color-main"><i class="icon-tel"></i>客服热线：18181356512</div>
+			<div class="floatBar-weixin">
+				<img src="images/weixin.jpg" alt="">
+			</div>
+		</div>
+		</body>
+		<!--底部结束-->
+		<script src="newJs/jquery-1.11.3.js"></script>
+		<script src="newJs/script.js"></script>
+		<script>
+			//标题进入动画
+			function add_title_animate(ele, animateName) {
+				ele.addClass(animateName);
+			}
+
+			//队列动画效果
+			function toAnimate(ele, animateName) {
+				var course_title_list = ele,
+						course_title_list_size = course_title_list.size();
+				var Index = 0;
+				var listSet = setInterval(function () {
+					course_title_list.eq(Index).addClass(animateName);
+					Index++;
+					if (Index == course_title_list_size) {
+						clearInterval(listSet)
+					}
+				}, 30)
+			}
+			$(function() {
+				var PicIndex = 0;   //图片索引
+				var bannerPic;       //计时器
+				var $banner = $(".banner"),
+					$bannerMove = $(".banner-move"),
+					$banner_move = $bannerMove.find("li"),
+					$banner_list = $(".banner-list"),
+					$banner_width = $banner_move.width(),
+					$banner_length = $banner_move.size(),
+					$arrow = $(".arrow-box"),
+					$left_arrow = $arrow.find(".left-arrow"),     //左切换按钮
+					$right_arrow = $arrow.find(".right-arrow");    //右切换按钮
+
+				//动态加载小圈圈
+				createList($banner_move);
+				initBannerWidth($bannerMove);
+				//幻灯片切换
+				move(0);
+				function move(Index) {
+					var a = $banner_list.find("a");
+					$banner.addClass("animation");
+					$banner_move.animate({"left": -Index * $banner_width});
+					a.eq(Index).addClass("on").siblings().removeClass("on");
+					$banner_move.eq(Index).find(".banner-move-item>h2")
+							.addClass("banner-item-title-animateDown")
+							.parent().parent().siblings().find(".banner-move-item>h2")
+							.removeClass("banner-item-title-animateDown");
+					$banner_move.eq(Index).find(".banner-move-item>p")
+							.addClass("banner-item-title-animateUp").parent().parent().siblings().find(".banner-move-item>p")
+							.removeClass("banner-item-title-animateUp");
+					$banner_move.eq(Index).find(".banner-move-item>a")
+							.addClass("banner-item-a-animate").parent().parent().siblings().find(".banner-move-item>a")
+							.removeClass("banner-item-a-animate");
+				}
+
+				//初始化轮播宽度
+				function initBannerWidth(ele) {
+					ele.css({
+						"width": $banner_length * $banner_width
+					})
+				}
+
+				//动态加载索引点
+				function createList(ele) {
+					$.each(ele, function (i) {
+						var aNode = '';
+						if (i == 0) {
+							aNode = $("<a href='javascript:void(0)' class='on'></a>");
+						} else {
+							aNode = $("<a href='javascript:void(0)'></a>");
+						}
+						$banner_list.append(aNode);
+					});
+				}
+
+				//计时轮播
+				$banner.hover(function () {
+					clearInterval(bannerPic);
+				}, function () {
+					bannerPic = setInterval(function () {
+						if (PicIndex == $banner_length - 1) {
+							PicIndex = 0;
+						} else {
+							PicIndex++;
+						}
+						move(PicIndex);
+					}, 6000);
+				}).trigger("mouseleave");
+
+				//点击索引点切换轮播图
+				$banner_list.on("click", "a", function () {
+					var list_a = $banner_list.find("a"),
+							index = list_a.index(this),
+							$this = $(this);
+					$this.addClass("on").siblings().removeClass("on");
+					move(index)
+				});
+
+				//向右切换
+				$right_arrow.on("click", function () {
+					if (PicIndex == $banner_length - 1) {
+						PicIndex = 0;
+					} else {
+						PicIndex++;
+					}
+					move(PicIndex)
+				});
+
+				//向左切换
+				$left_arrow.on("click", function () {
+					if (PicIndex == 0) {
+						PicIndex = $banner_length - 1;
+					} else {
+						PicIndex--;
+					}
+					move(PicIndex)
+				});
+
+
+				//科目 初高中切换
+				var $level_toggle = $(".level-toggle > .select-level"),
+						$course_title_list = $(".course-title-list:eq(0)");
+				$level_toggle.on("click", function () {
+					var $this = $(this);
+					$this.addClass("on").siblings().removeClass("on");
+				});
+				$level_toggle.eq(0).on("click", function () {
+					$course_title_list.removeClass("translate")
+				}).next().on("click", function () {
+					$course_title_list.addClass("translate")
+				});
+
+				//页面滚动动画
+				var $win = $(window);
+				$win.on("scroll", function () {
+					var $scrollTop = $(document).scrollTop(),
+						$documentHeight = $(document).height(),
+						$windowHeight = $(window).height(),
+						$study_experience = $(".study-experience"),
+						$study_experience_phone = $(".study-experience-phone"),
+						$study_experience_a = $(".study-experience-a"),
+						$course_title = $(".course-title"),
+						$course_title_list = $(".course-title-list"),
+						$score_program = $(".score-program"),
+						$all_apps_title = $(".all-apps-title");
+
+					var $study_experience_infoOffsetTop = $study_experience.offset().top,
+							$course_titleOffsetTop = $course_title_list.offset().top,
+							$score_programTop = $score_program.offset().top,
+							$all_apps_titleOffsetTop = $all_apps_title.offset().top;
+
+					if ( $windowHeight + $scrollTop >= $documentHeight ) {
+						$win.off("scroll");
+						return;
+					}
+					if ($scrollTop >= $score_programTop - 320) {
+						add_title_animate($score_program.find("h2.animate"), "banner-item-title-animateDown");
+						add_title_animate($score_program.find("p.animate"), "banner-item-title-animateFade");
+					}
+
+					if ($scrollTop >= $study_experience_infoOffsetTop - 400) {
+						toAnimate($study_experience.find("h2"), "banner-item-h2-animate");
+						add_title_animate($study_experience.find("p"), "banner-item-title-animateFade");
+						add_title_animate($study_experience_a, "banner-item-title-animateUp");
+						add_title_animate($study_experience_phone, "phone-animate");
+						add_title_animate($study_experience, "gradient-move");
+
+					}
+
+					if ($scrollTop >= $course_titleOffsetTop - 700) {
+						add_title_animate($course_title.find("h2"), "banner-item-title-animateDown");
+						add_title_animate($course_title.find("p"), "banner-item-title-animateFade");
+						toAnimate($course_title_list.find("li"), "toScale");
+					}
+
+
+					if ($scrollTop >= $all_apps_titleOffsetTop - 700) {
+						add_title_animate($all_apps_title.find("h2"), "banner-item-title-animateDown");
+						add_title_animate($all_apps_title.find("p"), "banner-item-title-animateFade");
+						add_title_animate($all_apps_title.find(".item"), "app-animate");
+						add_title_animate($all_apps_title.find("a"), "banner-item-title-animateUp");
+					}
+				});
+
+			});
+		</script>
+</html>
